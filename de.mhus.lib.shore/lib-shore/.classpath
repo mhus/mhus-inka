@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path="java"/>
+    <classpathentry kind="src" path="test"/>
+    <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+    <classpathentry kind="var" path="LIB_SHORE_HOME/lib/ant/junit/junit.jar"/>
+    <classpathentry kind="var" path="LIB_SHORE_HOME/lib/ant/org.apache.tools.ant/ant.jar"/>
+    <classpathentry kind="var" path="LIB_SHORE_HOME/lib/main/javax.j2ee/j2ee.jar"/>
+    <classpathentry kind="var" path="LIB_SHORE_HOME/lib/main/javax.j2ee/servlet.jar"/>
+    <classpathentry kind="var" path="LIB_SHORE_HOME/lib/main/shore/jbyte-release.jar"/>
+    <classpathentry kind="var" path="LIB_SHORE_HOME/lib/main/shore/mhu-lib.jar"/>
+    <classpathentry kind="lib" path="lib/main/apache-commons/commons-fileupload-1.0.jar"/>
+    <classpathentry kind="output" path="build/classes"/>
+</classpath>

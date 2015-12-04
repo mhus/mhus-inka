@@ -1,0 +1,1 @@
+<% if ( {v:name}_form.{v:getter}() == null ) { out.print( de.mhu.shore.ShoreUtil.text2web( {v:value_c}, false ) ); } else { out.print( de.mhu.shore.ShoreUtil.text2web( {v:name}_form.{v:getter}(), false ) ); }%>

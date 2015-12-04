@@ -1,0 +1,1 @@
+<%=de.mhu.lib.Rfc1738.encode( ({v:localLabel}.get( \"{v:name_pp}\" ) == null ) ? null : {v:localLabel}.get( \"{v:name_pp}\" ).toString() )%>

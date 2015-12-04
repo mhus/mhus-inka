@@ -1,0 +1,70 @@
+package de.mhus.inka.constgenerator;
+
+// auto generated
+public class CGFileConst {
+
+  public static final String CLASS_DE_MHUS_INKA_SOURCECODEGENERATOR_SCGFILE = "de_mhus_inka_sourcecodegenerator_SCGFile";
+  public static final String CLASS_METHODVISITOR = "MethodVisitor";
+  public static final String ID_CU = "cu";
+  public static final String ID_CURRENTCLASS = "currentClass";
+  public static final String ID_CURRENTCLASS_l = "currentclass";
+  public static final String ID_CURRENTCLASS_u = "CURRENTCLASS";
+  public static final String ID_CURRENTMETHOD = "currentMethod";
+  public static final String ID_CURRENTMETHOD_l = "currentmethod";
+  public static final String ID_CURRENTMETHOD_u = "CURRENTMETHOD";
+  public static final String ID_CU_l = "cu";
+  public static final String ID_CU_u = "CU";
+  public static final String ID_DEBUG = "Debug";
+  public static final String ID_DEBUG_l = "debug";
+  public static final String ID_DEBUG_u = "DEBUG";
+  public static final String ID_DE_MHUS_INKA_SOURCECODEGENERATOR = "de_mhus_inka_sourcecodegenerator";
+  public static final String ID_DE_MHUS_INKA_SOURCECODEGENERATOR_SCGFILE = "de_mhus_inka_sourcecodegenerator_SCGFile";
+  public static final String ID_DE_MHUS_INKA_SOURCECODEGENERATOR_SCGFILE_l = "de_mhus_inka_sourcecodegenerator_scgfile";
+  public static final String ID_DE_MHUS_INKA_SOURCECODEGENERATOR_SCGFILE_u = "DE_MHUS_INKA_SOURCECODEGENERATOR_SCGFILE";
+  public static final String ID_DE_MHUS_INKA_SOURCECODEGENERATOR_l = "de_mhus_inka_sourcecodegenerator";
+  public static final String ID_DE_MHUS_INKA_SOURCECODEGENERATOR_u = "DE_MHUS_INKA_SOURCECODEGENERATOR";
+  public static final String ID_ENTRIES = "Entries";
+  public static final String ID_ENTRIES_l = "entries";
+  public static final String ID_ENTRIES_u = "ENTRIES";
+  public static final String ID_LIST = "list";
+  public static final String ID_LIST_l = "list";
+  public static final String ID_LIST_u = "LIST";
+  public static final String ID_MAINCLASS = "MainClass";
+  public static final String ID_MAINCLASS_l = "mainclass";
+  public static final String ID_MAINCLASS_u = "MAINCLASS";
+  public static final String ID_METHODVISITOR = "MethodVisitor";
+  public static final String ID_METHODVISITOR_VISIT = "MethodVisitor_visit";
+  public static final String ID_METHODVISITOR_VISIT_l = "methodvisitor_visit";
+  public static final String ID_METHODVISITOR_VISIT_u = "METHODVISITOR_VISIT";
+  public static final String ID_METHODVISITOR_l = "methodvisitor";
+  public static final String ID_METHODVISITOR_u = "METHODVISITOR";
+  public static final String ID_PACK = "pack";
+  public static final String ID_PACKAGE = "Package";
+  public static final String ID_PACKAGE_l = "package";
+  public static final String ID_PACKAGE_u = "PACKAGE";
+  public static final String ID_PACK_l = "pack";
+  public static final String ID_PACK_u = "PACK";
+  public static final String ID_PARSE = "Parse";
+  public static final String ID_PARSE_l = "parse";
+  public static final String ID_PARSE_u = "PARSE";
+  public static final String ID_SHOULDPROCEED = "shouldProceed";
+  public static final String ID_SHOULDPROCEED_l = "shouldproceed";
+  public static final String ID_SHOULDPROCEED_u = "SHOULDPROCEED";
+  public static final String METHOD_DOPARSE = "doParse";
+  public static final String METHOD_GETENTRIES = "getEntries";
+  public static final String METHOD_GETMAINCLASS = "getMainClass";
+  public static final String METHOD_GETPACKAGE = "getPackage";
+  public static final String METHOD_ISDEBUG = "isDebug";
+  public static final String METHOD_METHODVISITOR_VISIT = "MethodVisitor_visit";
+  public static final String METHOD_SETDEBUG = "setDebug";
+  public static final String METHOD_SHOULDPROCEED = "shouldProceed";
+  public static final String PACKAGE_DE_MHUS_INKA_SOURCECODEGENERATOR = "de_mhus_inka_sourcecodegenerator";
+  public static final String VARIABLE_CU = "cu";
+  public static final String VARIABLE_CURRENTCLASS = "currentClass";
+  public static final String VARIABLE_CURRENTMETHOD = "currentMethod";
+  public static final String VARIABLE_DEBUG = "debug";
+  public static final String VARIABLE_LIST = "list";
+  public static final String VARIABLE_MAINCLASS = "mainClass";
+  public static final String VARIABLE_PACK = "pack";
+
+}

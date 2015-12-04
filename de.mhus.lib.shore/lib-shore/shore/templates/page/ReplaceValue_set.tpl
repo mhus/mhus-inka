@@ -1,0 +1,1 @@
+<% {v:localLabel}.set( "{v:name_p}" ); %>

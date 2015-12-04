@@ -1,0 +1,16 @@
+<project name="MyTaskTest" basedir="." default="test">
+
+	<path id="lib.path">
+		<fileset dir="libs" includes="*.jar"/>
+		<pathelement location="bin"/>
+	</path>
+	
+	<taskdef name="cg" classname="de.mhus.inka.constgenerator.CGAnt" classpathref='lib.path' />
+            
+	<target name="test">
+		<cg>
+			<fileset dir="src"/>
+		</cg>
+	</target>
+
+</project>

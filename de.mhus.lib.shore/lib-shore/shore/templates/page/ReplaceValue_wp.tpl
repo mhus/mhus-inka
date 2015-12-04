@@ -1,0 +1,1 @@
+<%=de.mhu.shore.ShoreUtil.text2web( ({v:localLabel}.get( "{v:name_p}" ) == null ? "" : {v:localLabel}.get( "{v:name_p}" ).toString() ), false )%>

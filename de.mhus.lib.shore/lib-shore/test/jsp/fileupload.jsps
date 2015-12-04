@@ -1,0 +1,15 @@
+<!--
+@shore.action
+-->
+<html>
+<body bgcolor='white'>
+
+<form action.class="de.mhu.test.fileupload.FileUploadAction" form.class="de.mhu.test.fileupload.FileUploadForm" method='post' enctype='multipart/form-data'>
+For demonstration, please select a text file:<p>
+Note: <input type="text" name="note" size="30"><p>
+<input type='file' name='ufile' size='30'><p>
+<input type='submit' value=' Upload Now '>
+</form>
+
+</body>
+</html>

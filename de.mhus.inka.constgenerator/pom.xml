@@ -1,0 +1,204 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.mhus.inka</groupId>
+  <artifactId>constgenerator</artifactId>
+  <packaging>maven-plugin</packaging>
+  <version>1.0.1-SNAPSHOT</version>
+  <url>http://www.mhus.de</url>
+  
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:svn:https://svn.code.sf.net/p/mhuinka/code/de.mhus.inka.constgenerator/trunk</connection>
+    <url>https://svn.code.sf.net/p/mhuinka/code/de.mhus.inka.constgenerator/trunk</url>
+  </scm>
+
+  <properties>
+	    <mavenVersion>3.1.0</mavenVersion>
+	    <mavenPluginPluginVersion>3.2</mavenPluginPluginVersion>
+	    <plexusCompilerVersion>2.2</plexusCompilerVersion>
+	  </properties>
+  <!-- 
+  <prerequisites>
+	    <maven>${mavenVersion}</maven>
+  </prerequisites>
+   -->
+
+  <developers>
+    <developer>
+      <id>mhu</id>
+      <name>Mike Hummel</name>
+      <email>mh@mikehummel.de</email>
+      <url>http://www.mhus.de</url>
+    </developer>
+  </developers>
+  <dependencies>
+    <dependency>
+    	<groupId>junit</groupId>
+    	<artifactId>junit</artifactId>
+    	<version>4.7</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>log4j</groupId>
+    	<artifactId>log4j</artifactId>
+    	<version>1.2.14</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+
+
+    <dependency>
+    	<groupId>ant</groupId>
+    	<artifactId>ant</artifactId>
+    	<version>1.7.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.google.code.javaparser</groupId>
+    	<artifactId>javaparser</artifactId>
+    	<version>1.0.8</version>
+    </dependency>
+    <dependency>
+	      <groupId>org.apache.maven</groupId>
+	      <artifactId>maven-plugin-api</artifactId>
+	      <version>${mavenVersion}</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.apache.maven</groupId>
+	      <artifactId>maven-artifact</artifactId>
+	      <version>${mavenVersion}</version>
+	    </dependency>
+	    <dependency>
+	    	<groupId>org.apache.maven</groupId>
+	    	<artifactId>maven-core</artifactId>
+	    	<version>${mavenVersion}</version>
+	    </dependency>
+	    <dependency>
+	    	<groupId>org.apache.maven.plugin-tools</groupId>
+	    	<artifactId>maven-plugin-annotations</artifactId>
+	    	<version>3.2</version>
+	    </dependency>
+  </dependencies>
+ 
+ <build>
+    <plugins>
+    <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-compiler-plugin</artifactId>
+	    <version>2.0.2</version>
+	    <configuration>
+    	    <source>1.6</source>
+        	<target>1.6</target>
+    	</configuration>
+	  </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-release-plugin</artifactId>
+		  <version>2.2.2</version>
+		  <configuration>
+		    <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+		    
+		  </configuration>
+		</plugin>
+
+    </plugins>
+    
+        <pluginManagement>
+	      <plugins>
+	        <plugin>
+	          <groupId>org.apache.maven.plugins</groupId>
+	          <artifactId>maven-plugin-plugin</artifactId>
+	          <version>${mavenPluginPluginVersion}</version>
+	          <configuration>
+	            <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+	          </configuration>
+	          <executions>
+	            <execution>
+	              <id>mojo-descriptor</id>
+	              <phase>process-classes</phase>
+	              <goals>
+	                <goal>descriptor</goal>
+	              </goals>
+	            </execution>
+	            <execution>
+	              <id>help-goal</id>
+	              <goals>
+	                <goal>helpmojo</goal>
+	              </goals>
+	            </execution>
+	          </executions>
+	        </plugin>
+	      </plugins>
+	    </pluginManagement>
+	    
+  </build>
+  
+  <distributionManagement>
+	  <snapshotRepository>
+	    <id>sonatype-nexus-snapshots</id>
+	    <name>Sonatype Nexus snapshot repository</name>
+	    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	  </snapshotRepository>
+	  <repository>
+	    <id>sonatype-nexus-staging</id>
+	    <name>Sonatype Nexus release repository</name>
+	    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+	  </repository>
+	</distributionManagement>
+
+	<profiles>
+	  <profile>
+	    <id>release-sign-artifacts</id>
+	    <activation>
+	      <property>
+	        <name>performRelease</name>
+	        <value>true</value>
+	      </property>
+	    </activation>
+	    <build>
+	      <plugins>
+	        <plugin>
+	          <groupId>org.apache.maven.plugins</groupId>
+	          <artifactId>maven-gpg-plugin</artifactId>
+	          <version>1.4</version>
+	          <configuration>
+	            <passphrase>${gpg.passphrase}</passphrase>
+	          </configuration>
+	          <executions>
+	            <execution>
+	              <id>sign-artifacts</id>
+	              <phase>verify</phase>
+	              <goals>
+	                <goal>sign</goal>
+	              </goals>
+	            </execution>
+	          </executions>
+	        </plugin>
+	      </plugins>
+	    </build>
+	  </profile>
+	</profiles>
+	<name>ConstGenerator</name>
+	<description>A tool which generates constantes out of java classes.</description>
+</project>

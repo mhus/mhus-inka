@@ -1,0 +1,96 @@
+<project name="project-struts" default="all" basedir="./">
+
+	<target name="init">
+    	<!-- General config -->
+        <tstamp />
+        <property environment="env" />
+		<property file="${basedir}/build.properties" />
+
+        <path id="project.class.path">
+        </path>
+						  	
+    </target>
+   
+   <target name="all">
+	    <antcall target="clean" />
+	    <antcall target="compile" />
+   		<antcall target="jar" />
+   </target>
+   
+<!-- ============================================== -->
+<!--                                                -->
+<!-- Clean                                          -->
+<!--                                                -->
+<!-- ============================================== -->
+
+	<target name="clean" depends="init">
+		<echo>+ ===================================================== +</echo>
+		<echo>+                                                       +</echo>
+		<echo>+  Cleaning                                             +</echo>
+		<echo>+                                                       +</echo>
+		<echo>+ ===================================================== +</echo>
+		
+		<delete>
+			<fileset dir="${build.dir}" includes="**/*.class" />
+		</delete>
+	</target>
+
+<!-- ============================================== -->
+<!--                                                -->
+<!-- Compile                                        -->
+<!--                                                -->
+<!-- ============================================== -->
+
+	<target name="compile" depends="init">
+		<echo>+ ===================================================== +</echo>
+		<echo>+                                                       +</echo>
+		<echo>+  Compiling                                            +</echo>
+		<echo>+                                                       +</echo>
+		<echo>+ ===================================================== +</echo>
+		
+      	<javac
+            destdir="${build.class.dir}"
+            debug="${compiler.debug}"
+            deprecation="${compiler.deprecation}"
+            compiler="${compiler.type}"
+            classpathref="project.class.path"
+        >
+            <src path="${java.dir}" />
+        </javac>
+        
+	</target>
+   
+<!-- ============================================== -->
+<!--                                                -->
+<!-- Jar                                            -->
+<!--                                                -->
+<!-- ============================================== -->
+
+	<target name="jar" depends="init">
+	
+		<echo>+ ===================================================== +</echo>
+		<echo>+                                                       +</echo>
+		<echo>+  Building jar files                                   +</echo>
+		<echo>+                                                       +</echo>
+		<echo>+ ===================================================== +</echo>
+		
+		<delete>
+			<fileset dir="${dist.dir}" includes="${jar.name}" />
+		</delete>
+		
+      	<jar
+            basedir="${build.class.dir}" 
+            excludes="**" 
+            jarfile="${dist.dir}/${jar.name}"
+         >
+            <fileset dir="${build.class.dir}">
+            	<include name="**/*.class" />
+            	<include name="license.txt" />
+            	<exclude name="**/test/**/*" />
+            </fileset>
+
+        </jar>
+                
+	</target>
+	
+</project>

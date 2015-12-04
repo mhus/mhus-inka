@@ -1,0 +1,20 @@
+
+<!--
+@shore.debug
+@shore.page
+	class = de.mhu.test.PageTest
+-->
+
+<html>
+<body>
+
+<logic type="empty" name="list">
+Nix da
+</logic>
+
+<logic type="iterator" name="list">
+Item: {%w:id%} - {%w:name%} - {%w:../name%}
+</logic>
+
+</body>
+</html>
