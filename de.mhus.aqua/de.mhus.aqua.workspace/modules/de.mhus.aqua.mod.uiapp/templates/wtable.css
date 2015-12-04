@@ -1,0 +1,16 @@
+/* custom styles for this example */
+.tableDemo {margin: 15px 0;}
+/* css to counter global site css */
+.tableDemo th {text-transform:none;}
+.tableDemo table {width:auto;}
+/* scrolling datatable doesn't support caption */
+.dt-example caption {display:table-caption;}
+
+.yui-pass {
+	background-color: #628FF9;
+}
+
+.yui-selected {
+	background-color: #426FD9;
+}
+

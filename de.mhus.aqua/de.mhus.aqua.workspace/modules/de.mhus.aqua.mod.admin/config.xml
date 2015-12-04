@@ -1,0 +1,23 @@
+<config
+	id='de.mhus.aqua.mod.admin'
+	class='de.mhus.aqua.mod.admin.Activator'
+>
+	<classpath>
+		<resource path='$root._path$/bin'/>
+		<resource path='$root._path$/src'/>
+	</classpath>
+	
+	<deploy>
+	</deploy>
+	<localisation path="$root._contentdir$/nls">
+		
+	</localisation>
+	<resources>
+	</resources>
+	<cao>
+		<queries 
+		
+		/>
+	</cao>
+	
+</config>

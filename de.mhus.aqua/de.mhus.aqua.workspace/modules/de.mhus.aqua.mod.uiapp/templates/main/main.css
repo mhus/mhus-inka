@@ -1,0 +1,276 @@
+
+#main_pic {
+	height: 284px;
+	margin: 0 0 20px;
+	overflow: hidden;
+	position: relative;	
+}
+
+#main_pic img {
+	display: block;
+	opacity: 1;
+	z-index: 5;
+	height: 284px;
+	position: absolute;
+	top: 0;	
+}
+	
+#main_pic .slideshow_control {
+	display: block;
+	font-size: 27px;
+	left: 50%;
+	position: absolute;
+	top: 250px;
+	z-index: 10;
+	color: black;
+}
+
+#main_pic .slideshow_control a {
+	padding 0 2px;	
+	text-decoration: none;
+}
+
+#main_pic .slideshow_control a.first {
+	padding-left: 10px;
+}
+
+#layout {
+	width: 100%;
+	margin-top: 30px;
+}
+
+#layout_l {
+	width: 300px;
+	float: left;	
+}
+
+#layout_c {
+	width: auto;
+	margin-right: 30px;
+	margin-left: 30px;
+	float: left;	
+}
+
+#layout_r {
+	width: 300px;
+	float: left;	
+}
+
+div.container {
+	margin-bottom: 30px;
+	width: auto;
+	padding: 5px;
+}
+
+#content {
+		
+}
+
+
+/* set millions of background images */
+.rbroundbox { background: url(nt.gif) repeat; }
+.rbtop div { background: url(tl.gif) no-repeat top left; }
+.rbtop { background: url(tr.gif) no-repeat top right; }
+.rbbot div { background: url(bl.gif) no-repeat bottom left; }
+.rbbot { background: url(br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really nessisary. */
+.rbtop div, .rbtop, .rbbot div, .rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+}
+.rbcontent { margin: 0 7px; }
+.rbroundbox { width: 50%; margin: 1em auto; }
+
+/* --------------------------------------------------------------------------------- */
+
+#hd {
+    _background-image: url(${baseurl}/res/_yui_3.03/assets/sprite.png);
+    _background-position: 0 -1300px;
+    color: #fff;
+    border: 1px solid #CDCDCD;
+    padding: 1em;
+}
+#hd h1 {
+    font-size: 116%;
+    font-weight: bold;
+    color: #000;
+}
+#ft {
+    font-size: 85%;
+    font-style: italic;
+}
+#play {
+    margin-top: .75em;
+    zoom: 1;
+}
+#play:after { display: block; clear: both; visibility: hidden; content: '.'; height: 0;}
+
+#feeds {
+    background-color: #B3D4FF;
+    margin-top: .75em;
+    border: 1px solid #CDCDCD;
+    min-height: 100px;
+    *height: 100px;
+    padding: .5em;
+    position: relative;
+}
+
+#feeds ul li {
+    background-image: url(${baseurl}/res/_yui_3.0/assets/rss_1.gif);
+    background-repeat: no-repeat;
+    background-color: #B3D4FF;
+    padding-left: 25px;
+    margin: 3px;
+    cursor: move;
+    zoom: 1;
+}
+#feeds ul li.disabled {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    cursor: default;
+}
+
+ul.list {
+    border: none;
+    margin: .5em;
+    zoom: 1;
+    padding: 0;
+
+}
+
+div.listlcr_l {
+	margin-left:-300px;
+	width: 300px;
+    min-height: 500px;
+    *height: 500px;
+}
+
+div.listlcr_c {
+    min-height: 500px;
+    *height: 500px;
+    width: 100%;
+}
+
+div.listlcr_r {
+	margin-right:-300px;
+	width: 300px;
+    min-height: 500px;
+    *height: 500px;
+}
+div.listlcr_x {
+	padding-left: 300px;
+	padding-right: 300px;
+}
+
+div.listtoplr_l {
+	width: 50%;
+}
+
+div.listtoplr_t {
+    width: 100%;
+}
+
+div.listtoplr_r {
+	width: 50%;
+}
+div.listtoplr_x {
+}
+
+
+.yui3-dd-proxy {
+    text-align: left;
+    padding-left: 20px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.yui3-dd-proxy li, #play li {
+    padding-left: 20px;
+    padding: 5px;
+    margin: 2px;
+    list-style: none outside none;
+}
+
+#play li.moving {
+    background-color: #D1E6EC;
+    border: 1px solid #7EA6B2;
+    list-style: none outside none;
+}
+
+div.mod {
+    position: relative;
+    border: none;
+    background-color: white;
+    zoom: 1;
+}
+div.mod div.inner {
+    overflow: hidden;
+    zoom: 1;
+}
+div.mod div.inner div.loading {
+    background-image: url(${baseurl}/res/_yui_3.03/assets/progress.gif);
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    padding: 5px 5px 5px 25px;
+
+}
+#play div.mod div.inner ul li {
+    padding-left: 20px;
+}
+div.mod div.inner ul li a {
+    color: #000;
+}
+div.mod h2 {
+    position: relative;
+    zoom: 1;
+    margin: 0;
+    border-bottom: 1px solid #808080;
+    cursor: move;
+    padding: 3px;
+    color: #000;
+    background-image: url(${baseurl}/res/_yui_3.03/assets/sprite.png);
+    background-position: 0 -1300px;
+    zoom: 1;
+    display: none;
+}
+
+div.mod h2 strong {
+    font-weight: bold;
+}
+
+
+div.mod h2 a.close, div.mod h2 a.setup {
+    background-color: #ccc;
+    background-image: url(${baseurl}/res/_yui_3.03/assets/layout_sprite.png);
+    background-position: -20px -100px;
+    border:1px solid #808080;
+    display: block;
+    height: 13px;
+    width: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    right: 4px;
+    top: 1px;
+    position: absolute;
+    font-size: 80%;
+    margin: 2px;
+    padding: 0;
+}
+div.mod h2 a.setup {
+    background:transparent url(${baseurl}/res/_yui_3.03/assets/layout_sprite.png) no-repeat scroll -20px -220px;
+    right: 25px;
+}
+div.mod h2 a:hover.close, div.mod h2 a:hover.setup {
+    border-color: #000;
+}
+
+div.mod div.resize {
+	display: none;
+	background-color: #eee;
+	border: dotted 1px #000;
+	height: 10px;
+}
+

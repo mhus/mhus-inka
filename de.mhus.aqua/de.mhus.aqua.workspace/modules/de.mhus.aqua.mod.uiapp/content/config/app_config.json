@@ -1,0 +1,17 @@
+{
+	"box" : [
+			{	"id":"i5b7d4fc9_2761_4659_aac5_67c816fc37ad",
+				"type" : "de.mhus.aqua.mod.uiapp.tst.ContGaga",
+				"text" : "Aloa cracatoa!!"
+			}
+	],
+	"layout" : {
+		"type" : "de.mhus.aqua.mod.uiapp.wui.WLayoutLCR",
+		"element" : [
+			{ "id" : "i5b7d4fc9_2761_4659_aac5_67c816fc37ad",
+			  "pos" : "0",
+			  "list" : "1"
+			}
+		]
+	}
+}

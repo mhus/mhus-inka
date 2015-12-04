@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Aqua Admin
+Bundle-SymbolicName: de.mhus.aqua.mod.admin
+Bundle-Version: 1.0.0
+Bundle-Activator: de.mhus.aqua.mod.admin.Activator
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0"
+Require-Bundle: de.mhus.aqua;bundle-version="1.0.0",
+ de.mhus.aqua.common;bundle-version="1.0.0",
+ de.mhus.aqua.mod.uiapp;bundle-version="1.0.0"

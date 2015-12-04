@@ -1,0 +1,22 @@
+<div id="${uid}">
+	<ul>
+	  <#list tabs as tab>  
+	    <li><a href="#${uid}_${tab[0]}">${tab[1]}</a></li>
+	  </#list>
+	  </ul>
+	  <div>
+	    <#list tabs as tab>
+	      <div id="${uid}_${tab[0]}">
+	         <@process name="paint" list=tab[0]/>
+	    </div>
+	  </#list>
+	  <script type="text/javascript">
+	        
+	        YUI({ filter: 'raw' }).use('dd', 'anim', 'cookie', 'json', "yui", "tabview", function(Y) {
+	
+		        var tabview = new Y.TabView({srcNode:'#${uid}'});
+		        tabview.render();
+	        });
+	  </script>
+	</div>
+</div>  

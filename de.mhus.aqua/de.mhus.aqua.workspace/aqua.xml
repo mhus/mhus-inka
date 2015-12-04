@@ -1,0 +1,127 @@
+<aqua
+WEB_PATH=''
+TRACE='1'
+de.mhus.lib.lang.DynamicClassLoader.TRACE='0'
+de.mhus.lib.sql.DbPool.TRACE='0'
+de.mhus.lib.MCast.TRACE='0'
+
+>
+	<activator>
+		<map alias='cao.service' class='de.mhus.aqua.caosql.ASDriver'/>
+		<map alias='default.app' class='de.mhus.aqua.mod.uiapp.UiApplication'/>
+	</activator>
+	
+	<deploy
+		xtemplates='$root._basedir$/tpl'
+		xcontent='$root._basedir$/mod'
+		templates='/Users/mikehummel/tmp/aqua/tpl'
+		content='/Users/mikehummel/tmp/aqua/mod'
+	/>
+	<localisation default='en_US'>
+		<locale name='en_US' title='English (US)' />
+		<locale name='de_DE' title='Deutsch' />
+	</localisation>
+	<dbpool>
+		<database>
+			<connection
+				driver="com.mysql.jdbc.Driver"
+				url  = "jdbc:mysql://localhost:3306/test"
+				user = "root"
+				pass = "nein"
+			/>
+			<queries
+				node_select = "select * from node where parent=$id,int$ and name=$name,text$"
+				node_select_by_id = "select * from node where id=$id,int$"
+				node_select_children="select id,acl from node where parent=$id,int$"
+				container_select="select * from container where users=$user,text$ and node=$node,int$"
+				container_create="insert into container (config,users,node) values ($config,text$,$user,text$,$node,int$)"
+				container_change="update container set config=$config,text$ where users=$user,text$ and node=$node,int$"
+				container_remove="delete from container where users=$user,text$ and node=$node,int$"
+				user_select="select * from users where id=$id,text$"
+				user_rights_select="select * from user_rights where users=$user,text$"
+				acl_select="select * from acl where id=$id,text$"
+				acl_rule_select="select * from acl_rule where acl=$id,text$ order by sort"
+				application_config_change="update node set config=$config,text$ WHERE id=$id,int$"
+			/>
+		</database>
+	</dbpool>
+	<sql>
+		<table name="node">
+			<field name="id" type="int"/>
+			<field name="name" type="string" size="400"/>
+			<field name="parent" type="int"/>
+			<field name="hidden" type="bool"/>
+			<field name="application" type="string" size="400"/>
+			<field name="config" type="text"/>
+			<field name="acl" type="string" size="400"/>
+		</table>
+		<data select="select * from node" condition="not found">
+			<execute sql="insert into node (id,parent,name,application,config,hidden,acl) values (0,-1,'root','de.mhus.aqua.mod.uiapp.UiApplication','',0,'default')"/>
+			<execute sql="insert into node (id,parent,name,application,config,hidden,acl) values (1,0,'private','de.mhus.aqua.mod.uiapp.UiApplication','',0,'admin');"/>
+			<execute sql="insert into node (id,parent,name,application,config,hidden,acl) values (2,0,'mhus','de.mhus.aqua.mod.uiapp.UiApplication','',0,'user');"/>
+			<execute sql="insert into node (id,parent,name,application,config,hidden,acl) values (3,1,'menu','de.mhus.aqua.mod.uiapp.UiApplication','',0,'user');"/>
+			<execute sql="insert into node (id,parent,name,application,config,hidden,acl) values (4,1,'lol','de.mhus.aqua.app.DumpApplication','',0,'user');"/>
+			<execute sql="insert into node (id,parent,name,application,config,hidden,acl) values (5,0,'res','de.mhus.aqua.res.ResApplication','',1,'hidden');"/>
+		</data>
+		<table name="users">
+			<field name="id" type="string" size="400"/>
+			<field name="name" type="string" size="400"/>
+			<field name="config" type="text"/>
+			<field name="is_admin" type="bool"/>
+			<field name="acl" type="string" size="400"/>
+		</table>
+		<data select="select * from users" condition="not found">
+			<execute sql="insert into users (id,name,config,is_admin,acl) values('everyone','Everyone','',0,'admin')"/>
+			<execute sql="insert into users (id,name,config,is_admin,acl) values('a','Alpha','',1,'admin')"/>
+			<execute sql="insert into users (id,name,config,is_admin,acl) values('o','Omega','',0,'admin')"/>
+		</data>
+		<table name="container">
+			<field name="users" type="string" size="400"/>
+			<field name="node" type="int"/>
+			<field name="config" type="text"/>
+		</table>
+		<table name="user_rights">
+			<field name="users" type="string" size="400"/>
+			<field name="rg" type="int"/>
+			<field name="name" type="string" size="400"/>
+		</table>
+		<data select="select * from user_rights" condition="not found">
+			<execute sql="insert into user_rights (users,rg,name) VALUES ('a', 0, 'admin')"/>
+			<execute sql="insert into user_rights (users,rg,name) VALUES ('o', 0, 'user')"/>
+		</data>
+		<table name="acl">
+			<field name="id" type="string" size="400"/>
+			<field name="policy" type="int"/>
+			<field name="acl" type="string" size="400"/>
+		</table>
+		<table name="acl_rule">
+			<field name="acl" type="string" size="400"/>
+			<field name="right_name" type="string" size="400"/>
+			<field name="sort" type="int"/>
+			<field name="rg" type="int"/>
+			<field name="rg_name" type="string" size="400"/>
+			<field name="rg_policy" type="int"/>
+		</table>
+		
+		
+		<data select="select * from acl where id='default'" condition="not found">
+			<execute sql="insert into acl (id,policy,acl) values ('default',0,'admin')"/>
+			<execute sql="insert into acl_rule (acl,right_name,sort,rg,rg_name,rg_policy) values ('default','read,show',0,3,'',1)"/>
+			<execute sql="insert into acl_rule (acl,right_name,sort,rg,rg_name,rg_policy) values ('default','read,write,show,edit',0,0,'admin',1)"/>
+		</data>
+		<data select="select * from acl where id='admin'" condition="not found">
+			<execute sql="insert into acl (id,policy,acl) values ('admin',0,'admin')"/>
+			<execute sql="insert into acl_rule (acl,right_name,sort,rg,rg_name,rg_policy) values ('admin','read,write,show,edit',0,0,'admin',1)"/>
+		</data>
+		<data select="select * from acl where id='user'" condition="not found">
+			<execute sql="insert into acl (id,policy,acl) values ('user',0,'admin')"/>
+			<execute sql="insert into acl_rule (acl,right_name,sort,rg,rg_name,rg_policy) values ('user','read,show,edit',0,0,'user',1);"/>
+			<execute sql="insert into acl_rule (acl,right_name,sort,rg,rg_name,rg_policy) values ('user','read,show',0,0,'admin',1);"/>
+		</data>
+		<data select="select * from acl where id='hidden'" condition="not found">
+			<execute sql="insert into acl (id,policy,acl) values ('hidden',1,'admin');"/>
+			<execute sql="insert into acl_rule (acl,right_name,sort,rg,rg_name,rg_policy) values ('hidden','show',0,3,'',0);"/>
+		</data>
+		
+	</sql>
+</aqua>

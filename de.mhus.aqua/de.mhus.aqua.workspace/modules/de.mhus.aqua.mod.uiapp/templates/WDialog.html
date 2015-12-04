@@ -1,0 +1,67 @@
+<div id="dialog-win" class="x-hidden">
+    <div id="dialog-panel">
+		<@process name="paint" list='content'/>
+    </div>
+<script type="text/javascript">
+   var win_${uid} = null;
+//    var button = Ext.get('show-btn');
+try {
+    Ext.onReady(function() {
+		try {
+        // create the window on the first click and reuse on subsequent clicks
+        if(win_${uid} == null){
+        	win_${uid} = new Ext.Window({
+                applyTo:'dialog-win',
+                layout:'fit',
+                width:${width},
+                height:${height},
+                modal: true,
+                closable: false,
+                plain: true,
+                title: '${title}',
+               
+                items: new Ext.Panel({
+                    applyTo: 'dialog-panel',
+                    deferredRender:false,
+                    border:false
+                }),
+
+                buttons: [
+                  <#list buttons as button>
+                  {
+                      text:'${button.title}',
+					  handler: function(){
+						  ${button.action}
+					  }   
+                  },
+                  </#list>
+                  {
+                    text: '${close_title}',
+                    handler: function(){
+                    	${close_action}
+                    	if (win_${uid} && win_${uid} != null) {
+	                    	win_${uid}.hide();
+	                    	win_${uid} = null;
+                    	}
+                    }
+                }]
+            });
+            win_${uid}.on({
+    	        activate: function(form){
+   	            	${actioncomplete!""}
+    	        }
+    	    });
+
+        }
+     win_${uid}.show(this);
+		} catch (e) {
+			// alert(e);
+			yconsole.log(e);
+		}
+    });
+} catch (e) {
+	// alert(e);
+	yconsole.log(e);
+}
+</script>
+</div>

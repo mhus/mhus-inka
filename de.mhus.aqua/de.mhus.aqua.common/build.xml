@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="getlibs" name="Aqua Common">
+
+	<property name="sql.driver.jar" value="${basedir}/libs/mysql/mysql-connector-java/5.1.14/mysql-connector-java-5.1.14.jar" />
+	<property name="sql.driver" value="org.gjt.mm.mysql.Driver"/>
+	<property name="sql.url" value="jdbc:mysql://localhost/test"/>
+	<property name="sql.user" value="root"/>
+	<property name="sql.pass" value="nein"/>
+
+
+	<path id="sql.classpath">
+		<pathelement location="${sql.driver.jar}"/>
+	</path>
+		
+	<target name="createTables">
+		<sql driver="${sql.driver}" url="${sql.url}" userid="${sql.user}" password="${sql.pass}" >
+			<classpath refid="sql.classpath"/>
+	    	<transaction src="etc/create.sql"/>
+	    </sql>
+	</target>
+	
+	<target name="getlibs">
+		<copy todir="libs">
+			<fileset dir="/Users/mikehummel/.m2/repository">
+				<include name="mhus/mhu-lib/3.0.1-SNAPSHOT/mhu-lib-3.0.1-SNAPSHOT.jar"/>
+				<include name="mhus/mhu-lib-dev/3.0.1-SNAPSHOT/mhu-lib-dev-3.0.1-SNAPSHOT.jar"/>
+				<include name="mhus/mhu-framework/3.0.1-SNAPSHOT/mhu-framework-3.0.1-SNAPSHOT.jar"/>
+				<include name="log4j/log4j/1.2.15/log4j-1.2.15.jar"/>
+				<include name="mysql/mysql-connector-java/5.1.14/mysql-connector-java-5.1.14.jar"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

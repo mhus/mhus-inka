@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Aqua UiApplication
+Bundle-SymbolicName: de.mhus.aqua.mod.uiapp;singleton:=true
+Bundle-Version: 1.0.0.snapshot
+Bundle-Activator: de.mhus.aqua.mod.uiapp.Activator
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0"
+Require-Bundle: de.mhus.aqua.common;bundle-version="1.0.0",
+ de.mhus.aqua;bundle-version="1.0.0",
+ org.eclipse.core.runtime;bundle-version="3.6.0"
+Export-Package: de.mhus.aqua.mod.uiapp,
+ de.mhus.aqua.mod.uiapp.wui

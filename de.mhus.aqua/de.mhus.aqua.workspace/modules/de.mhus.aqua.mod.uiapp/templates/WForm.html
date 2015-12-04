@@ -1,0 +1,111 @@
+<div id="${uid}"></div>
+<script type="text/javascript">
+var fs_${uid} = null;
+try {
+	Ext.onReady(function(){
+		try {
+	    Ext.QuickTips.init();
+
+	    // turn on validation errors beside the field globally
+	    Ext.form.Field.prototype.msgTarget = 'side';
+
+	    // A reusable error reader class for XML forms
+		Ext.form.XmlErrorReader = function(){
+		    Ext.form.XmlErrorReader.superclass.constructor.call(this, {
+		            record : 'field',
+		            success: '@success'
+		        }, [
+		            'id', 'msg'
+		        ]
+		    );
+		};
+		Ext.extend(Ext.form.XmlErrorReader, Ext.data.XmlReader);	
+		
+	    fs_${uid} = new Ext.FormPanel({
+	        frame: true,
+	        title:'${title}',
+	        labelAlign: 'right',
+	        labelWidth: 85,
+	        width:${width},
+	        height:${height},
+	        waitMsgTarget: true,
+
+	        // configure how to read the XML Data
+	        reader : new Ext.data.XmlReader({
+	            record : 'data',
+	            success: '@success'
+	        }, [
+				<#list allfields as item>
+				'${item.id}'<#if item_has_next>,</#if>
+				</#list>
+	        ]),
+
+	        // reusable eror reader class defined at the end of this file
+	        errorReader: new Ext.form.XmlErrorReader(),
+
+            autoHeight: true,
+            defaultType: 'textfield',
+            
+	        items: [
+	                      <#list form as item>
+	                      {
+	                    	  <#if item.xtype=="field">
+	                    	  fieldLabel: '${item.title}',
+	                    	  emtyText: '${item.description}',
+	                    	  xtype: '${item.type}',
+	                    	  width:'100%',
+	                    	  name:'${item.id}'
+	                    	  </#if>
+	                    	  <#if item.xtype=="tabbed">
+	                    	  <@process name="tabbed"/>
+	                    	  </#if>
+	                    	  <#if item.xtype=="group">
+	                    	  <@process name="group"/>
+	                    	  </#if>
+	                    	  <#if item.xtype=="page">
+	                    	  <@process name="page"/>
+	                    	  </#if>
+	                    	  <#if item.xtype=="composite">
+	                    	  <@process name="composite"/>
+	                    	  </#if>	                    	  
+	                      }<#if item_has_next>,</#if>
+	                      </#list>
+
+	        ]
+	    });
+	    
+	    <#if autorender>
+        fs_${uid}.render('${uid}');
+		</#if>
+		
+        fs_${uid}.loadForm = function() {
+        	fs_${uid}.getForm().load({url:'${source}&form=load', waitMsg:'Loading'});
+        };
+        
+        fs_${uid}.saveForm = function(listener) {
+        	
+        	fs_${uid}.getForm().submit({
+        		url:'${source}&form=save', 
+        		waitMsg:'Saving Data...', 
+        		submitEmptyText: true, 
+        		success: function(form, action) {
+        			if (listener && listener.success) listener.success();
+        		},
+        		failure: function(form, action) {
+        			if (listener && listener.failure) listener.failure();
+        		}
+        		});
+        };
+        
+        fs_${uid}.loadForm();
+		} catch (e) {
+			// alert(e);
+			yconsole.log(e);
+		}
+	});
+	
+	} catch (e) {
+		// alert(e);
+		yconsole.log(e);
+	}
+</script>

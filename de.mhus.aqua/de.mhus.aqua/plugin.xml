@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension-point id="application" name="Aqua Application" schema="schema/application.exsd"/>
+   <extension-point id="res" name="Resource" schema="schema/res.exsd"/>
+   <extension-point id="publisher" name="Publisher" schema="schema/publisher.exsd"/>
+   <extension
+         name="Resource Application"
+         point="de.mhus.aqua.application">
+      <Application
+            class="de.mhus.aqua.res.ResApplication"
+            id="de.mhus.aqua.res.ResApplication">
+      </Application>
+   </extension>
+   <extension
+         point="de.mhus.aqua.publisher">
+      <Publisher
+            class="de.mhus.aqua.mod.ZipPublisher"
+            id="de.mhus.aqua.mod.ZipPublisher">
+      </Publisher>
+      <Publisher
+            class="de.mhus.aqua.mod.PathPublisher"
+            id="de.mhus.aqua.mod.PathPublisher">
+      </Publisher>
+      <Publisher
+            class="de.mhus.aqua.mod.SqlPublisher"
+            id="de.mhus.aqua.mod.SqlPublisher">
+      </Publisher>
+   </extension>
+   <extension
+         point="de.mhus.aqua.res">
+      <Resource
+            class="de.mhus.aqua.res.FileRes"
+            id="de.mhus.aqua.res.FileRes">
+      </Resource>
+      <Resource
+            class="de.mhus.aqua.res.TplRes"
+            id="de.mhus.aqua.res.TplRes">
+      </Resource>
+      <Resource
+            class="de.mhus.aqua.res.ZipRes"
+            id="de.mhus.aqua.res.ZipRes">
+      </Resource>
+   </extension>
+</plugin>

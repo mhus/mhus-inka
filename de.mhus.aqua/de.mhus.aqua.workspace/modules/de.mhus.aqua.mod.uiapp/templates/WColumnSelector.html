@@ -1,0 +1,79 @@
+<div id="${uid}" style="width:${width};height:${height}">
+<select id='select_0_${uid}' size="10" style="width:${columnWidth};height:${height}">
+</select>
+<script type="text/javascript">
+
+var ${uid}Values=Array();
+
+function ${uid}fillSelect(nr,id) {
+	try {
+		Ext.Ajax.request({
+		   url: '${sourceUrl}&id=' + id,
+		   success: function(result,options) {
+			   var jsonData = Ext.util.JSON.decode(result.responseText);
+			   if (jsonData.rc != 1) return;
+			   var select = Ext.get('select_'+nr+'_${uid}');
+			   var list = select.dom;
+			   for (var i=0; i < jsonData.values.length;i++) {
+				   var values = jsonData.values[i];
+				   ${uid}Values[values['id']] = values;
+				   list.options.add(new Option(values['title'],values['id']));				   
+			   }
+		   },
+		   failure: function(){}
+		});
+	} catch (e) {
+		yconsole.log(e);
+	}
+}
+function ${uid}Changed(ee,t,o) {
+	try {
+		var myNr = parseInt(t.id.split('_')[1]);
+		var nr = myNr;
+		while (true){
+			nr++;
+			var select = Ext.get('select_'+nr+'_${uid}');
+			if (!select) break;
+			select.remove();
+		}
+		
+		if (t.selectedIndex<0) return;
+	
+		var value  = t.options[t.selectedIndex].value;
+		var values = ${uid}Values[value];
+		if (!values || values.leaf) return;
+		
+		var myElement = Ext.get('select_'+myNr+'_${uid}');
+		Ext.DomHelper.append('${uid}',{tag: 'select', id: "select_"+(myNr+1)+"_${uid}", size:"10", style:"width:${columnWidth};height:${height}"});
+		
+		${uid}fillSelect(myNr+1,value);
+		Ext.get('select_'+(myNr+1)+'_${uid}').on('change',${uid}Changed);
+		Ext.get('select_'+(myNr+1)+'_${uid}').on('dblclick',${uid}DblClick);
+	} catch (e) {
+		yconsole.log(e);
+	}
+}
+function ${uid}DblClick(ee,t,o) {
+	try {
+		if (t.selectedIndex<0) return;
+		var id  = t.value;		
+		var values = ${uid}Values[id];
+		if (!values) return;
+		if(values.leaf) {
+        	<#if selectAction??>
+        	${selectAction}
+        	</#if>			
+		}
+	} catch (e) {
+		yconsole.log(e);
+	}
+}
+
+Ext.onReady(function() {
+	Ext.get('select_0_${uid}').on('change',${uid}Changed);	
+	Ext.get('select_0_${uid}').on('dblclick',${uid}DblClick);	
+	
+	${uid}fillSelect(0,"");
+});
+</script>
+</div>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<script type="text/javascript">
+var aquaConfig = new Array();
+<#if editor??>
+aquaConfig["editor"] = "${editor}";
+</#if>
+aquaConfig["path"] = "${path}";
+var yconsole = function() {};
+yconsole.log = function(txt) {}
+
+</script>
+<#list list_res_js as data>
+	<script src="${data}" type="text/javascript"></script>
+</#list>
+<#list list_res_css as data>
+	<link rel="stylesheet" href="${data}" type="text/css" media="screen" charset="utf-8">
+</#list>
+<#list list_css as data>
+	<style type="text/css">
+	${data}
+	</style>
+</#list>
+<#list list_js as data>
+	<script type="text/javascript">
+	${data}
+	</script>
+</#list>
+</head>
+<body class="yui3-skin-sam  yui-skin-sam">
+<div id="doc3" class="yui-t2">
+    <div id="hd"><@process name="paint" list="header"/></div>
+    <div id="bd">
+        <div id="yui-main">
+<#if editor??>
+	        <div class="yui-b">
+<div id="admin_action" style="display:none"></div>
+		        <div id="admin_container">
+		        <@process name="editor"/>
+		        </div>
+	        </div>
+</#if>
+	        <div class="yui-b">
+                <div class="yui-g">
+<div id="dialog_pane">
+<@process name="paint" list="dialog"/>
+</div>
+                    <@process name="paint"/>
+	            </div>
+            </div>
+	    </div>
+    </div>
+</div>
+</body></html>

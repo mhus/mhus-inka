@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension-point id="wcomponent" name="WComponent Element" schema="schema/wcomponent.exsd"/>
+   <extension
+         name="Ui Application"
+         point="de.mhus.aqua.application">
+      <Application
+            class="de.mhus.aqua.mod.uiapp.UiApplication"
+            id="de.mhus.aqua.mod.uiapp.UiApplication">
+      </Application>
+   </extension>
+   <extension
+         point="de.mhus.aqua.res">
+      <Resource
+            class="de.mhus.aqua.mod.uiapp.UiAjaxRes"
+            id="de.mhus.aqua.mod.uiapp.UiAjaxRes">
+      </Resource>
+   </extension>
+   <extension
+         point="de.mhus.aqua.mod.uiapp.wcomponent">
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.wui.WLayoutLCR"
+            group="layout"
+            id="de.mhus.aqua.mod.uiapp.wui.WLayoutLCR"
+            title="Left Center Right">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.wui.WLayoutTopLR"
+            group="layout"
+            id="de.mhus.aqua.mod.uiapp.wui.WLayoutTopLR"
+            title="Top, Left Right">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.wui.WBreadcrumb"
+            id="de.mhus.aqua.mod.uiapp.wui.WBreadcrumb">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.wui.WConsole"
+            id="de.mhus.aqua.mod.uiapp.wui.WConsole">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.wui.WImage"
+            id="de.mhus.aqua.mod.uiapp.wui.WImage">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.wui.WImageSlideshow"
+            id="de.mhus.aqua.mod.uiapp.wui.WImageSlideshow">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.wui.WLogin"
+            id="de.mhus.aqua.mod.uiapp.wui.WLogin">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.wui.WNavigation"
+            id="de.mhus.aqua.mod.uiapp.wui.WNavigation">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.ContainerEditorBox"
+            id="de.mhus.aqua.mod.uiapp.ContainerEditorBox">
+      </WComponent>
+      <WComponent
+            acl="default"
+            class="de.mhus.aqua.mod.uiapp.tst.ContGaga"
+            config="&lt;c text=&apos;starter...&apos;&gt;&lt;element_text type=&apos;input&apos; title=&apos;text=Text&apos;/&gt;&lt;/c&gt;"
+            group="box"
+            id="de.mhus.aqua.mod.uiapp.tst.ContGaga"
+            title="Gaga">
+      </WComponent>
+   </extension>
+</plugin>

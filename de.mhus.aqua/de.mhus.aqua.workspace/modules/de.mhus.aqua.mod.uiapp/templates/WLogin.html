@@ -1,0 +1,12 @@
+<#if need_login>
+<form name="aqualogin"><input name='user'><input type="password"name='pw'></form><button onclick="javascript:aquaExecute('${login_action}' + '&mode=login&user=' + document.forms['aqualogin'].user.value);">Login</button>
+<#else>
+ <#if is_admin>
+  <#if is_admin_mode>
+   <button onclick="javascript:aquaExecute('${login_action}' + '&mode=off');">AOff</button>
+  <#else>
+   <button onclick="javascript:aquaExecute('${login_action}' + '&mode=on');">AOn</button>
+  </#if>
+ </#if>
+ <button onclick="javascript:aquaExecute('${login_action}' + '&mode=logout');">Logout</button>  
+</#if>

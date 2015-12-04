@@ -1,0 +1,110 @@
+<config
+	id='de.mhus.aqua.mod.uiapp'
+	class='de.mhus.aqua.mod.uiapp.Activator'
+>
+	<classpath>
+		<resource path='$root._path$/bin'/>
+		<resource path='$root._path$/src'/>
+	</classpath>
+	
+	<deploy>
+	<!--  strategy: 'overwrite' 'update' or 'once' -->
+		<content src='$root._path$/content/config' dest='config' strategy='overwrite'/>
+		<content src='$root._path$/content/main' dest='main' strategy='overwrite'/>
+		<content src='$root._path$/content/nls' dest='nls' strategy='overwrite'/>
+		<!-- content src='$root._path$/content/resources/ext-3.3.1.zip' dest='resources/extjs' strategy='once'/ -->
+		
+		<templates src='$root._path$/templates' dest='.' strategy='overwrite'/>
+	</deploy>
+	<localisation path="$root._contentdir$/nls">
+		
+	</localisation>
+	<resources>
+		<resource 
+			type="de.mhus.aqua.res.ZipRes"
+			path="$root._path$/content/resources/jquery_1.3.1.zip"
+			subpath="/jquery_1.3.1"
+			name="jquery"
+			version="1.0301"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.TplRes"
+			path="$root.id$/main"
+			name="main"
+			version="0.0"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.FileRes"
+			path="$root._contentdir$/main"
+			name="static"
+			version="1.0"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.ZipRes"
+			path="$root._path$/content/resources/yui3.zip"
+			subpath="/yui3/build"
+			name="yui"
+			version="3.03"
+		>
+			<map
+				default="/yui/yui-min.js"
+			/>
+		</resource>
+		<resource 
+			type="de.mhus.aqua.res.ZipRes"
+			path="$root._path$/content/resources/ext-3.3.1.zip"
+			subpath="/ext-3.3.1"
+			name="extjs"
+			version="3.0301"
+		>
+			<map
+				default="/ext-all.js"
+			/>
+		</resource>
+		<resource 
+			type="de.mhus.aqua.mod.uiapp.UiAjaxRes"
+			name="ajax"
+			version="0.0"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.ZipRes"
+			path="$root._path$/content/resources/famfamfam_silk_icons_v013.zip"
+			name="icons"
+			version="0.13"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.ZipRes"
+			path="$root._path$/content/resources/famfamfam_mini_icons.zip"
+			name="icons_small"
+			version="1"
+		/>
+		
+	</resources>
+	<cao>
+		<queries 
+		
+		/>
+	</cao>
+	
+	<page>
+		<element list="header" type="de.mhus.aqua.mod.uiapp.wui.WConsole" />
+		<element list="header" type="de.mhus.aqua.mod.uiapp.wui.WBreadcrumb" />
+		<element list="header" type="de.mhus.aqua.mod.uiapp.wui.WLogin" ajax="yes"/>
+		<element list="header" type="de.mhus.aqua.mod.uiapp.wui.WNavigation" />
+		
+		<element               include="layout" />
+		<element list="dialog" include="dialog" />
+		
+		<js resource="yui" />
+		<js resource="extjs" path="/adapter/ext/ext-base.js" />
+		<js resource="extjs" />
+		
+		<css resource="yui" path="/cssfonts/fonts-min.css"/>
+		<css resource="extjs" path="/resources/css/ext-all.css"/>
+		<css resource="yui" path="/cssgrids/grids.css"/>
+		
+		<css resource="main" path="/main.css"/>
+		<js resource="main" path="/main.js"/>
+		
+	</page>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="libs/freemaker/freemarker.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jackson/jackson-core-lgpl-1.7.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jackson/jackson-mapper-lgpl-1.7.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/mhus/mhu-lib/3.0.1-SNAPSHOT/mhu-lib-3.0.1-SNAPSHOT.jar" sourcepath="/Users/mikehummel/Documents/mhu/workspaces/mhu-lib-3/mhu-lib"/>
+	<classpathentry exported="true" kind="lib" path="libs/mysql/mysql-connector-java/5.1.14/mysql-connector-java-5.1.14.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,83 @@
+<config
+	id='de.mhus.aqua.mod.uiapp'
+	class='de.mhus.aqua.mod.uiapp.Activator'
+>
+	<classpath>
+		<resource path='$root._path$/bin'/>
+		<resource path='$root._path$/src'/>
+	</classpath>
+	
+	<deploy>
+	<!--  strategy: 'overwrite' 'update' or 'once' -->
+		<content src='$root._path$/content/config' dest='config' strategy='overwrite'/>
+		<content src='$root._path$/content/main' dest='main' strategy='overwrite'/>
+		<content src='$root._path$/content/nls' dest='nls' strategy='overwrite'/>
+		<templates src='$root._path$/templates' dest='.' strategy='overwrite'/>
+	</deploy>
+	<localisation path="$root._contentdir$/nls">
+		
+	</localisation>
+	<resources>
+		<resource 
+			type="de.mhus.aqua.res.FileRes"
+			path="web:resources/js/jquery_1.3.1"
+			name="jquery"
+			version="1.0301"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.TplRes"
+			path="$root.id$/main"
+			name="main"
+			version="0.0"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.FileRes"
+			path="$root._contentdir$/main"
+			name="static"
+			version="1.0"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.FileRes"
+			path="web:resources/js/yui3/build"
+			name="yui"
+			version="3.03"
+		>
+			<map
+				default="/yui/yui-min.js"
+			/>
+		</resource>
+		<resource 
+			type="de.mhus.aqua.res.FileRes"
+			path="web:resources/js/ext-3.3.1"
+			name="extjs"
+			version="3.0301"
+		>
+			<map
+				default="/ext-all.js"
+			/>
+		</resource>
+		<resource 
+			type="de.mhus.aqua.mod.uiapp.UiAjaxRes"
+			name="ajax"
+			version="0.0"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.FileRes"
+			path="web:resources/icons/famfamfam_silk_icons_v013/icons"
+			name="icons"
+			version="1"
+		/>
+		<resource 
+			type="de.mhus.aqua.res.FileRes"
+			path="web:resources/icons/famfamfam_mini_icons/icons"
+			name="icons_small"
+			version="1"
+		/>
+		
+	</resources>
+	<cao>
+		<queries 
+		
+		/>
+	</cao>
+</config>

@@ -1,0 +1,16 @@
+<#if editor??>
+<div id="console_pane"></div>
+<script type="text/javascript">
+<!--
+YUI({ filter: 'raw' }).use('console', function (Y) {
+ 
+    // Console has no required configuration
+    yconsole = new Y.Console();
+ 
+    yconsole.render('#console_pane');
+    yconsole.log('First entry');
+});
+
+//-->
+</script>
+</#if>
