@@ -1,0 +1,8 @@
+<config class="de.mhu.hair.sf.scripts.db.TestDb" listen="_ignore_" ignore_objects="1">
+  <panel>
+    <title title="Oracle Connect"/>
+    <input title="Oracle Connect String" name="OracleUrl" value="jdbc:oracle:thin:@localhost:1521:ORCL" />
+    <input title="User" name="OracleUser" value="pcd" />
+    <input title="Pass" name="OraclePass" value="pcd" />
+  </panel>
+</config>

@@ -1,0 +1,8 @@
+<config>
+  <select>
+  	<include pattern="select.*"/>
+  	<include pattern="cap.*"/>
+  	<include pattern="file.delete"/>
+  </select>
+
+</config>

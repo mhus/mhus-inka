@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 20.4-b02-402 (Apple Inc.)
+Bundle-ManifestVersion: 2
+Bundle-Name: Db
+Bundle-SymbolicName: de.mhus.hair.db;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.mhus.hair.db.Activator
+Require-Bundle: org.eclipse.core.runtime,de.mhus.cap.core;bundle-versi
+ on="0.0.1",de.mhus.cap.libs;bundle-version="0.0.1",org.eclipse.ui;bun
+ dle-version="3.6.2"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: .,libs/cao-db-0.0.1-SNAPSHOT.jar,libs/commons-codec-
+ 20041127.091804.jar,libs/hsqldb-2.2.8.jar,libs/jackson-core-lgpl-1.7.
+ 2.jar,libs/jackson-mapper-lgpl-1.7.2.jar,libs/junit-4.7.jar,libs/log4
+ j-1.2.14.jar,libs/mhu-lib-3.0.1-SNAPSHOT.jar,libs/mysql-connector-jav
+ a-5.1.18.jar,libs/opendmk_jdmkrt_jar-1.0-b01-ea.jar,libs/rrd4j-2.0.7.
+ jar,libs/xercesImpl-2.4.0.jar
+

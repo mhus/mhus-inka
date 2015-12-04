@@ -1,0 +1,4 @@
+#
+#Tue Dec 11 15:24:08 CET 2007
+publish_dd=EXEC,\:publish_dd,c
+Find\ Content\ Storage=[RAW],\:GET,v\:apply,c,$objid$,GET_PATH\nEXEC,v\:next,c,$q0$\nGET,v\:dump,c,$q0$

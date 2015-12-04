@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="de.mhus.cao.model.driver">
+      <CaoDriver
+            class="de.mhus.cao.model.fs.FsDriver"
+            driverIdentifier="fs"
+            title="Filesystem Driver">
+      </CaoDriver>
+      <CaoDriver
+            class="de.mhus.cao.model.xml.XmlDriver"
+            driverIdentifier="xml"
+            title="XML File Driver">
+      </CaoDriver>
+   </extension>
+
+</plugin>

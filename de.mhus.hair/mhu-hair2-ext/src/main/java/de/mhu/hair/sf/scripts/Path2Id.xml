@@ -1,0 +1,20 @@
+<config class="de.mhu.hair.sf.scripts.Path2Id" listen="_ignore_">
+  <panel>
+	  <file title="Export File" name="OutputCsv" value="D:/tmp_trans/out.csv">
+	  	<ext title="CSV File" ext="csv"/>
+	  </file>
+	  <select title="Type" name="Type">
+	  	<option value="File"/>
+	  	<option value="Selected"/>
+	  </select>
+	  <file title="Import File" name="InputCsv" value="D:/tmp_trans/in.csv">
+	  	<ext title="CSV File" ext="csv"/>
+	  </file>
+	  <input title="Where clause" name="Where" value=""/>
+	  <input title="Object Type" name="ObjectType" value="ebase_document (all)"/>
+	  <checkbox title="Input Has Header Line" name="InputHasHeader" value="1"/>
+	  <checkbox title="Multiple Outputs" name="Multi" value="1"/>
+	  <checkbox title="Output Versions" name="Versions" value="1"/>
+	  
+  </panel>
+</config>

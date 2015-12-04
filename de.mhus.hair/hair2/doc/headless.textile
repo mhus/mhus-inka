@@ -1,0 +1,85 @@
+h1. Headless mhu-hair
+
+mhu-hair documentation "http://www.mhus.de":http://www.mhus.de 
+
+{toc}
+
+h2. Scope
+
+It is also possible to use hair in a headless mode if you not try to use GUI only plugins. There are a set of text only plugins. Specially scripts can be executed in the text mode.
+
+h2. Requirements
+
+This document only describe the installation in a UNIX environment with bash. The environment have to contain the parameters DOCUMENTUM and DOCUMENTUM_SHARED pointing to the correct directories. See documentum administration guide for this.
+
+h2. The mhu-hair package
+
+To install hair in the console create a new directory, e.g. "hair" and download the zip install package. Unpack the package in the directory and create the softlink "bin" to the new directory.
+
+bc.. mkdir hair
+cd hair
+unzip xxx/mhu-hair2-2.x.x-bin.zip
+mv hair2 mhu-hair2-2.x.x-bin
+bc. ln -s mhu-hair2-2.x.x-bin bin
+
+h2. Central configuration
+
+Create a config.inc file and put important informations inside it. You can also define DOCUMENTUM and DOCUMENTUM_SHARED inside.
+
+bc.. # path to documentum, this is maybe already set
+export DOCUMENTUM=xxx
+export DOCUMENTUM_SHARED=$DOCUMENTUM/shared
+# path to the java executable
+export JAVA_BIN=$JAVA_HOME/bin/java
+# optimize java parameters
+export JAVA_OPTS=-Xmx128M -verbose:gc 
+# for D5.x only
+export JAVA_OPTS=$JAVA_OPTS -Dlibrary.path=$DOCUMENTUM_SHARED/dfc
+# path to the hair home directory
+export HAIR_HOME=xxx/hair
+export HAIR_JAR=$HAIR_HOME/bin/Hair.jar
+export HAIR_LIBS=$HAIR_HOME/bin/libs
+export HAIR_DFC=$HAIR_HOME/bin/dfc
+
+export HAIR=$JAVA_BIN $JAVA_OPTS -jar $HAIR_JAR -st cons -hair_home $HAIR_HOME/bin -hair_dfc $HAIR_DFC -dctm_lib_dir $DOCUMENTUM_SHARED/dfc
+
+# maybe add access informations
+bc. export DOCBASE=docbase.host.com,username,encrypted_password
+
+h2. Start mhu-hair
+
+Include the configuration and start hair via the created parameter:
+
+bc. . config.inc
+$HAIR <path to the plugins directory>
+
+h2. Headless plugin configuration
+
+In the plugins directory the work definition is set. Have a look into "plugins configuration":plugin_config.html . In the headless mode you need a headless login onto the docbase. At the end of execution you need a plugin that will stop hair it will not do by itself.
+
+The "login" configuration section can look like this:
+
+bc.. connect.xml:
+
+<root sort="001" >
+    <start class="de.mhu.hair.plugin.dctm.ApiDocbases"/>
+    <start class="de.mhu.hair.plugin.cons.ConnectPlugin">
+       <config>
+          <docbase   docbase="$docbase:0$" user="$docbase:1$" pass="$docbase:2$"/>
+          </config>
+       </start>
+bc. </root>
+
+Execute hair like this:
+
+bc. $HAIR <path to plugins> -docbase $DOCBASE
+
+The additional parameter from "config.inc" will be used to authenticate and connect to the docbase. Now the "exit" configuration:
+
+bc.. exit.xml:
+
+<root sort="zzz" >
+   <start class="de.mhu.hair.plugin.cons.ExitPlugin" />
+bc. </root>
+
+Have a look to the sort values. The connect plugin should be started as the first plugin. The exit is the last executed. If you define additional files with your functionality use sort values between "001" and "zzz", e.g. "2", "3", "10" ... . If you need a task befor the connect use the sort "0".

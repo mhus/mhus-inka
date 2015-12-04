@@ -1,0 +1,8 @@
+<config class="de.mhu.hair.sf.scripts.Publish" listen="">
+  <panel>
+	  <checkbox title="Full Refresh" name="FullRefresh" value="0"/>
+	  <checkbox title="Recreate property Schema" name="RecreatePropertySchema" value="0"/>
+	  <input title="Trace Level" name="TraceLevel" value="0"/>
+	  <checkbox title="Test" name="Test" value="0"/>
+  </panel>
+</config>

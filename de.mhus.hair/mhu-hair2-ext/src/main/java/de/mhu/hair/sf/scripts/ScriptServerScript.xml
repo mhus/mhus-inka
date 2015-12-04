@@ -1,0 +1,8 @@
+<config class="de.mhu.hair.sf.scripts.ScriptServerScript" listen="_ignore_">
+  <panel>
+	  <input title="Port" name="Port" value="1234"/>
+	  <input title="Temp File" name="TmpFile" value="server_ids.dat"/>
+	  <input title="Select Query" name="Select" value=""/>
+	  <input title="Package Size" name="PackageSize" value="60"/>
+  </panel>
+</config>

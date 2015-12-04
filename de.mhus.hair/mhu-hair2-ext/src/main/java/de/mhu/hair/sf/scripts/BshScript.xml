@@ -1,0 +1,7 @@
+<config class="de.mhu.hair.sf.scripts.BshScript" listen="">
+  <panel>
+	  <input title="Path Initial" name="Initial" value="initial.bsh"/>
+	  <input title="Path Targets" name="targets" value="targets.bsh"/>
+	  <input title="Path Destroy" name="Destroy" value="destroy.bsh"/>
+  </panel>
+</config>

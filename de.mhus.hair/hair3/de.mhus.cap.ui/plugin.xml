@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+      <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="org.eclipse.ui"
+            class="de.mhus.cap.ui.browsertree.BrowserTreeView"
+            id="de.mhus.cap.ui.browsertree_View"
+            name="Browser Tree"
+            restorable="true">
+      </view>
+      <view
+            class="de.mhus.cap.ui.rightsview.RightsView"
+            icon="icons/key.png"
+            id="de.mhus.cap.ui.rightsview"
+            name="Rights View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="de.mhus.cap.ui.oleditor.ObjectListEditor"
+            extensions="capol"
+            icon="icons/folder_go.png"
+            id="de.mhus.cap.ui.oleditor.OLEditor"
+            name="ObjectList Editor">
+      </editor>
+      <editor
+            class="de.mhus.cap.ui.attreditor.AttributeEditor"
+            extensions="capal"
+            icon="icons/tag_blue.png"
+            id="de.mhus.cap.ui.attreditor"
+            name="Attribute Editor">
+      </editor>
+      <editor
+            class="de.mhus.cap.ui.qeditor.QueryEditor"
+            default="false"
+            icon="icons/cog.png"
+            id="de.mhus.cap.ui.qeditor"
+            name="Query">
+      </editor>
+      <editor
+            class="de.mhus.cap.ui.tableeditor.TableEditor"
+            default="false"
+            icon="icons/table.png"
+            id="de.mhus.cap.ui.tableeditor"
+            name="Table Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.mhus.cap.ui.action.CaoCmdHandler"
+            commandId="de.mhus.cap.ui.action.caocmdhandler">
+      </handler>
+      <handler
+            class="de.mhus.cap.ui.connections.AddConnectionHandler"
+            commandId="de.mhus.cap.ui.add_connection">
+      </handler>
+      <handler
+            class="de.mhus.cap.ui.connections.RemoveConnectionHandler"
+            commandId="de.mhus.cap.ui.remove_connection">
+      </handler>
+      <handler
+            class="de.mhus.cap.ui.connections.RenameConnectionHandler"
+            commandId="de.mhus.cap.ui.rename_connection">
+      </handler>
+      <handler
+            class="de.mhus.cap.ui.qeditor.OpenQueryEditorHandler"
+            commandId="de.mhus.cap.ui.qeditor.open">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="de.mhus.cap.ui.action.caocmdhandler"
+            name="CaoCommand">
+         <commandParameter
+               id="de.mhus.cap.ui.action.caocmdhandler.action"
+               name="action"
+               optional="false">
+         </commandParameter>
+      </command>
+      <command
+            id="de.mhus.cap.ui.add_connection"
+            name="Add Connection">
+         <commandParameter
+               id="config"
+               name="config"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            id="de.mhus.cap.ui.remove_connection"
+            name="Remove Connection">
+      </command>
+      <command
+            id="de.mhus.cap.ui.rename_connection"
+            name="Rename Connection">
+      </command>
+      <command
+            id="de.mhus.cap.ui.qeditor.open"
+            name="Open Query Editor">
+         <commandParameter
+               id="query"
+               name="query"
+               optional="true">
+         </commandParameter>
+      </command>
+   </extension>
+   <extension
+         point="de.mhus.cap.core.image_provider">
+      <client
+            class="de.mhus.cap.ui.imageprovider.FileExtensionImageProvider"
+            name="de.mhus.cap.ui.file_extension">
+      </client>
+   </extension>
+</plugin>

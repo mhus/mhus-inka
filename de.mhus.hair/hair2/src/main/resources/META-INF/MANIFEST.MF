@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Build-Time: ${build.time}
+Main-Class: de.mhu.hair.main.Main
+
+Name: build
+version: ${build.version}
+artifactId: ${build.artifactId}
+
+Name: hair
+config: de/mhu/hair/definitions.xml

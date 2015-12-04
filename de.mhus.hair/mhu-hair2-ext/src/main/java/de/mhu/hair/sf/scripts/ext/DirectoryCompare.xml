@@ -1,0 +1,10 @@
+<config class="de.mhu.hair.sf.scripts.ext.DirectoryCompare" listen="_ignore_" ignore_objects="1">
+  <panel>
+	  <file title="Directory left" name="LeftDir" value=""/>
+	  <file title="Directory Right" name="RightDir" value=""/>
+  	
+      <checkbox title="Check Timestamp" name="CheckTimestamp" value="0"/>
+   	  <checkbox title="Check Size" name="CheckSize" value="0"/>
+  	
+  </panel>
+</config>

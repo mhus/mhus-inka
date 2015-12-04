@@ -1,0 +1,8 @@
+<default>
+
+	<header width="450" name="object_name" title="Name" isfile="1" imageprovider="de.mhus.hair.dctm.image_provider"/>
+	<header width="100" name="language_code" title="Lang" isfile="0"/>
+	<header width="100" name="r_modify_date" title="Modified" isfile="0"/>
+	
+
+</default>

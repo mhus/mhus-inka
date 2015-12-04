@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="de.mhus.cao.model.driver">
+      <CaoDriver
+            class="de.mhus.hair.sling.SlingDriver"
+            driverIdentifier="sling"
+            title="Sling Driver">
+      </CaoDriver>
+      <CaoDriver
+            class="de.mhus.hair.cq5.Cq5Driver"
+            driverIdentifier="cq5"
+            title="CQ5 Driver">
+      </CaoDriver>
+   </extension>
+   <extension
+         point="de.mhus.hair.jack.createnode">
+      <worker
+            application_class="de.mhus.hair.sling.SlingApplication"
+            class="de.mhus.hair.sling.NewSlingFolder"
+            driver_class="de.mhus.hair.sling.SlingDriver"
+            title="Sling: Folder">
+      </worker>
+   </extension>
+
+</plugin>

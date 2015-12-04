@@ -1,0 +1,46 @@
+<config name="Hair">
+
+  <resource name="res"  class="de.mhu.lib.resources.ClasspathResourceProvider"/>
+  <resource name="hair" class="de.mhu.res.img.HairResourceProvider"/>
+
+          <usage>
+                    <module name="login">
+                              <attribute name="login_auto" value="Docbase name"/>
+                    </module>
+                    <module name="loader">
+                              <attribute name="st" value="Select starter configuration, e.g. gui, cons, offline" default="menu"/>
+                              <attribute name="hair_plugins" value="Directory of the hair plugins" default="plugins/"/>
+                              <attribute name="hair_config" value="Location of a hair config xml" multiple="1" default="Config files from jar files"/>
+                              <attribute name="hair_dfc" value="Location of the dfc libraries"/>
+                              <attribute name="hair_test_mode" value="if set hair will load the configuration and exit"/>
+                              <attribute name="hair_libs" value="List of lib directories to load" default="load libs from the libs and plugins directory" multiple="1"/>
+                              <attribute name="hair_jar" value="List of extra libs to load" multiple="1"/>
+                              
+                    </module>
+                    
+          </usage>
+
+  <start sort="0" name="gui"  class="de.mhu.hair.main.DctmGui" />
+  <start sort="0" name="cons" class="de.mhu.hair.main.DctmConsole" />
+  <start sort="0" name="offline" class="de.mhu.hair.main.OfflineGui" />
+
+  <action>
+            <action id="cancel_check_out" class="de.mhu.hair.tools.actions.CancelCheckOut"/>
+            <action id="check_out" class="de.mhu.hair.tools.actions.CheckOut"/>
+            <action id="create_object" class="de.mhu.hair.tools.actions.CreateObject"/>
+            <action id="create_folder" class="de.mhu.hair.tools.actions.CreateFolder"/>
+            <action id="create_cabinet" class="de.mhu.hair.tools.actions.CreateCabinet"/>
+            <action id="delete" class="de.mhu.hair.tools.actions.Delete"/>
+            <action id="edit_content" class="de.mhu.hair.tools.actions.EditContent">
+                      <config pos="*"></config>
+            </action>
+            <action id="export_file" class="de.mhu.hair.tools.actions.ExportFile"/>
+            <action id="import_file" class="de.mhu.hair.tools.actions.ImportFile"/>
+            <action id="view_content" class="de.mhu.hair.tools.actions.ViewContent">
+                      <config pos="*"></config>
+            </action>
+            <action id="publish_all" class="de.mhu.hair.tools.actions.PublishAction"/>
+            <action id="publish_single" class="de.mhu.hair.tools.actions.PublishObject"/>  
+  </action>
+  
+</config>

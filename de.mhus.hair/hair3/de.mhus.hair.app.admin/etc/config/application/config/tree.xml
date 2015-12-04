@@ -1,0 +1,7 @@
+<config>
+	<rootnode title='Local Directory' service='fs' url='path=/Users/mikehummel/tmp' />
+	<rootnode title='EMC Documentum' service='dctm' url='docbase=frapeb00&amp;user=U181326adm' />
+	<rootnode title='Java Content Repository' service='jack' url='uri=http://localhost:4502/crx/server&amp;user=admin&amp;password=admin' />
+	<rootnode title='Sling Server' service='sling' url='uri=http://localhost:4502/crx/server&amp;user=admin&amp;password=admin' />
+	
+</config>

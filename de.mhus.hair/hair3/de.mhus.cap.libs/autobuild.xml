@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="LIBS" default="main" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+	
+	<property file="autobuild.properties" />
+	
+	<path id="maven-ant-tasks.classpath" path="../de.mhus.cap.libs/antlibs/maven-ant-tasks-2.1.3.jar" />
+	<typedef resource="org/apache/maven/artifact/ant/antlib.xml"
+	           uri="antlib:org.apache.maven.artifact.ant"
+	           classpathref="maven-ant-tasks.classpath" />
+	
+	<path id="xmltask.classpath" path="../de.mhus.cap.libs/antlibs/xmltask.jar" />
+	<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpathref="xmltask.classpath"/>
+	
+	<!-- The Main Task -->
+    <target name="main">
+    	<mkdir dir="libs"/>
+        <antcall target="getMavenLibs"/>
+    	<antcall target="updateConfigurations"/>
+    	<eclipse.refreshLocal resource="${PROJECT}"/>
+    	<!--  <eclipse.incrementalBuild project="MyProject" kind="incremental"/> -->
+    </target>
+	
+	<!-- Update MANIFEST.MF, build.properties and .classpath file to configure the new jar files -->
+
+	<target name="updateConfigurations">
+		<!-- create a property containing all .jar files, prefix lib/, and seperated with a space -->
+		  <pathconvert property="libs.project" pathsep=",">
+		    <mapper>
+		      <chainedmapper>
+		 
+		        <!-- remove absolute path -->
+		        <flattenmapper />
+		 
+		        <!-- add lib/ prefix -->
+		        <globmapper from="*" to="libs/*" />
+		      </chainedmapper>
+		    </mapper>
+		 
+		    <path>
+		 
+		      <!-- lib.home contains all jar files, in several subdirectories -->
+		      <fileset dir="libs">
+		        <include name="**/*.jar" />
+		      </fileset>
+		    </path>
+		  </pathconvert>
+		
+		<manifest file="META-INF/MANIFEST.MF" mode="update">
+			<attribute name="Bundle-ClassPath" value=".,${libs.project}" />
+		</manifest>
+		
+		<propertyfile file="build.properties">
+		      <entry key="bin.includes" type="string" value="META-INF/,.,${libs.project}" />
+	    </propertyfile>
+		
+		
+		
+		  <pathconvert property="libs.project.xml" pathsep="">
+		    <mapper>
+		      <chainedmapper>
+		 
+		        <!-- remove absolute path -->
+		        <flattenmapper />
+		 
+		        <!-- add lib/ prefix -->
+		        <globmapper from="*" to="&lt;classpathentry kind=&quot;lib&quot; path=&quot;libs/*&quot;/&gt;" />
+		      </chainedmapper>
+		    </mapper>
+		 
+		    <path>
+		 
+		      <!-- lib.home contains all jar files, in several subdirectories -->
+		      <fileset dir="libs">
+		        <include name="**/*.jar" />
+		      </fileset>
+		    </path>
+		  </pathconvert>
+
+		<xmltask outputter="simple" source=".classpath" dest=".classpath">
+			<remove path="classpath/classpathentry[@kind='lib' and starts-with(@path,'libs/')]" />
+			<insert path="classpath" xml="${libs.project.xml}"/>
+		</xmltask>
+		
+	</target>
+	
+	<!-- Copy the dependencies into the libs directory -->
+
+    <target name="getMavenLibs">
+    	
+    	<artifact:dependencies filesetId="dependency.fileset" useScope="runtime">
+    	  <!-- Your dependency definitions go here -->
+    		<dependency groupId="de.mhus.lib" artifactId="mhu-lib" version="${MHU_LIB_VERSION}"/>
+    		<dependency groupId="de.mhus.lib" artifactId="mhu-lib-dev" version="${MHU_LIB_DEV_VERSION}"/>
+    		<dependency groupId="de.mhus.lib" artifactId="mhu-lib-swt" version="${MHU_LIB_SWT_VERSION}">
+	    		<exclusion groupId="org.eclipse.ui" artifactId="forms" />
+    		</dependency>
+    		
+    	</artifact:dependencies>
+    	<copy todir="libs">
+    	  <fileset refid="dependency.fileset" >
+    	  </fileset>
+    	  <!-- This mapper strips off all leading directory information -->
+    	  <mapper type="flatten" />
+    	</copy>
+    </target>
+
+</project>

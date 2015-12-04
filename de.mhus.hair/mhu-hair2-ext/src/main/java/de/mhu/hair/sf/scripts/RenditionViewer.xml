@@ -1,0 +1,8 @@
+<config class="de.mhu.hair.sf.scripts.RenditionViewer" listen="_documents.only_">
+  <panel>
+	  <input title="Export Dir" name="ExportDir" value="D:/tmp_trans/wv/data"/>
+	  <file title="Change map" name="MapProperties" value="D:/tmp_trans/wv/content_map.properties"/>
+	  <file title="Header" name="Header" value="D:/tmp_trans/wv/header.html"/>
+	  <file title="Footer" name="Footer" value="D:/tmp_trans/wv/footer.html"/>
+  </panel>
+</config>

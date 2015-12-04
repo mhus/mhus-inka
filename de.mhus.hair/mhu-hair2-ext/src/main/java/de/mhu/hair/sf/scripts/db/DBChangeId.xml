@@ -1,0 +1,6 @@
+<config class="de.mhu.hair.sf.scripts.db.DBChangeId" listen="_single_">
+  <panel>
+    <input title="Old Object Id" name="OldId"/>
+    <input title="New Object Id" name="NewId"/>
+  </panel>
+</config>

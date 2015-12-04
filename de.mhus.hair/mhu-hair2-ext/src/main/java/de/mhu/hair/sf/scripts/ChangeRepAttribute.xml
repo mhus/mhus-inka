@@ -1,0 +1,12 @@
+<config class="de.mhu.hair.sf.scripts.ChangeRepAttribute" listen="">
+  <panel>
+	  <input title="Attribute Name" name="Name" value=""/>
+	  <input title="Attribute Value" name="Value" value=""/>
+	  <select title="Mode" name="Mode">
+	    <option value="truncate"/>
+	    <option value="append"/>
+	    <option value="set"/>
+	    <option value="remove"/>
+	  </select>
+  </panel>
+</config>

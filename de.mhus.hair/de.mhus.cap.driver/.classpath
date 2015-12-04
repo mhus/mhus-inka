@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<classpath>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"></classpathentry>
+  <classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"></classpathentry>
+  <classpathentry kind="src" path="src"></classpathentry>
+  <classpathentry kind="output" path="bin"></classpathentry>
+  <classpathentry kind="lib" path="libs/cao-fs-0.0.1-SNAPSHOT.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/cao-xml-0.0.1-SNAPSHOT.jar"></classpathentry>
+</classpath>
+

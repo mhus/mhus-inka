@@ -1,0 +1,11 @@
+<root>
+    
+    <start class="de.mhu.hair.plugin.ui.OutputPlugin">
+        <config icon="hair:/out.gif"/>
+    </start>
+    <start class="de.mhu.hair.plugin.dctm.ApiDocbases"/>
+    <start class="de.mhu.hair.plugin.ui.ConnectPlugin">
+    	<config icon="hair:/hair.png"/>
+    </start>
+    
+</root>

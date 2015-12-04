@@ -1,0 +1,7 @@
+<default>
+
+	<header width="450" name="**name" title="Name" isfile="1" imageprovider="de.mhus.hair.jack.image_provider"/>
+	<header width="100" name="jcr:primaryType" title="Primary Type" isfile="0"/>
+	<header width="100" name="jcr:created" title="Created" isfile="0"/>
+
+</default>

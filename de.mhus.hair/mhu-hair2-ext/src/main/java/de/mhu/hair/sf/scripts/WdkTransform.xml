@@ -1,0 +1,11 @@
+<config class="de.mhu.hair.sf.scripts.WdkTransform" listen="_documents.only_">
+  <panel>
+    <checkbox title="Test Only" name="TestMode" value="0"/>  
+    <input title="Renditions" name="Renditions" value="" description="Renditions, separated by Comma or empty string for all known renditions"/>
+    <checkbox title="Change a_special_app" name="SetSpecialApp" value="1"/>
+    <checkbox title="Overwrite existing Formats" name="IsOverwrite" value="1"/>  
+    <input title="Render Included content also" name="RenderDeep" value=""/>
+    <checkbox title="Render Only Yellow" name="RenderOnlyYellow" value="0"/>
+    <input title="Behovior Config File" name="ConfigFile" value=""/>
+  </panel>
+</config>

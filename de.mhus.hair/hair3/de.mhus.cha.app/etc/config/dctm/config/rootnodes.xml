@@ -1,0 +1,3 @@
+<config>
+	<node type='tree' title='Web-Ablagen' name='content' imageprovider='de.mhus.hair.dctm.image_provider'/>
+</config>

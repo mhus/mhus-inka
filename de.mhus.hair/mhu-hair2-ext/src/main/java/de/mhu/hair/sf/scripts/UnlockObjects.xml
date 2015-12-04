@@ -1,0 +1,5 @@
+<config class="de.mhu.hair.sf.scripts.UnlockObjects" listen="">
+  <panel>
+    <checkbox title="Test Only" name="TestMode" value="1"/>
+  </panel>
+</config>

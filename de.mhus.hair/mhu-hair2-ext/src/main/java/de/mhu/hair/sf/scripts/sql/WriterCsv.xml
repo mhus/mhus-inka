@@ -1,0 +1,12 @@
+<config class="de.mhu.hair.sf.scripts.sql.WriterCsv" listen="_ignore_" ignore_objects="1">
+  <panel>
+	  <input title="Driver Class" name="Driver" value="oracle.jdbc.driver.OracleDriver"/>
+	  <input title="JDBC Url" name="JdbcUrl" value=""/>
+	  <input title="User" name="User" value=""/>
+	  <password title="Password" name="Pass" value=""/>	  
+	  <file title="Export File" name="CsvFile" value=""/>
+	  <input title="SQL Query" name="Query" value=""/>
+	  <checkbox title="Append File" name="Append" value="0"/>
+	  <checkbox title="Print Header" name="Header" value="1"/>
+  </panel>
+</config>

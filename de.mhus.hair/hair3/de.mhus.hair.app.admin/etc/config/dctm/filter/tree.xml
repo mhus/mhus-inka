@@ -1,0 +1,6 @@
+<config>
+  <select>
+  	<include pattern="select.*"/>
+  </select>
+
+</config>

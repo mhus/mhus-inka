@@ -1,0 +1,18 @@
+<root sort="1" >
+    
+    <!-- jar mode="absolut" file="D:\DLH\workspace\DCTM_5.3_TBO\dist\dborIfc.jar"/>
+	<jar mode="absolut" file="D:\DLH\workspace\DCTM_5.3_TBO\dist\dborTbo.jar"/ -->
+	
+    <start class="de.mhu.hair.plugin.ui.FramePlugin">
+        <config icon="hair:/hair.png" title="[$docbase$]" location="100x100" size="800x600" persistent="c_main" >
+        	<desktop/>
+            <!-- split orientation="v">
+            	<desktop/>
+            	<position pos="log" pref="200x200"/>
+            </split -->
+        </config>
+    </start>
+
+    <start include="../main.inc"/>
+        
+</root>

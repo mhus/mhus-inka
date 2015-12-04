@@ -1,0 +1,34 @@
+h1. Extended Configuration Options
+
+mhu-hair documentation "http://www.mhus.de":http://www.mhus.de 
+
+{toc}
+
+h2. Hair login can remember the password
+
+If it's okay fro you to be insecure you can tell hair to remember passwords for different docbases. Edit the file plugins/hair.dctm_gui/hair_connect.ini and insert the following new line:
+
+bc. unsecure=1
+
+Restart hair. It will now remember the secrets. Remove this file to remove all stored passwords.
+
+h2. Profiles for different docbases
+
+You can create a profile for each of your docbases. In the profile you can store some basic things like a background color. In this way you can easily recognice wich docbase you are editing. I prefer to mark productive docbases wit ha red label.
+
+For this go into the directory plugins/hair.dctm_gui/dock end create a file with the following pattern:
+
+bc. profile_<docbase name>@<host name>_<port - 1489>.ini
+
+For example:
+
+bc. profile_dev01@10.10.10.20_1489.ini
+
+Insert the following content:
+
+bc.. # Background color
+frame.bgcolor=#00dd00
+# Name of the main window (prefix)
+frame.title=INT
+# Place where to store default configurations from the scripts
+bc. fs.store.dir=fsp_base-dev02

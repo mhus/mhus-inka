@@ -1,0 +1,33 @@
+h1. Start Properties
+
+hair_classpath_properties
+ Path to the file classpath.properties, including the filename.
+ 
+hair_test_mode
+ Do not load plugins, only test the configuration
+
+hair_config <config>
+ A list of xml configurations. By default the config is searched in the jar files. If this parameter is given the xml files for the configuration are loaded only from this list.
+ 
+hair_classpath_config
+ Starts the Classpath editor, not hair.
+
+hair_home
+ Path to the hair home directory, usually includes plugins, libs and log directory.
+
+development
+ If the parameter is set, the hair_home is set to <local dir>/dist (for development only)
+ 
+hair_dfc
+ Path to the dfc DIRECTORY, including the dfc.properties file
+
+dctm_lib_dir
+ Dir of the lib directory, by default in <hair_home>/libs
+
+hair_jar
+ Location of the hair.jar file, by default in <hair_home>/libs/hair.jar
+
+hair_plugins
+ Location of the hair plugin config files (not effects the jar files).
+
+

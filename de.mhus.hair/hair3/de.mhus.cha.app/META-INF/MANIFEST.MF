@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cha Manager
+Bundle-SymbolicName: de.mhus.cha.app;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.mhus.cha.app.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.mhus.cap.core;bundle-version="0.0.1",
+ de.mhus.cap.libs;bundle-version="0.0.1"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,24 @@
+<config class="de.mhu.hair.sf.scripts.WriteStatistics" listen="_ignore_" ignore_objects="1">
+  <panel>
+  	<input title="dql" name="Dql" value="select '0_All' as a,count(*) as c from ebase_task_queue where worker=0 union
+select '0_OK' as a,count(*) as c from ebase_task_queue where status=2 and worker=0 union
+select '0_ERR' as a,count(*) as c from ebase_task_queue where status=3 and worker=0 union
+
+select '1_All' as a,count(*) as c from ebase_task_queue where worker=1 union
+select '1_OK' as a,count(*) as c from ebase_task_queue where status=2 and worker=1 union
+select '1_ERR' as a,count(*) as c from ebase_task_queue where status=3 and worker=2 union
+
+select '2_All' as a,count(*) as c from ebase_task_queue where worker=2 union
+select '2_OK' as a,count(*) as c from ebase_task_queue where status=2 and worker=2 union
+select '2_ERR' as a,count(*) as c from ebase_task_queue where status=3 and worker=2 union
+
+select '3_All' as a,count(*) as c from ebase_task_queue where worker=3 union
+select '3_OK' as a,count(*) as c from ebase_task_queue where status=2 and worker=3 union
+select '3_ERR' as a,count(*) as c from ebase_task_queue where status=3 and worker=3"/>
+  	<input title="Interval in sec." name="Interval" value="300"/>
+  	<input title="Titles" name="Titles" value="0_All,0_OK,0_ERR,1_All,1_OK,1_ERR,2_All,2_OK,2_ERR,3_All,3_OK,3_ERR"/>
+  	<checkbox title="Append" name="Append" value="0"/>
+  	<file title="Output" name="File" value="D:/tmp_trans/statistics.csv"/>
+  	<input title="Maximum rows or 0" name="Max" value="0"/>
+  </panel>
+</config>

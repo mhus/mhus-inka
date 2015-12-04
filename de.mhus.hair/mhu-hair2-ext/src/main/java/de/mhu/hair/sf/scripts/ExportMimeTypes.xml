@@ -1,0 +1,5 @@
+<config class="de.mhu.hair.sf.scripts.ExportMimeTypes" listen="_ignore_" ignore_objects="1">
+  <panel>
+	  <file title="Export File" name="ExportFile" value="D:/tmp_trans/mime.properties" mode="file"/>
+  </panel>
+</config>

@@ -1,0 +1,5 @@
+<config class="de.mhu.hair.sf.scripts.SetVersionString" listen="_documents.only_">
+  <panel>
+	  <input title="Versions" name="Versions" value="CURRENT,WIP,Staging,Approved,Active"/>
+  </panel>
+</config>

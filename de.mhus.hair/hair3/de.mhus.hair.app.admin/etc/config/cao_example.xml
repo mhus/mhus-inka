@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<application no_more_secrets="true">
+<filter>
+<new>
+<include pattern="create.*"/>
+</new>
+<select>
+<include pattern="select.*"/>
+<include pattern="cap.*"/>
+<include pattern="file.delete"/>
+</select>
+<extras>
+<include pattern="extras.*"/>
+</extras>
+</filter>
+<definitions>
+<connection service="fs" title="Local Directory" url="path=/"/>
+<connection service="dctm" title="EMC Documentum" url="docbase=dev00&amp;user="/>
+<connection service="jack" title="Java Content Repository" url="uri=http://localhost:4502/crx/server&amp;user=admin&amp;password=admin"/>
+<connection service="sling" title="Sling Server" url="uri=http://localhost:8080/server&amp;user=admin&amp;password=admin"/>
+<connection service="cq5" title="CQ5 Server" url="uri=http://localhost:4502/crx/server&amp;user=admin&amp;password=admin"/>
+<connection service="db" title="DB Driver" url="uri="/>
+</definitions>
+<connections>
+<connection id="234e7e9d-ca20-4286-bd6a-e93791d355c8" service="fs" title="Local Directory" url="path=/"/>
+<connection id="3724991f-1ef2-43c2-8461-c0ac564a17c4" service="sling" title="Sling WebDav" url="workspace=&amp;password=:1nqzva&amp;user=admin&amp;uri=http://localhost:8080/server"/>
+<connection id="95afe154-abb3-44ab-afba-17505302c3a6" service="cq5" title="CQ5 Author CRX" url="workspace=&amp;password=:1nqzva&amp;user=admin&amp;uri=http://localhost:4502/crx/server"/>
+<connection id="d5f2f99a-fa84-4767-88c1-2c0084a60f99" service="jack" title="Jack WebDav" url="workspace=&amp;password=:1nqzva&amp;user=admin&amp;uri=http://localhost:8080/server"/>
+<connection id="7491232e-895f-4793-a637-4cb6a1eb292a" service="jdbc" title="JDBC Driver" url="uri="/>
+</connections>
+</application>
+<jdbc>
+<content>
+<tree imageprovider="de.mhus.hair3.core.file_extension"/>
+<list_headers>
+<header imageprovider="de.mhus.hair3.core.file_extension" name="name" title="Name" width="150"/>
+<header name="path" title="Path" width="300"/>
+</list_headers>
+<filter>
+<new>
+<include pattern="create.*"/>
+</new>
+<select>
+<include pattern="select.*"/>
+<include pattern="cap.*"/>
+<include pattern="file.delete"/>
+</select>
+<extras>
+<include pattern="extras.*"/>
+</extras>
+</filter>
+</content>
+</jdbc>
+<fs>
+<content>
+<tree imageprovider="de.mhus.hair3.core.file_extension"/>
+<list_headers>
+<header imageprovider="de.mhus.hair3.core.file_extension" name="name" title="Name" width="150"/>
+<header name="path" title="Path" width="300"/>
+</list_headers>
+<filter>
+<new>
+<include pattern="create.*"/>
+</new>
+<select>
+<include pattern="select.*"/>
+<include pattern="cap.*"/>
+<include pattern="file.delete"/>
+</select>
+<extras>
+<include pattern="extras.*"/>
+</extras>
+</filter>
+</content>
+</fs>
+<dctm>
+<ql name="dql" title="DQL"/>
+<content>
+<tree imageprovider="de.mhus.hair.dctm.image_provider"/>
+<list_headers>
+<header imageprovider="de.mhus.hair.dctm.image_provider" isfile="1" name="object_name" title="Name" width="450"/>
+<header isfile="0" name="language_code" title="Lang" width="100"/>
+<header isfile="0" name="r_modify_date" title="Modified" width="100"/>
+</list_headers>
+<filter>
+<new>
+<include pattern="create.*"/>
+</new>
+<select>
+<include pattern="select.*"/>
+<include pattern="cap.*"/>
+<include pattern="file.delete"/>
+</select>
+<extras>
+<include pattern="extras.*"/>
+</extras>
+</filter>
+</content>
+</dctm>
+<jack>
+<content>
+<tree imageprovider="de.mhus.hair.jack.image_provider"/>
+<list_headers>
+<header imageprovider="de.mhus.hair.jack.image_provider" isfile="1" name="**name" title="Name" width="450"/>
+<header isfile="0" name="jcr:primaryType" title="Primary Type" width="100"/>
+<header isfile="0" name="jcr:created" title="Created" width="100"/>
+</list_headers>
+<filter>
+<new>
+<include pattern="create.*"/>
+</new>
+<select>
+<include pattern="select.*"/>
+<include pattern="cap.*"/>
+<include pattern="file.delete"/>
+</select>
+<open>
+<include patter="openwithselect"/>
+</open>
+<extras>
+<include pattern="extras.*"/>
+</extras>
+</filter>
+</content>
+</jack>
+<sling>
+<ql name="xpath" title="xPath"/>
+<ql name="sql" title="JCR-SQL2"/>
+<content>
+<tree imageprovider="de.mhus.hair.jack.image_provider"/>
+<list_headers>
+<header imageprovider="de.mhus.hair.jack.image_provider" isfile="1" name="**name" title="Name" width="450"/>
+<header isfile="0" name="jcr:primaryType" title="Primary Type" width="100"/>
+<header isfile="0" name="jcr:created" title="Created" width="100"/>
+</list_headers>
+<filter>
+<new>
+<include pattern="create.*"/>
+</new>
+<select>
+<include pattern="select.*"/>
+<include pattern="cap.*"/>
+<include pattern="file.delete"/>
+</select>
+<open>
+<include pattern="openwithselect"/>
+</open>
+<extras>
+<include pattern="extras.*"/>
+</extras>
+</filter>
+</content>
+</sling>
+<cq5>
+<ql name="xpath" title="xpath"/>
+<content>
+<tree imageprovider="de.mhus.hair.jack.image_provider"/>
+<list_headers>
+<header imageprovider="de.mhus.hair.jack.image_provider" isfile="1" name="**name" title="Name" width="450"/>
+<header isfile="0" name="jcr:primaryType" title="Primary Type" width="100"/>
+<header isfile="0" name="jcr:created" title="Created" width="100"/>
+</list_headers>
+<filter>
+<new>
+<include pattern="create.*"/>
+</new>
+<select>
+<include pattern="select.*"/>
+<include pattern="cap.*"/>
+<include pattern="file.delete"/>
+</select>
+<open>
+<include pattern="openwithselect"/>
+</open>
+<extras>
+<include pattern="extras.*"/>
+</extras>
+</filter>
+</content>
+</cq5>
+<none/>
+<db>
+<content>
+<tree imageprovider="de.mhus.hair.jack.image_provider"/>
+<list_headers>
+<header imageprovider="de.mhus.hair.jack.image_provider" isfile="1" name="**name" title="Name" width="450"/>
+<header isfile="0" name="jcr:primaryType" title="Primary Type" width="100"/>
+<header isfile="0" name="jcr:created" title="Created" width="100"/>
+</list_headers>
+<filter>
+<new>
+<include pattern="create.*"/>
+</new>
+<select>
+<include pattern="select.*"/>
+<include pattern="cap.*"/>
+<include pattern="file.delete"/>
+</select>
+<open>
+<include pattern="openwithselect"/>
+</open>
+<extras>
+<include pattern="extras.*"/>
+</extras>
+</filter>
+</content>
+</db>
+</config>

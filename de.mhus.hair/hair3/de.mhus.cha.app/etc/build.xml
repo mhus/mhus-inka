@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Cha Core Deploy Helper" default="main">
+
+    <target name="main">
+    </target>
+<!-- not correct !!!	
+	<target name="delete_builds">
+    	<delete dir="/Users/mikehummel/tmp/Hair3win" includes="**/**" verbose="true"/>	
+    	<delete dir="/Users/mikehummel/tmp/Hair3" includes="**/**" verbose="true"/>	
+	</target>
+	
+    <target name="deploy_configs">
+    	<delete dir="/Users/mikehummel/tmp/Hair3win/cap_config" includes="**/**" verbose="true"/>
+    	<copy todir="/Users/mikehummel/tmp/Hair3win">
+    		<fileset dir="../config" includes="**/**"/>
+		</copy>
+    	<delete dir="/Users/mikehummel/tmp/Hair3/cap_config" includes="**/**" verbose="true"/>
+    	<copy todir="/Users/mikehummel/tmp/Hair3">
+    		<fileset dir="../config" includes="**/**"/>
+		</copy>
+    </target>
+-->
+</project>

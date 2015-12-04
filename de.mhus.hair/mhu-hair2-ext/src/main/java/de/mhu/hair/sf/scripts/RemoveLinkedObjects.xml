@@ -1,0 +1,7 @@
+<config class="de.mhu.hair.sf.scripts.RemoveLinkedObjects" listen="">
+  <panel>
+    <checkbox title="Test Only" name="TestMode" value="1"/>
+    <checkbox title="Mass Mode" name="MassMode" value="0"/>
+    <checkbox title="Unlock Mode" name="UnlockMode" value="1"/>
+  </panel>
+</config>

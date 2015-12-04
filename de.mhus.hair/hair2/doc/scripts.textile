@@ -1,0 +1,211 @@
+h1. Script Framework
+
+mhu-hair documentation "http://www.mhus.de":http://www.mhus.de 
+
+{toc}
+
+h2. Concept
+
+The idea is to allow a fast way to create script functionality for documentum tasks. To create a script
+first you have to create a xml definition of script. In the definition you insert description, input fields,
+the implemented class etc.
+
+The implemented class do not need to collect affected objects or make care about the connection.
+
+Another goal is that you can use the same code in the GUI (for example to test the functionality) in the console to make long working processes or in a distributed environment.
+
+h2. The definition file
+
+The definition file is a xml file with the main tag "config".
+
+Example:
+
+bc. <config class="path.to.class" listen="_ignore_" ignore_objects="1">
+
+Attributes:
+
+* class: Full qualified path to the class.
+* listen: For the GUI, what objects will the script prefer. Values: _folders.only_, _documents.only_, _single_, _ignore_
+* ignore_objects: For the GUI, if set to "1" the object selection tab is not shown
+* warning: For the GUI, if the attribute is set, the warning will be confirmed before execution.
+
+Into the config tag could be a "description" tag. The tag includes the description of the script.
+
+Example:
+
+bc. <config class="path.to.class" listen="_ignore_" ignore_objects="1">
+ <description>
+   Some words about the script license etc.
+   Some more text...
+ </description>
+</config>
+
+Next there must be a "panel" tag. This tag describes the input fields.
+
+First example:
+
+bc. <config class="path.to.class" listen="_ignore_" ignore_objects="1">
+  <panel>
+    <input title="Some Input" name="input" value="predefined text"/>
+  </panel>
+</config>
+
+h2. The implementation
+
+The implementation must implement the ScriptIfc. This interface define the three methods initialize(), execute() and destroy(). First of all
+setter methods for the inputs are called and the script will be filled with user input (see below). Then the initialize() method is called
+to let the script initialize and check (maybe connect to additional systems, databases etc.) the inputs.
+
+Then the execute() method is called with the affected objects. The Objects already full loaded from DFC and you can work on in. if the
+amount of affected objects is to large the execute method will be called more times again with the next package of objects. If no object is affected the function will never been called.
+
+After all the destroy() method will be called to cleanup resources. The destroy() method is not called if a error occured.
+
+Example:
+
+
+bc.. public class Test1 implements ScriptIfc {
+
+	public void destroy(PluginNode node, DMConnection con, ALogger logger) {
+		logger.out.println(">>> Destroy");
+	}
+
+	public void execute(PluginNode node, DMConnection con,
+			IDfPersistentObject[] targets, ALogger logger) throws Exception {
+		logger.out.println(">>> Execute" + targets.length);		
+	}
+
+	public void initialize(PluginNode node, DMConnection con, ALogger logger)
+			throws Exception {
+		logger.out.println(">>> Initialize");
+	}
+
+	public void setInput(String in) {
+		logger.out.println("--- Set Input: " + in );
+	}
+	
+}
+
+Output:
+
+--- Set Input: predefined text
+>>> Initialize
+>>> Execute 500
+>>> Execute 500
+>>> Execute 274
+bc. >>> Destroy
+
+h2. Input fields
+
+User inputs will be defined in the definition file under the tag "panel". If the script starts the input will be given to the script via a setter and the name of the input field. The attributes differ depending of the input values. For example the input
+
+bc. <input name="someName"/>
+
+will call the setter "setSomeName(String in)". The syntax and naming of the fields is adapted to the html form fields.
+
+h3. input
+
+The field "input" allows to input a simple string value. It calls the setter with one String attribute.
+
+bc. <input title="Input something" name="input" value="default value"/>
+setInput(String in)
+
+h3. checkbox
+
+The "checkbox" allows to input a boolean value. In the attribute "value" the letters "0" or "1" are allowed to define the default.
+
+bc. <checkbox title="Selected or not selected" name="checkbox" value="1"/>
+setCheckbox(boolean in)
+
+h3. password
+
+Has the same behavior like "input" but do not show the written value.
+
+bc. <password title="Input something" name="input" value="default value"/>
+setInput(String in)
+
+h3. textarea
+
+Has the same behavior like "input" but shows a big text area.
+
+bc. <textarea title="Input something" name="input" value="default value
+with two lines"/>
+setInput(String in)
+
+h3. select
+
+The "select" input allows to select a value from a predefined list. The list is included with "option" tags inside the select tag. It will
+call a setter with the selected position (int) and value (String).
+
+bc. <select title="Selection element" name="selection" value="1">
+            <option value="Red"/>
+            <option value="Green"/>
+            <option value="Blue"/>
+</select>
+setSelection(int nr, String value)
+
+h3. file
+
+The "file" input allows to select a file from the file system. It calls the setter with a String input with the file path. To configure the
+the input it is allowed to set the modi to "file" (default) or "dir". With mode="dir" the selection of directories is enabled. You can
+specify file filters with extra "ext" (extension) tags inside the file tag. You can group more extensions by separating the extensions by comma.
+
+bc. <file title="File with format selection" name="fileFormat" value="/home/xyz/file">
+	<ext title="Text Files" ext="txt,text,rtf"/>
+	<ext title="Image Files" ext="gif,png,tif,bmp"/>
+</file>
+setFileFormat(String in)
+
+h3. files
+
+This input allows to select a list of files. The behavior is like the "file" input but it will call the setter with a string array as attribute (String[]). To
+define more the one default values use the pipe as separator.
+
+bc. <files title="Multiple Files Selection" name="files" values="/tmp/file1|/tmp/file2">
+	<ext title="Text Files" ext="txt,text,rtf"/>    
+</files>
+setFiles(String[] in)
+
+h2. Scripts and actions
+
+After developing the script you want to use the script in the GUI to execute or test it. For this you have to create a action for it and then plug the action into the main menu, toolbar or popup menu.
+
+First create the action, create a action entry in your hair configuration like this:
+
+bc.. <action id="sf_your_unique_action_id_string" class="de.mhu.hair.sf.ExecuteScriptAction">
+	<config script="res:/canonical/path/to/your/xmlfile.xml" pos="*" title="Title of the script"
+		size="70%x70%" closable="1" close.operation="dispose"/>
+bc. </action>
+
+Now you can add the menu entry for example:
+
+bc.  <menu action="sf_your_unique_action_id_string" location="Scripts/Dev"/>
+
+h2. Start scripts in a headless environment
+
+You can start the scripts in a headless environment direct on a server also. Follow the documentation for that task in "headless":headless.html.
+
+Add an additional configuration:
+
+bc.. action.xml:
+
+<root sort="010" >
+        <start class="de.mhu.hair.sf.ScriptConsole">
+          <config
+            script="res:/canonical/path/to/xml/foo.xml"
+			dql="select r_object_id from ..."
+            cachefile="cache.ids"
+          >
+            <parameters>
+                <parameter name="<name>" value="<value>"/>
+            </parameters>
+          </config>
+        </start>
+bc. </root>
+
+With the "dql" attribute you define a query to select the affected objects. The "r_object_id"s will be collected and stored in the "cachefile" before the script is executed with the objects from the docbase. In this way a concurrent modification is not possible. Be aware that not tow scripts use the same "cachefile" in the same time.
+
+In the "parameters" section you have to fill the parameters of the script with values differ from the default values. Create a "parameter" tag for every attribute in the script configuration (if needed) and use exact the same name than in the attribute configuration. Remember that you can import program parameters with the "$<name>$" notation.
+
+h2. Start scripts as distributed applications
+

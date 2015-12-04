@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Build-Time: ${build.time}
+
+Name: hair
+config: de/mhu/hair2/ext/definitions.xml

@@ -1,0 +1,40 @@
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <baseDirectory>hair2</baseDirectory>
+  <fileSets>
+    <fileSet>
+    <directory>etc/env</directory>
+    <outputDirectory></outputDirectory>
+      <includes>
+        <include>**/**</include>
+      </includes>
+    </fileSet>
+    <!--  fileSet>
+      <directory>target</directory>
+      <outputDirectory></outputDirectory>
+      <includes>
+        <include>mhu-hair2*.jar</include>
+      </includes>
+    </fileSet -->
+  </fileSets>
+  <files>
+	  <file>
+	  	<source>target/${artifact.artifactId}-${artifact.version}.jar</source>
+	  	<outputDirectory></outputDirectory>
+	  	<destName>hair.jar</destName>
+	  </file>
+  </files>
+  
+  <dependencySets>
+    <dependencySet>
+		  <outputDirectory>libs</outputDirectory>
+		  <excludes>
+		  	<exclude>emc.dctm:*</exclude>
+		  </excludes>
+    </dependencySet>
+  </dependencySets>
+  
+</assembly>

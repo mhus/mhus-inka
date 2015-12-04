@@ -1,0 +1,10 @@
+<root sort="1" >
+
+    <start class="de.mhu.hair.plugin.ui.FramePlugin">
+        <config icon="hair:/hair.png" title="[$docbase$]" location="100x100" size="800x600" persistent="c_main" >
+        </config>
+    </start>
+    
+    <start include="../main.inc"/>
+
+</root>

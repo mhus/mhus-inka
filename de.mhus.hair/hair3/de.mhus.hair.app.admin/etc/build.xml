@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Hair3 Core Deploy Helper" default="main">
+
+    <target name="main">
+    </target>
+	
+	<target name="delete_builds">
+    	<delete dir="/Users/mikehummel/tmp/Hair3" includes="**/**" verbose="true"/>	
+	</target>
+	
+    <target name="deploy_configs">
+    	<delete dir="/Users/mikehummel/tmp/Hair3/config" includes="**/**" verbose="true"/>
+    	<copy todir="/Users/mikehummel/tmp/Hair3">
+    		<fileset dir="../etc" includes="config/**"/>
+		</copy>
+    </target>
+
+</project>

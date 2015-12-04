@@ -1,0 +1,214 @@
+<config name="Hair">
+
+  <action>
+            
+            <action id="bsh_console" class="de.mhu.hair.tools.actions.BshConsole">
+                      <config pos="*" size="70%x70%" title="BSH" closable="1" close.operation="dispose"
+                                >
+                                <eval code="import com.documentum.fc.common.*;"/>
+                                <eval code="query(in) { q = new DfQuery(); q.setDQL( in ); return q.execute( session, DfQuery.READ_QUERY ); }" />
+                                <eval code="path( in ) { return de.mhu.hair.tools.ObjectTool.getPath( in ); }" />
+                                <eval code="printpath( in ) { print( path( in ) ); }" />
+                      </config>
+            </action>
+
+
+            <action id="oxygen_adapter_server" class="de.mhu.hair.tools.actions.OxygenAdapterServer">
+                      <config pos="*" title="oXygen Adapter" closable="1" persistent="c_oxygen" close.operation="dispose"/>
+            </action>
+            <action id="oxygen_adapter_static" class="de.mhu.hair.tools.actions.OxygenAdapterStatic"/>
+
+            <action id="ebase_path2id" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/Path2Id.xml" pos="*" 
+                                title="Path 2 Id"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            <action id="sf_write_statistics" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/WriteStatistics.xml" pos="*" 
+                                title="Write Statistics"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_rendition_viewer" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/RenditionViewer.xml" pos="*"
+                                title="Export Renditions"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_unlink" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/RemoveLinkedObjects.xml" pos="*" title="Remove Linked Objects"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            <action id="sf_unlock" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/UnlockObjects.xml" pos="*" title="Unlock Objects"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            <action id="sf_link_from_folder" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/CreateLinksFromFolder.xml" pos="*" title="Create Links From Folder"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            <action id="sf_wdk_transform" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/WdkTransform.xml" pos="*" title="WDK Transform"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+
+
+            <action id="sf_export_mimes" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/ExportMimeTypes.xml" 
+                                pos="*" title="Export Mime Types"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            <action id="sf_db_change_id" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/db/DBChangeId.xml" pos="*" title="Change Id"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_set_version_string" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/SetVersionString.xml" pos="*" title="Set Version String"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_script_server_script" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/ScriptServerScript.xml" pos="*" title="Script Server Script"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_execute_dql" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/ExecuteDql.xml" pos="*" 
+                                title="Execute DQL"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_change_attribute" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/ChangeAttribute.xml" pos="*" 
+                                title="Change Attribute"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            <action id="sf_change_rep_attribute" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/ChangeRepAttribute.xml" pos="*" 
+                                title="Change Rep Attribute"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_performance_dql" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/PerformanceDql.xml" pos="*" 
+                                title="Performance Dql"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_change_object_type" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/ChangeObjectType.xml" pos="*" 
+                                title="Change Object Type"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_delete_objects" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/DeleteObjects.xml" pos="*" 
+                                title="Delete Objects"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_xml_parser" class="de.mhu.hair.sf.ExecuteScriptAction" popup="1">
+                      <config script="res:/de/mhu/hair/sf/scripts/XmlParser.xml" pos="*" 
+                                title="Xml Parser"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="port_forward" class="de.mhu.hair.tools.actions.PortForwardAction">
+                      <config pos="*" title="Port Forward"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="wp_assistance" class="de.mhu.hair.tools.actions.WebPublisherAssistance">
+                      <config pos="*" title="WPA"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sql_write" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/sql/WriterCsv.xml" pos="*" title="Sql Write"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <!-- action id="java_html_builder" class="de.mhu.hair.tools.actions.JavaHtmlBuilder">
+                      <config pos="*" title="Java Html Builder"
+                      size="70%x70%" closable="1" close.operation="dispose"/>
+                      </action -->
+            
+            <action id="unclose_collection" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/UncloseCollection.xml" pos="*" title="Unclose Collection"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_dir_comp" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/ext/DirectoryCompare.xml" pos="*" title="Compare Directories"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+            <action id="sf_bsh" class="de.mhu.hair.sf.ExecuteScriptAction">
+                      <config script="res:/de/mhu/hair/sf/scripts/BshScript.xml" pos="*" title="BSH Script"
+                                size="70%x70%" closable="1" close.operation="dispose"/>
+            </action>
+            
+  </action>
+          
+          <action_menu>
+          
+                    <menu title="Bsh Console" 		action="bsh_console" 		location="Extra"/>
+                    <menu title="Dbor Info" 		action="dbor_print_info" 	location="Extra"/>
+                    <menu title="Server" 			action="oxygen_adapter_server" location="Extra/oXygen"/>
+                    <menu title="Refresh Cash (Static)" action="oxygen_adapter_static" location="Extra/oXygen"/>
+                    <menu title="Port Forwarder" 		action="port_forward" 	location="Extra"/>
+                    <menu title="Sql Write CSV" 		action="sql_write" 		location="Extra"/>
+                    <!-- menu title="Html Editor" 		action="java_html_builder" location="Extra"/ -->
+                    <menu title="Unclose Collection" 	action="unclose_collection" location="Extra"/>
+                    <menu title="Xml Parser" 			action="sf_xml_parser" 	location="Extra"/>
+
+                    <menu title="Remove Linked Objects" action="sf_unlink" location="Scripts"/>
+                    <menu title="Unlock Objects" action="sf_unlock" location="Scripts"/>
+                    <menu title="Create Links From Folder" action="sf_link_from_folder" location="Scripts"/>
+                    <menu title="WDK Transform" action="sf_wdk_transform" location="Scripts"/>
+                    <menu title="Export Renditions" action="sf_rendition_viewer" location="Scripts"/>
+                    <menu title="Create ACLs from AliasSet" action="sf_create_acls_from_alias_set" location="Scripts"/>
+                    <menu title="Path 2 Id" action="ebase_path2id" location="Scripts"/>
+                    <menu title="Write Statistics" action="sf_write_statistics" location="Scripts"/>
+
+                    <menu title="Export Mime Types" action="sf_export_mimes" location="Scripts/Export"/>
+
+                    <menu title="Change Id" action="sf_db_change_id" location="Scripts/DB"/>
+                    
+                    <menu action="sf_set_version_string" location="Scripts"/>
+                    <menu action="sf_script_server_script" location="Scripts"/>
+                    <menu title="Execute DQL" action="sf_execute_dql" location="Scripts"/>
+                    <menu action="sf_change_attribute" location="Scripts"/>
+                    <menu action="sf_change_rep_attribute" location="Scripts"/>
+                    <menu action="sf_change_object_type" location="Scripts"/>
+                    <menu title="Performance Dql" action="sf_performance_dql" location="Scripts"/>
+                    <menu action="sf_delete_objects" location="Scripts"/>
+                    <menu action="sf_dir_comp" location="Scripts"/>
+          
+                    <menu location="Scripts" title="Render" action="sf_wdk_transform"/>
+                    <menu location="Scripts" title="Renditions" action="sf_rendition_viewer"/>
+                    <menu location="Scripts" title="WPA" action="wp_assistance"/>                    
+                    
+                    <menu location="Scripts" action="sf_bsh"/>                    
+                    
+          </action_menu>
+  
+          <!-- action_button>
+                    <button title="Render" action="sf_wdk_transform"/>
+                    <button title="Renditions" action="sf_rendition_viewer"/>
+                    <button title="WPA" action="wp_assistance"/>                    
+          </action_button -->
+          
+          <!-- action id="browser" class="de.mhu.hair.tools.actions.Browser">
+                    <config pos="*" title="Browser" closable="1" close.operation="dispose"
+                    >
+                    </config>
+                    </action -->
+          <!-- menu title="Browser" action="browser" location="Extra/browser"/ -->
+
+          <action_popup>
+                    
+          </action_popup>
+
+</config>

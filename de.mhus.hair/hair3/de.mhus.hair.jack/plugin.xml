@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="de.mhus.hair.jack.createnode" name="Create JCR Node" schema="schema/de.mhus.hair.jack.createnode.exsd"/>
+   <extension
+         point="de.mhus.cao.model.driver">
+      <CaoDriver
+            class="de.mhus.hair.jack.JackDriver"
+            driverIdentifier="jack"
+            title="Jackrabbit Driver">
+      </CaoDriver>
+   </extension>
+   <extension
+         point="de.mhus.cap.core.image_provider">
+      <client
+            class="de.mhus.hair.jack.ui.JackImageProvider"
+            name="de.mhus.hair.jack.image_provider">
+      </client>
+   </extension>
+   <extension
+         point="de.mhus.hair.jack.createnode">
+      <worker
+            class="de.mhus.hair.jack.action.NewNtFolder"
+            title="nt: Folder">
+      </worker>
+      <worker
+            class="de.mhus.hair.jack.action.NewNtFile"
+            title="nt: File">
+      </worker>
+   </extension>
+
+</plugin>

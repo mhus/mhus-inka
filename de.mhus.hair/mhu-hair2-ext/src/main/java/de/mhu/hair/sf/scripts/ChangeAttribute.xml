@@ -1,0 +1,6 @@
+<config class="de.mhu.hair.sf.scripts.ChangeAttribute" listen="">
+  <panel>
+	  <input title="Attribute Name" name="Name" value=""/>
+	  <input title="Attribute Value" name="Value" value=""/>
+  </panel>
+</config>

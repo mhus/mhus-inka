@@ -1,0 +1,85 @@
+<root sort="1" >
+   
+    <start class="de.mhu.hair.plugin.ui.IdwFrame">
+        <config icon="hair:/hair.png" title="[$docbase$]" location="100x100" size="800x600" persistent="c_main" >
+           
+        </config>
+    </start>
+
+    <start class="de.mhu.hair.plugin.ui.OutputPlugin">
+        <config icon="hair:/out.gif" 
+        		pos ="log" 
+        		title="I/O" 
+        		closable="0" 
+        		persistent="c_io"
+        		/>
+    </start>
+
+    <start class="de.mhu.hair.plugin.log4j.Plugin">
+    	<config properties="log4j.properties"/>
+    </start>
+
+    <start class="de.mhu.hair.plugin.ui.MenuStructurePlugin">
+      <config>
+        <menu location="File" title="Object"/>
+        <menu location="Edit" title="Bearbeiten"/>        
+        <menu location="View" title="Ansicht"/>
+        <menu location="Extra" title="Extras"/>
+        <menu location="Scripts" title="Scripte"/>
+        <!--  includeconfigs name="menu_structure" / -->
+
+        <special type="window_manager" location="Windows"/>
+        
+      </config>
+    </start>
+
+    <start class="de.mhu.hair.tools.ActionsPlugin">
+        <config>
+
+            <action id="bsh_console" class="de.mhu.hair.tools.actions.BshConsole">
+                <config pos="*" title="BSH" closable="1" close.operation="dispose"
+                 >
+                	<eval code="import com.documentum.fc.common.*;"/>
+                	<eval code="query(in) { q = new DfQuery(); q.setDQL( in ); return q.execute( session, DfQuery.READ_QUERY ); }" />
+                	<eval code="path( in ) { return de.mhu.hair.tools.ObjectTool.getPath( in ); }" />
+					<eval code="printpath( in ) { print( path( in ) ); }" />
+                </config>
+            </action>
+
+            <action id="port_forward" class="de.mhu.hair.tools.actions.PortForwardAction">
+            	<config pos="*" title="Port Forward"
+            	        size="700x500" closable="1" close.operation="dispose"/>
+            </action>
+
+            <action id="sql_write" class="de.mhu.hair.sf.ExecuteScriptAction">
+            	<config script="res:/de/mhu/hair/sf/scripts/sql/WriterCsv.xml" pos="*" title="Sql Write"
+            	        size="700x500" closable="1" close.operation="dispose"/>
+            </action>
+
+            <action id="bsh_console" class="de.mhu.hair.tools.actions.BshConsole">
+                <config pos="*" size="70%x70%" title="BSH" closable="1" close.operation="dispose"
+                    >
+                    <!-- eval code="import com.documentum.fc.common.*;"/>
+                    <eval code="query(in) { q = new DfQuery(); q.setDQL( in ); return q.execute( session, DfQuery.READ_QUERY ); }" />
+                    <eval code="path( in ) { return de.mhu.hair.tools.ObjectTool.getPath( in ); }" />
+                    <eval code="printpath( in ) { print( path( in ) ); }" / -->
+                </config>
+            </action>
+
+            <menu title="Port Forwarder" 		action="port_forward" 	location="Extra"/>
+            <menu title="Sql Write CSV" 		action="sql_write" 		location="Extra"/>
+            <menu title="BSH" 		action="bsh_console" 		location="Extra"/>
+        </config>
+	</start>
+	
+    <start class="de.mhu.hair.plugin.ui.DummyPlugin">
+        <config pos="top" title="Test" text="Das ist ein test" persistent="test1"/>
+    </start>
+	
+    <start class="de.mhu.hair.plugin.ui.DummyPlugin">
+        <config pos="top" title="Test2" text="Das ist ein test 2" persistent="test2"/>
+    </start>
+    
+	<start class="de.mhu.hair.plugin.ui.SysStatusPlugin"/>
+	
+</root>

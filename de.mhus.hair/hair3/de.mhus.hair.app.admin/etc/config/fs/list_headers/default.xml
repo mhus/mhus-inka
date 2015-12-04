@@ -1,0 +1,6 @@
+<default>
+
+	<header width="150" name="name" title="Name" imageprovider="de.mhus.hair3.core.file_extension" />
+	<header width="300" name="path" title="Path" />
+
+</default>

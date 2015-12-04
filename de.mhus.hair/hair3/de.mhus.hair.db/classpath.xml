@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<classpath>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"></classpathentry>
+  <classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"></classpathentry>
+  <classpathentry kind="src" path="src"></classpathentry>
+  <classpathentry kind="lib" path="/de.mhus.cap.libs/libs/mhu-lib-3.1.1-SNAPSHOT.jar"></classpathentry>
+  <classpathentry kind="output" path="bin"></classpathentry>
+  <classpathentry kind="lib" path="libs/cao-db-0.0.1-SNAPSHOT.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/commons-codec-20041127.091804.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/hsqldb-2.2.8.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/jackson-core-lgpl-1.7.2.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/jackson-mapper-lgpl-1.7.2.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/junit-4.7.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/log4j-1.2.14.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/mhu-lib-3.0.1-SNAPSHOT.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/mysql-connector-java-5.1.18.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/opendmk_jdmkrt_jar-1.0-b01-ea.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/rrd4j-2.0.7.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/xercesImpl-2.4.0.jar"></classpathentry>
+</classpath>
+

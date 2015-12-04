@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sling
+Bundle-SymbolicName: de.mhus.hair.sling;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.mhus.hair.sling.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ de.mhus.cap.core;bundle-version="0.0.1",
+ de.mhus.cap.libs;bundle-version="0.0.1",
+ de.mhus.hair.jack;bundle-version="1.0.0",
+ org.apache.sling;bundle-version="1.0.0",
+ com.meterware.httpunit;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: de.mhus.hair.sling

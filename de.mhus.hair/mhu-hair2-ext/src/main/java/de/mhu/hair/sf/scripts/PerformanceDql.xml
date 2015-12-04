@@ -1,0 +1,14 @@
+<config class="de.mhu.hair.sf.scripts.PerformanceDql" listen="_ignore_" ignore_objects="1">
+  <panel>
+	  <input title="Dql Abfrage" name="Dql" value=""/>
+	  <input title="Interval (int)" name="Interval" value="1000"/>
+	  <select title="Method" name="Method">
+	  	<option value="READ_QUERY"/>
+	  	<option value="QUERY"/>
+	  	<option value="CACHE_QUERY"/>
+	  	<option value="EXEC_QUERY"/>
+	  	<option value="EXECREAD_QUERY"/>
+	  	<option value="APPLY"/>
+	  </select>
+  </panel>
+</config>

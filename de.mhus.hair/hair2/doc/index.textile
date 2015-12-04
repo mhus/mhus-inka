@@ -1,0 +1,10 @@
+h1. mhu-hair Help Index
+
+mhu-hair documentation "http://www.mhus.de":http://www.mhus.de 
+
+* "Extended Configuration Options":extended_config.html
+* "Configure run.ini":run_ini.html
+* "Plugin Configuration":plugin_config.html
+* "Headless hair":headless.html
+* "Script and Script Development":scripts.html
+

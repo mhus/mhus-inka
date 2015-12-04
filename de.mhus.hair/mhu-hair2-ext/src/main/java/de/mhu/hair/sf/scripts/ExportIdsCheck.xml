@@ -1,0 +1,10 @@
+<config class="de.mhu.hair.sf.scripts.ExportIdsCheck" listen="_ignore_" ignore_objects="1">
+  <panel>
+	<file title="ids.dat File:" name="File">
+	  <ext title="DAT files" ext="dat"/>
+	</file>
+	<checkbox title="Validate Object" name="Validate" value="0"/>
+	<checkbox title="Write Correct File" name="Write" value="0"/>
+	
+  </panel>
+</config>

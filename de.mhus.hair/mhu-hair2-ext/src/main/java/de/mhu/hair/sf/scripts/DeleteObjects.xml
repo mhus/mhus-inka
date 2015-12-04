@@ -1,0 +1,8 @@
+<config class="de.mhu.hair.sf.scripts.DeleteObjects" listen="">
+  <panel>
+    <checkbox title="Recursive" name="Recursive" value="0"/>
+    <checkbox title="Delete Versions" name="Versions" value="0"/>
+    <checkbox title="Unlink if possible" name="Unlink" value="1"/>
+    <checkbox title="Unlock Mode" name="UnlockMode" value="1"/>
+  </panel>
+</config>

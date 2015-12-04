@@ -1,0 +1,16 @@
+<config class="de.mhu.hair.sf.scripts.ChangeObjectType" listen="">
+  <panel>
+    <input title="Super Type" name="SuperType" value="ebase_document"/>
+    <input title="New Type" name="NewType" value="ebase_"/>
+    <checkbox title="Use Transaction" name="Transaction" value="0"/>
+    <title title="Handle checkout"/>
+    <checkbox title="Cancel checkout" name="Cancelcheckout" value="0"/>
+    <title title="Handle immutable"/>
+    <checkbox title="Remove immutable" name="Unimmutable" value="0"/>
+    <checkbox title="Recover immutable" name="Recoverimmutable" value="0"/>
+    <title title="Handle Deleted"/>
+    <checkbox title="Recover deleted" name="Recover" value="0"/>
+    <checkbox title="Delete recovered" name="Delete" value="0"/>
+    
+  </panel>
+</config>

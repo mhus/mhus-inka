@@ -1,0 +1,4 @@
+
+Parameter:
+
+-Dm_config_file=/Users/mikehummel/Documents/mhu/workspaces/hair3/de.mhus.hair.app.admin/etc/config

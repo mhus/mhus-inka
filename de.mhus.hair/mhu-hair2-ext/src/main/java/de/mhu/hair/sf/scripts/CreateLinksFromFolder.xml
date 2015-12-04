@@ -1,0 +1,10 @@
+<config class="de.mhu.hair.sf.scripts.CreateLinksFromFolder" listen="">
+  <panel>
+    <checkbox title="Test Only" name="TestMode" value="1"/>
+    <checkbox title="Overwrite" name="Overwrite" value="1"/>
+    <input title="Source Folder" name="SourceFolder" value="/WCM_COMMON"/>
+    <input title="Destination Folder" name="DestFolder" value="WCM_COMMON"/>
+    <input title="Exclude" name="IgnoreList" value="folder.properties;CB Expiry Notification%"/>
+    
+  </panel>
+</config>

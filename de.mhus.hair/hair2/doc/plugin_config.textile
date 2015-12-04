@@ -1,0 +1,73 @@
+h1. Plugin Configuration
+
+mhu-hair documentation "http://www.mhus.de":http://www.mhus.de 
+
+{toc}
+
+h2. Concept
+
+Hair is compleatly plugin driven, even the GUI is a plugin with a defined interface. The loading of the plugins is defined in a set of xml files that will be found in a directory. The mechanism first load all xml files, loads and sorts the entries in a sorted list end then starts processing the instructions. In general there are only the "plugin" tags that are important to the mechanism. This sections will be loaded, loaded from includes and plugin jar files.
+
+After loading all plugins they will be enabled. A plugin has the ability to load the next plugin configuration and extend in this way the current configuration of the system.
+
+h2. Structure of the configuration
+
+For the GUI (parameter -st gui) the first plugin definition is hardcoded in the folder plugins/hair.dctm_gui. If you choose the offline system (-st offline) the folder hair.offline_gui is implemented.
+
+The first configuration in "dctm_gui" will only load the GUI connect-plugin and the output plugin. After login the connect-plugin starts loading the configuration from the inner directory "dock". This configuration loads the GUI Interface for docking windows and includes the plugins/hair.dctm_gui/main.inc file for more plugins. The reason is historic. In last versions it was possible to choose the GUI interface between MDI, SDI and docking windows but there was the decision to support docking UI only any more. If you want to try the other systems use the programm parameter -hair_ui <ui> to change the default UI (e.g. hair -st gui -hair_ui mdi).
+
+The file main.inc will be loaded from all UI configurations. The main goal of this file is that it is configurable from the user. if you don't like a plugin feel free to comment the plugin section and restart hair.
+
+Additional configurations will come with the jar bundles placed in the plugins directory. Every jar file can contain one or more additional configurations. For this the configurations define entry points which where loaded from the main configuration. A special tag define the position (thats important because of the order of creation) where the bundle configurations will be included.
+
+There are entry points for plugins, actions, menus etc.
+
+h2. Plugin configuration ordering
+
+To order the plugins every config file can define a sort="?" attribute in the first element of the xml file. This value will be left filed with characters ("0") and ordered by a ASCII algorithm. The plugin sections will be ordered like defined. Every section also gets a increasing id, combined with the sort id of the file.
+
+h2. Including external files
+
+To include external files use the following tag
+
+bc. <start include="../main.inc"/>
+
+This will include the xml structure expect the root element. You can use this only in the first level in the root tag.
+
+h2. Include bundle configurations
+
+To include sections from bundles use the following tag:
+
+bc. <includeconfigs name="menu_structure" />
+
+In this case the processor will include content inside the tag "menu_structure" of each bundle, if defined, on this place. You can set this tag on every place in the configuration expect of the first level of the configuration, there use
+
+bc. <start includeconfigs="plugins" />
+
+for example.
+
+h2. Define a plugin
+
+to define a plugin you have to use the "start" tag. This tells the processor to start the defined plugin.
+
+bc.. <start class="de.mhu.hair.plugin.log4j.Plugin">
+	<config properties="log4j.properties"/>
+bc. </start>
+
+This code will start the logging plugin with a configuration. The values of the "config" tag is given to the plugin and depends on the plugin implementation. Not every plugin needs a configuration.
+
+h2. Parameters in the configuration file
+
+It is possible to use parameters in the tag attributes. The parameters are set from the program parameters and from inside the code. The connect-plugin for example define the parameters "docbase" and "docbase_user".
+
+To access the parameters use the following notation "$<attribute name>$", e.g. "$docbase$". If you want to insert a dollar use the notation "$$" this will result in a single "$".
+
+A special character in the attribute notation is the ":". After it you can define a index. For that the processor will split the parameter using the comma "," character and return only the defined index.
+
+Compleate notation:
+
+bc. $<name>[:<index>]$
+
+Example:
+
+bc. title="some text [$docbase$] end"

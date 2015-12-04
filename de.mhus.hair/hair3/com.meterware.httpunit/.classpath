@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="libs/httpunit.jar" sourcepath="/Users/mikehummel/.m2/repository/httpunit/httpunit/1.7/httpunit-1.7-sources.jar"/>
+	<classpathentry kind="lib" path="libs/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="libs/js-1.6R5.jar" sourcepath="/Users/mikehummel/.m2/repository/rhino/js/1.6R5/js-1.6R5-sources.jar"/>
+	<classpathentry kind="lib" path="libs/jtidy-4aug2000r7-dev.jar"/>
+	<classpathentry kind="lib" path="libs/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/mail-1.4.jar"/>
+	<classpathentry kind="lib" path="libs/nekohtml-0.9.5.jar"/>
+	<classpathentry kind="lib" path="libs/servlet-api-2.4.jar"/>
+	<classpathentry kind="lib" path="libs/xercesImpl-2.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

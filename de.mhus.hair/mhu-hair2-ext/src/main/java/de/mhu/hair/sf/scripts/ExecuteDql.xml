@@ -1,0 +1,7 @@
+<config class="de.mhu.hair.sf.scripts.ExecuteDql" listen="_ignore_" ignore_objects="1">
+  <panel>
+	  <input title="DQL" name="Dql" value=""/>
+	  <checkbox title="Print Result" name="PrintResult" value="1"/>
+	  <file title="Export CSV file" name="CSVFile" value=""/>
+  </panel>
+</config>

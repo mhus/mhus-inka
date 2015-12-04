@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="de.mhus.cha.app"
+         name="Cha Manager"
+         point="de.mhus.cap.core.application">
+      <application
+            class="de.mhus.cha.app.ChaApplication"
+            name="Cha Manager">
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="de.mhus.hair.app.admin.caocommand"
+            name="CaoCommand">
+         <commandParameter
+               id="de.mhus.hair.app.admin.caooperation"
+               name="CaoOperation"
+               optional="false">
+         </commandParameter>
+      </command>
+      <command
+            id="de.mhus.cha.app.toolbar.editable"
+            name="Editable">
+      </command>
+      <command
+            id="de.mhus.cha.app.toolbar.undo"
+            name="Undo">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.mhus.cha.menu.UndoHandler"
+            commandId="de.mhus.cha.app.toolbar.undo">
+      </handler>
+      <handler
+            class="de.mhus.cha.menu.EditableHandler"
+            commandId="de.mhus.cha.app.toolbar.editable">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <dynamic
+                  class="de.mhus.cha.menu.FileContributionItem"
+                  id="de.mhus.cha.app.admin.menu.file.dynamic">
+            </dynamic>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="de.mhus.cha.app.toolbar">
+            <command
+                  commandId="de.mhus.cha.app.toolbar.editable"
+                  icon="icons/page_edit.png"
+                  label="Editable"
+                  style="toggle">
+            </command>
+            <command
+                  commandId="de.mhus.cha.app.toolbar.undo"
+                  icon="icons/arrow_undo.png"
+                  label="Undo"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="de.mhus.cao.model.driver">
+      <CaoDriver
+            class="de.mhus.cha.cao.ChaDriver"
+            driverIdentifier="cha"
+            title="Cha Manager">
+      </CaoDriver>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="de.mhus.cha.formeditor.FormEditor"
+            default="false"
+            id="de.mhus.cha.formeditor.FormEditor"
+            name="Form Editor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,4 @@
+
+Parameter:
+
+-Dcha.config.dir=/Users/mikehummel/Documents/mhu/workspaces/hair3/de.mhus.cha.app/etc/config

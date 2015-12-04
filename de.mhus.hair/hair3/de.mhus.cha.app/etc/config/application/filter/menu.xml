@@ -1,0 +1,6 @@
+<config>
+  <new>
+  	<include pattern="create.*"/>
+  </new>
+
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="de.mhus.cap.core.initialize" name="MHU-CAP Initializer" schema="schema/de.mhus.cap.core.initializer.exsd"/>
+   <extension-point id="de.mhus.cap.core.image_provider" name="MHU-CAP Image Provider" schema="schema/de.mhus.cap.core.image_provider.exsd"/>
+   <extension-point id="de.mhus.cap.core.application" name="MHU-CAP Application" schema="schema/de.mhus.cap.core.application.exsd"/>
+   <extension-point id="de.mhus.cao.model.driver" name="Cao Model Driver" schema="schema/de.mhus.cao.model.driver.exsd"/>
+
+   <extension
+         point="de.mhus.cap.core.initialize">
+      <client
+            class="de.mhus.cap.core.InitializeCaoFromOsgi">
+      </client>
+   </extension>
+
+</plugin>

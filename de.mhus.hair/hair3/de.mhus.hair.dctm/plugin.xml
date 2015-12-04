@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="de.mhus.cao.model.driver">
+      <CaoDriver
+            class="de.mhus.hair.dctm.DctmDriver"
+            driverIdentifier="dctm"
+            title="Documentum Driver">
+      </CaoDriver>
+   </extension>
+   <extension
+         point="de.mhus.cap.core.image_provider">
+      <client
+            class="de.mhus.hair.dctm.ui.DctmImageProvider"
+            name="de.mhus.hair.dctm.image_provider">
+      </client>
+   </extension>
+
+</plugin>

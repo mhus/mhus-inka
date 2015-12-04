@@ -1,0 +1,19 @@
+<root sort="1" >
+   
+    <start class="de.mhu.hair.plugin.ui.IdwFrame">
+        <config icon="hair:/hair.png" title="[$docbase$]" location="100x100" size="800x600" persistent="c_main" >
+           
+        </config>
+    </start>
+
+    <start include="../main.inc"/>
+        
+        <start class="de.mhu.hair.plugin.ui.OutputPlugin">
+        <config icon="hair:/out.gif" 
+        		pos ="*tab:Bottom" 
+        		title="I/O" 
+        		closable="0" 
+        		persistent="c_io"
+        		/>
+    </start>
+</root>

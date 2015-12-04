@@ -1,0 +1,40 @@
+h1. Configure run.ini
+
+mhu-hair documentation "http://www.mhus.de":http://www.mhus.de 
+
+{toc}
+
+Under Windows the hair.exe executable uses the run.ini file to load the configuration. The file is a default windows (old) ini style file.
+
+ 
+h2. Section	exec	
+
+| jar | Hair.jar |Path to the executed jar file |
+| opt | -st gui | Options for the java program |
+| javaopt | | Options for the VM |
+| debug | debug | Add this if you want debug the start procedure |
+
+h2. Section java
+	
+| exe | javaw.exe | Executable java, e.g java.exe |
+| dir | | Directory to the java executable if not set it will search for it. |
+| version | 1.5 | Version of the java to look for |
+
+h2. Example:
+
+bc.. [exec]
+jar=Hair.jar
+opt=-st gui
+[java]
+bc. exe=javaw.exe
+
+Another example:
+
+bc.. [exec]
+jar=Hair.jar
+opt=-st gui
+debug=debug
+[java]
+exe=java.exe
+bc. dir=C:\Program Files\Java\jdk1.5\bin
+

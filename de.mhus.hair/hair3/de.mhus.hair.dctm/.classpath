@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<classpath>
+  <classpathentry exported="true" kind="lib" path="documentum.config/"></classpathentry>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"></classpathentry>
+  <classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"></classpathentry>
+  <classpathentry kind="src" path="src"></classpathentry>
+  <classpathentry kind="lib" path="/de.mhus.cap.libs/libs/mhu-lib-3.1.1-SNAPSHOT.jar"></classpathentry>
+  <classpathentry kind="output" path="bin"></classpathentry>
+  <classpathentry kind="lib" path="libs/aspectjrt-6.5.2.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/cao-dctm-0.0.1-SNAPSHOT.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/certjFIPS-6.5.2.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/configservice-api-6.5.2.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/dfc-6.5.2.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/jsafeFIPS-6.5.2.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/wcm-api-6.5.2.jar"></classpathentry>
+  <classpathentry kind="lib" path="libs/wcm-utils-6.5.2.jar"></classpathentry>
+</classpath>
+

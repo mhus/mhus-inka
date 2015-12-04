@@ -1,0 +1,3 @@
+<config>
+	<node type='tree' title='' name='workspace' imageprovider="de.mhus.hair.jack.image_provider"/>
+</config>

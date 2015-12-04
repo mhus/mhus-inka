@@ -1,0 +1,6 @@
+<config class="de.mhu.hair.sf.scripts.XmlParser" listen="">
+  <panel>
+	  <input title="Format" name="Format" value="xml"/>
+      <checkbox title="Output Node Values" name="ParseNodes" value="0"/>
+  </panel>
+</config>
