@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_fos__________________
+DESCRIPTION=FOSI - Formatting Output Specification Instance
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=fos
+M_STAMP=0
+NAME=fos

@@ -1,0 +1,3 @@
+debug_parser:
+	extended QueryParser output to console
+

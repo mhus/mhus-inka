@@ -1,0 +1,13 @@
+M_TYPE=m_channel
+M_ACL=administrator
+FEATURES.0.K=path
+M_LOCK=
+M_ID=_m_channel_fs___________________
+FEATURES.SIZE=1
+_DESTINATION=sys
+ACL=everyone_all
+FEATURES.0.V=$$channel.fs.path$$
+M_STAMP=0
+CHANNEL=fs
+NAME=fs
+CLASS=de.mhu.com.morse.channel.fs.FileChannelDriver

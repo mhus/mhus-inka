@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_vsd2_________________
+DESCRIPTION=Visio 2 drawing
+_DESTINATION=sys
+MIME_TYPE=application/vnd.visio
+DOS_EXTENSION=vsd
+M_STAMP=0
+NAME=vsd2

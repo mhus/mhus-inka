@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_excel5book___________
+DESCRIPTION=Excel workbook 5.0 (MacOS), 5.0-7.0 (Windows)
+_DESTINATION=sys
+MIME_TYPE=application/vnd.ms-excel
+DOS_EXTENSION=xls
+M_STAMP=0
+NAME=excel5book

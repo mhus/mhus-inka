@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_tga__________________
+DESCRIPTION=Targa Image
+_DESTINATION=sys
+MIME_TYPE=image/x-targa
+DOS_EXTENSION=tga
+M_STAMP=0
+NAME=tga

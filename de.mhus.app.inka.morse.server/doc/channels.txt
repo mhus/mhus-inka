@@ -1,0 +1,32 @@
+init:
+	Initial channel with start options (minimal config), core jar modules, core EXEC functions
+	
+sys:
+	System database with configuration, user rights etc.
+
+*:
+	Verteiler, standart channel wenn nicht angegeben
+
+db:
+	current database channel
+
+fs:
+	current filestore channel
+
+arc:
+	archive für db + fs
+
+idx:
+	Index channel
+
+exe:
+	Channel für Operations
+
+jrn:
+	Journal channel für accounting / log
+
+bck:
+	Backup für incremental backup
+
+
+

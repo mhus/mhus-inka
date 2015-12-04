@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_xsl__________________
+DESCRIPTION=XSL File
+_DESTINATION=sys
+MIME_TYPE=text/xsl
+DOS_EXTENSION=xsl
+M_STAMP=0
+NAME=xsl

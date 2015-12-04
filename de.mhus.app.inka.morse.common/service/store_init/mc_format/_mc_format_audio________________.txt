@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_audio________________
+DESCRIPTION=Audio File
+_DESTINATION=sys
+MIME_TYPE=audio/basic
+DOS_EXTENSION=au
+M_STAMP=0
+NAME=audio

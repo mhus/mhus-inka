@@ -1,0 +1,6 @@
+BTC - Basic Type Controller
+A class that is controlling the type by insert / update it is direct connected to the
+channels.
+
+ACO - Attribute Controll Class
+A class that controlls the behavior (validation and output format) of an attribute.

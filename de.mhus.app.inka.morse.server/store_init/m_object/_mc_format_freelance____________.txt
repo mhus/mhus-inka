@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_freelance____________
+DESCRIPTION=Freelance presentation
+_DESTINATION=sys
+MIME_TYPE=application/vnd.lotus-freelance
+DOS_EXTENSION=pre
+M_STAMP=0
+NAME=freelance

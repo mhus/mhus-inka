@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_swf__________________
+DESCRIPTION=Shockwave Flash File (swf)
+_DESTINATION=sys
+MIME_TYPE=application/x-shockwave-flash
+DOS_EXTENSION=swf
+M_STAMP=0
+NAME=swf

@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_jpeg_lres____________
+DESCRIPTION=JPEG Low Resolution
+_DESTINATION=sys
+MIME_TYPE=image/jpeg
+DOS_EXTENSION=jpg
+M_STAMP=0
+NAME=jpeg_lres

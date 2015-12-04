@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_mht__________________
+DESCRIPTION=Single File Web Page
+_DESTINATION=sys
+MIME_TYPE=multipart/related
+DOS_EXTENSION=mht
+M_STAMP=0
+NAME=mht

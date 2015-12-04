@@ -1,0 +1,30 @@
+
+CoreModule:
+
+- create & enable initDb
+  initDb works without type definitions
+
+- create type provider (load types from @init in apInit() )
+  Now types are the first time possible to use
+
+- create the object manager
+
+- create acl manager
+
+- create channel provider
+  the channel provider load all needed channels. Config is from @init
+
+- enable type provider
+  Type provider refresh the type tree. Now from the @sys channel.
+
+- enable channel provider
+  the channel re-creates the channels from @sys now and also copy
+  the records from @init to the other channels.
+
+- enable object manager
+  the object manager load all existing object ids from the channels
+
+- enable acl manager
+  now its possible to query with user informations
+
+

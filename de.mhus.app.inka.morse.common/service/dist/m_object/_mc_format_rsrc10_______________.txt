@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_rsrc10_______________
+DESCRIPTION=Macintosh OS X Resource Fork
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=rf10
+M_STAMP=0
+NAME=rsrc10

@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_sgi__________________
+DESCRIPTION=Silicon Graphics Inventor
+_DESTINATION=sys
+MIME_TYPE=application/x-inventor
+DOS_EXTENSION=sgi
+M_STAMP=0
+NAME=sgi

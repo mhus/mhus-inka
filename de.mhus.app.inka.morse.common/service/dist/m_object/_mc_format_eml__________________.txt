@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_eml__________________
+DESCRIPTION=Microsoft Outlook Message
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=.eml
+M_STAMP=0
+NAME=eml

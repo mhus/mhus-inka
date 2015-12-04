@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_ms_access7___________
+DESCRIPTION=Access 95 database
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=mdb
+M_STAMP=0
+NAME=ms_access7

@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_ibmshrlib____________
+DESCRIPTION=IBM-AIX Shared Library
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=so
+M_STAMP=0
+NAME=ibmshrlib

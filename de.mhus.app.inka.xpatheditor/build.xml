@@ -1,0 +1,11 @@
+<project name='XPathEditor' default="main">
+	
+	<property file="build.prroperties"></property>
+	
+	<target name="main">
+		<input addproperty="username" message="Username"/>
+		<input addproperty="password" message="Password"/>
+		<scp file="${release.file}" todir="${username}:${password}@frs.sourceforge.net:uploads/" />
+	</target>
+	
+</project>

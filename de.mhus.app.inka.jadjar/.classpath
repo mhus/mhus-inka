@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/de.mhus.app.inka.common/libs/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/de.mhus.app.inka.common/libs/mhus/mhu-lib-core/2.0.0-EOL/mhu-lib-core-2.0.0-EOL.jar"/>
+	<classpathentry kind="lib" path="/de.mhus.app.inka.common/libs/mhus/mhu-lib-form/2.0.0-EOL/mhu-lib-form-2.0.0-EOL.jar"/>
+	<classpathentry kind="lib" path="/de.mhus.app.inka.morse.common/libs/mhu-lib.jar"/>
+	<classpathentry kind="lib" path="/de.mhus.app.inka.common/libs/mhus/mhu-lib-swing/2.0.0-EOL/mhu-lib-swing-2.0.0-EOL.jar"/>
+	<classpathentry kind="lib" path="/de.mhus.app.inka.common/libs/commons-vfs/commons-vfs/20050307052300/commons-vfs-20050307052300.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

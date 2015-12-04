@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_mcr__________________
+DESCRIPTION=XMetaL Macro File
+_DESTINATION=sys
+MIME_TYPE=text/xml
+DOS_EXTENSION=mcr
+M_STAMP=0
+NAME=mcr

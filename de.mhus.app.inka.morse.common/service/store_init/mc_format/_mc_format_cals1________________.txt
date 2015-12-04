@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_cals1________________
+DESCRIPTION=CALS 1 image
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=mil
+M_STAMP=0
+NAME=cals1

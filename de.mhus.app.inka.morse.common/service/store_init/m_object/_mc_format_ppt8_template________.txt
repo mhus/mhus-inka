@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_ppt8_template________
+DESCRIPTION=Microsoft PowerPoint Template
+_DESTINATION=sys
+MIME_TYPE=application/vnd.ms-powerpoint
+DOS_EXTENSION=pot
+M_STAMP=0
+NAME=ppt8_template

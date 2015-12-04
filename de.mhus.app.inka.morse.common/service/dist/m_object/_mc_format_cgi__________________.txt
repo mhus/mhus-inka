@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_cgi__________________
+DESCRIPTION=Common Gateway Interface Program
+_DESTINATION=sys
+MIME_TYPE=application/cgi
+DOS_EXTENSION=cgi
+M_STAMP=0
+NAME=cgi

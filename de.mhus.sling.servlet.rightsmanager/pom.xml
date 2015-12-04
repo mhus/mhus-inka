@@ -1,0 +1,281 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.mhus.sling.servlet.rightsmanager</groupId>
+  <artifactId>RightsManager</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  
+  
+  <properties>
+  
+    <!-- define default encoding for all source/resource files -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <build>
+  
+      <resources>
+      <resource>
+        <directory>src/main/webapp/SLING-CONTENT</directory>
+        <targetPath>SLING-CONTENT</targetPath>
+        <filtering>false</filtering>
+      </resource>
+      </resources>
+  
+    <plugins>
+
+	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.5.1</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      
+      <!-- Eclipse configuration -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <downloadSources>true</downloadSources>
+          <useProjectReferences>false</useProjectReferences>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-scr-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+<!--                     <Export-Package>*</Export-Package>  -->
+<!--                          <Embed-Dependency>bsh;inline=true</Embed-Dependency> -->
+		        <Import-Package>
+		          com.sun.*;org.apache.bsf.*;sun.*;resolution:=optional
+			</Import-Package> 
+			<DynamicImport-Package>*</DynamicImport-Package>
+<!-- 
+			<Bundle-Activator>de.mhus.test.sling.servlet.MigActivator</Bundle-Activator>
+-->
+                    </instructions>
+<!--                     <wrapImportPackage>;</wrapImportPackage>  -->
+                </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>maven-sling-plugin</artifactId>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+          <wtpversion>1.5</wtpversion>
+        </configuration>
+      </plugin>
+ 
+    </plugins>
+
+    <!-- plugin management -->
+    <pluginManagement>
+      <plugins>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-eclipse-plugin</artifactId>
+          <version>2.8</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.sling</groupId>
+          <artifactId>maven-sling-plugin</artifactId>
+          <version>2.0.4-incubator</version>
+		      <!-- Default configuration for deploying bundles into running CQ instance -->
+          <configuration>
+            <slingUrl>http://localhost:8080/system/console</slingUrl>
+            <user>admin</user>
+            <password>admin</password>
+          </configuration>
+          <executions>
+            <!-- Specify that the maven validate task automatically incorporates the use of the maven-sling-plugin to validate 
+              the JSON files contained in a bundle. Validation can be skipped by setting system property 'sling.validation.skip' to true. -->
+            <execution>
+              <id>validate-bundle</id>
+              <goals>
+                <goal>validate</goal>
+              </goals>
+            </execution>
+            <!-- Specify that the maven install task automatically incorporates the use of the maven-sling-plugin to deploy 
+              resulting bundles directly to a running Sling-instance Install to sling instance can be skipped by setting system property 
+              'sling.install.skip' to true. -->
+            <execution>
+              <id>install-bundle</id>
+              <goals>
+                <goal>install</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <version>2.0.1</version>
+          <!-- Allow the plugin to extend maven with the 'bundle' packaging target -->
+          <extensions>true</extensions>
+          <configuration>
+            <instructions>
+              <Sling-Initial-Content>SLING-CONTENT;overwrite:=false</Sling-Initial-Content>
+            </instructions>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-scr-plugin</artifactId>
+          <version>1.7.4</version>
+          <executions>
+            <!-- The scr goal is bound to the generate-resources phase and will generate a single descriptor file as well 
+              as meta type file for all components found in the project. -->
+            <execution>
+              <id>generate-scr-scrdescriptor</id>
+              <goals>
+                <goal>scr</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+      </plugins>
+    </pluginManagement>
+    <extensions>
+    </extensions>
+
+  </build>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <!-- Web Application API -->
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.4</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <!-- Apache Commons Lang -->
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.4</version>
+      </dependency>
+
+      <!-- Felix SCR annotations -->
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.scr.annotations</artifactId>
+        <scope>compile</scope>
+        <version>1.6.0</version>
+      </dependency>
+
+      <!-- Sling API -->
+      <dependency>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>org.apache.sling.api</artifactId>
+        <version>2.2.0</version>
+      </dependency>
+
+      <!-- OSGI -->
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>org.osgi.core</artifactId>
+        <version>4.1.0</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>org.osgi.compendium</artifactId>
+        <version>4.1.0</version>
+        <scope>provided</scope>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+  
+    <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.scr.annotations</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.compendium</artifactId>
+    </dependency>
+  
+    <dependency>
+      <groupId>javax.jcr</groupId>
+      <artifactId>jcr</artifactId>
+      <version>2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.commons.osgi</artifactId>
+      <version>2.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+    </dependency>
+    <!-- slf4j -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-nop</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.apache.felix</groupId>
+    	<artifactId>org.apache.felix.http.api</artifactId>
+    	<version>2.2.0</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.apache.sling</groupId>
+    	<artifactId>org.apache.sling.auth.core</artifactId>
+    	<version>1.0.6</version>
+    	<type>bundle</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.jackrabbit</groupId>
+    	<artifactId>jackrabbit-core</artifactId>
+    	<version>2.5.2</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    </dependencies>
+    
+   
+</project>

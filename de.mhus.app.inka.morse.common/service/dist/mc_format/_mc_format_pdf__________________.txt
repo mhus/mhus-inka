@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_pdf__________________
+DESCRIPTION=Acrobat PDF
+_DESTINATION=sys
+MIME_TYPE=application/pdf
+DOS_EXTENSION=pdf
+M_STAMP=0
+NAME=pdf

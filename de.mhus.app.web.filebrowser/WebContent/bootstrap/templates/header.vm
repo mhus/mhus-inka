@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="$root/~/famfamfam_mini_icons/action_go.gif">
+
+    <title>$esc.html($title)</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="$root/~/bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="$root/~/styles.css" rel="stylesheet">
+    
+	<link href="$root/~/jquery-filetype/jquery-filetype.css" rel="stylesheet" type="text/css" />
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="$root/~/bootstrap-3.0.0/assets/js/html5shiv.js"></script>
+      <script src="$root/~/bootstrap-3.0.0/assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+    <script src="$root/~/bootstrap-3.0.0/assets/js/jquery.js"></script>
+    <script src="$root/~/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+
+    <div class="container">
+

@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_pps__________________
+DESCRIPTION=Powerpoint Präsentation
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=pps
+M_STAMP=0
+NAME=pps

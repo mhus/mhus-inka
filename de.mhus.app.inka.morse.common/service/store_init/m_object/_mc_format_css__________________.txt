@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_css__________________
+DESCRIPTION=Cascading Style Sheet Document
+_DESTINATION=sys
+MIME_TYPE=text/css
+DOS_EXTENSION=css
+M_STAMP=0
+NAME=css

@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_ra___________________
+DESCRIPTION=RealAudio Clip File
+_DESTINATION=sys
+MIME_TYPE=audio/vnd.rn-realaudio
+DOS_EXTENSION=ra
+M_STAMP=0
+NAME=ra

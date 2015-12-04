@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_mxf__________________
+DESCRIPTION=MXF Stream
+_DESTINATION=sys
+MIME_TYPE=video/x-mxf
+DOS_EXTENSION=mxf
+M_STAMP=0
+NAME=mxf

@@ -1,0 +1,42 @@
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem initWithAll:metafs:contentfs:storefs:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:24: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:24: error: (Each undeclared identifier is reported only once
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:24: error: for each function it appears in.)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem dealloc]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:30: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem moveItemAtPath:toPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:41: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem removeDirectoryAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:55: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem removeItemAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:68: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem createDirectoryAtPath:attributes:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:77: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem createFileAtPath:attributes:userData:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:88: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem linkItemAtPath:toPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:104: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem createSymbolicLinkAtPath:withDestinationPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:122: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem destinationOfSymbolicLinkAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:131: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem openFileAtPath:mode:userData:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:142: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem exchangeDataOfItemAtPath:withItemAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:193: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem contentsOfDirectoryAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:206: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem attributesOfItemAtPath:userData:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:215: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem attributesOfFileSystemForPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:223: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem setAttributes:ofItemAtPath:userData:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:239: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem extendedAttributesOfItemAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:267: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem valueOfExtendedAttribute:ofItemAtPath:position:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:294: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem setExtendedAttribute:ofItemAtPath:value:position:options:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:324: error: 'rootPath_' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m: In function '-[Direct_Filesystem removeExtendedAttribute:ofItemAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m:338: error: 'rootPath_' undeclared (first use in this function)

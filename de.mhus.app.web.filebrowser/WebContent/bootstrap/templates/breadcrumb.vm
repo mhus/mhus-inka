@@ -1,0 +1,9 @@
+<ol class="breadcrumb">
+	#foreach( $entry in $breadcrumb )
+	#if ($entry == $node)
+		<li class="active">$esc.html(${entry.getTitle()})</li>
+	#else
+		<li><a href='${entry.toLink()}'>$esc.html(${entry.getTitle()})</a></li>
+	#end
+	#end
+</ol>

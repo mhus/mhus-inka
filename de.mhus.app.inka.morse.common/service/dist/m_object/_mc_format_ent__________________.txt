@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_ent__________________
+DESCRIPTION=XML Entity File(ent)
+_DESTINATION=sys
+MIME_TYPE=text/xml
+DOS_EXTENSION=ent
+M_STAMP=0
+NAME=ent

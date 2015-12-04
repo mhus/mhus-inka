@@ -1,0 +1,337 @@
+TmDisk
+v7
+r0
+t298332125.214331
+cCheck dependencies
+cProcessInfoPlistFile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist Info.plist
+cCopyStringsFile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib
+cCpResource build/Debug/mDisk.app/Contents/Resources/mDisk.icns mDisk.icns
+cProcessPCH /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch mDisk_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004A49A9E400000000000000EE
+t1246341604
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/Library/Frameworks/MacFUSE.framework/Headers/MacFUSE.h
+c00000000494BE0D20000000000000740
+t1229709522
+s1856
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004864A1C900000000000012EE
+t1214554569
+s4846
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/stat.h
+c0000000047E883D100000000000047CE
+t1206420433
+s18382
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/xattr.h
+c0000000047E883D30000000000000B43
+t1206420435
+s2883
+
+N/Library/Frameworks/MacFUSE.framework/MacFUSE
+c00000000494BE0E7000000000005DBF8
+t1229709543
+s383992
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/InfoPlist.strings
+c000000004C17F51B000000000000005C
+t1276638491
+s92
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib
+c000000004C17F51B000000000001F62E
+t1276638491
+s128558
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.h
+c000000004C17F81A00000000000003B6
+t1276639258
+s950
+i<Foundation/Foundation.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m
+c000000004C17F85300000000000003B7
+t1276639315
+s951
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app
+t2
+s0
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist
+t1276639319
+s821
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/MacOS/mDisk
+t2
+s0
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/PkgInfo
+t1276639319
+s8
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1276639320
+s92
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/MainMenu.nib
+t1276639319
+s27590
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/mDisk.icns
+t1276639319
+s226826
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o
+t1276639325
+s6272
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk.LinkFileList
+c000000004C17F85700000000000001E5
+t1276639319
+s485
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o
+t1276639324
+s25640
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o
+t2
+s0
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o
+t1276639323
+s4876
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk.icns
+c000000004C17F51B000000000003760A
+t1276638491
+s226826
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.h
+c000000004C17F51B0000000000000149
+t1276638491
+s329
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m
+c000000004C17F6790000000000000AEB
+t1276638841
+s2795
+i"mDisk_Controller.h"
+i"mDisk_Filesystem.h"
+i<MacFUSE/MacFUSE.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.h
+c000000004C17F79900000000000002AB
+t1276639129
+s683
+i<Foundation/Foundation.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m
+c000000004C17F793000000000000299D
+t1276639123
+s10653
+i<sys/xattr.h>
+i<sys/stat.h>
+i"LoopbackFS.h"
+i<MacFUSE/MacFUSE.h>
+i"NSError+POSIX.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Prefix.pch
+c000000004C17F51B000000000000008D
+t1276638491
+s141
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m
+c000000004C17F51B00000000000000FF
+t1276638491
+s255
+i<Cocoa/Cocoa.h>
+
+N/var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch
+t1276639323
+s54071728
+
+NInfo.plist
+c000000004C17F51B000000000000036B
+t1276638491
+s875
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies298332119#298332119#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298332124.397039
+e298332125.214240
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m298332124#298332125#0(0"0(0#0#65"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m4300911832#1541"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298332123.766887
+e298332124.396942
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m298332123#298332124#0(0"0(0#0#68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m4300911832#1547"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298332123.929884
+e298332125.069287
+r0
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:4:23: error: LoopbackFS.h: No such file or directory
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:10: warning: cannot find interface declaration for 'mDisk_Filesystem'
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem initWithRootPath:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:11: error: no super class declared in @interface for 'mDisk_Filesystem'
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:12: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:12: error: (Each undeclared identifier is reported only once
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:12: error: for each function it appears in.)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem dealloc]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:18: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:19: error: no super class declared in @interface for 'mDisk_Filesystem'
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem moveItemAtPath:toPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:29: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem removeDirectoryAtPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:43: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem removeItemAtPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:56: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem createDirectoryAtPath:attributes:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:65: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem createFileAtPath:attributes:userData:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:76: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem linkItemAtPath:toPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:92: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem createSymbolicLinkAtPath:withDestinationPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:110: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem destinationOfSymbolicLinkAtPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:119: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem openFileAtPath:mode:userData:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:130: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem exchangeDataOfItemAtPath:withItemAtPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:181: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem contentsOfDirectoryAtPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:194: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem attributesOfItemAtPath:userData:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:203: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem attributesOfFileSystemForPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:211: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem setAttributes:ofItemAtPath:userData:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:227: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem extendedAttributesOfItemAtPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:255: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem valueOfExtendedAttribute:ofItemAtPath:position:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:282: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem setExtendedAttribute:ofItemAtPath:value:position:options:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:312: error: 'rootPath_' undeclared (first use in this function)
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem removeExtendedAttribute:ofItemAtPath:error:]':
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:326: error: 'rootPath_' undeclared (first use in this function)
+lSLF07#2@76"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298332123#298332125#0(6286"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:4:23: error: LoopbackFS.h: No such file or directory/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:10: warning: cannot find interface declaration for 'mDisk_Filesystem'/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem initWithRootPath:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:11: error: no super class declared in @interface for 'mDisk_Filesystem'/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:12: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:12: error: (Each undeclared identifier is reported only once/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:12: error: for each function it appears in.)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem dealloc]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:18: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:19: error: no super class declared in @interface for 'mDisk_Filesystem'/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem moveItemAtPath:toPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:29: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem removeDirectoryAtPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:43: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem removeItemAtPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:56: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem createDirectoryAtPath:attributes:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:65: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem createFileAtPath:attributes:userData:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:76: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem linkItemAtPath:toPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:92: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem createSymbolicLinkAtPath:withDestinationPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:110: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem destinationOfSymbolicLinkAtPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:119: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem openFileAtPath:mode:userData:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:130: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem exchangeDataOfItemAtPath:withItemAtPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:181: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem contentsOfDirectoryAtPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:194: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem attributesOfItemAtPath:userData:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:203: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem attributesOfFileSystemForPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:211: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem setAttributes:ofItemAtPath:userData:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:227: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem extendedAttributesOfItemAtPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:255: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem valueOfExtendedAttribute:ofItemAtPath:position:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:282: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem setExtendedAttribute:ofItemAtPath:value:position:options:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:312: error: 'rootPath_' undeclared (first use in this function)/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m: In function '-[mDisk_Filesystem removeExtendedAttribute:ofItemAtPath:error:]':/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m:326: error: 'rootPath_' undeclared (first use in this function)24(4@39"LoopbackFS.h: No such file or directory298332124#0#122#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#4#0#4#0#28"*: No such file or directory0(22@56"Cannot find interface declaration for 'mDisk_Filesystem'298332124#122#139#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#10#0#10#0#0"0(4@60"No super class declared in @interface for 'mDisk_Filesystem'298332124#384#141#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#11#0#11#0#0"0(4@51"'rootPath_' undeclared (first use in this function)298332124#525#132#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#12#0#12#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#1014#132#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#18#0#18#0#43"'*' undeclared (first use in this function)0(4@60"No super class declared in @interface for 'mDisk_Filesystem'298332124#1146#141#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#19#0#19#0#0"0(4@51"'rootPath_' undeclared (first use in this function)298332124#1421#132#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#29#0#29#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#1687#132#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#43#0#43#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#1948#132#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#56#0#56#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#2225#132#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#65#0#65#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#2506#132#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#76#0#76#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#2772#132#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#92#0#92#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#3061#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#110#0#110#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#3338#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#119#0#119#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#3612#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#130#0#130#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#3897#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#181#0#181#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#4168#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#194#0#194#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#4445#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#203#0#203#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#4720#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#211#0#211#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#5001#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#227#0#227#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#5277#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#255#0#255#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#5569#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#282#0#282#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#5871#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#312#0#312#0#43"'*' undeclared (first use in this function)0(4@51"'rootPath_' undeclared (first use in this function)298332124#6153#133#0(6@68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m298331923#326#0#326#0#43"'*' undeclared (first use in this function)0(0#0#68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m4300911832#1547"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o1#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298332123.765916
+e298332123.929780
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m298332123#298332123#0(0"0(0#0#56"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m4300911832#1523"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib
+s298332119.477288
+e298332119.782472
+r1
+xCompileXIB
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib298332119#298332119#0(0"0(0#0#76"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib4300911832#358"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/MainMenu.nib /Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib0#
+
+CCopyStringsFile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s298332119.455869
+e298332120.106038
+r1
+xCopyStringsFile
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings298332119#298332120#0(0"0(0#0#81"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/InfoPlist.strings4300911832#386"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Debug/mDisk.app/Contents/Resources/mDisk.icns mDisk.icns
+s298332119.782562
+e298332120.128338
+r1
+xCpResource
+xbuild/Debug/mDisk.app/Contents/Resources/mDisk.icns
+xmDisk.icns
+lSLF07#2@15"Copy mDisk.icns298332119#298332120#0(0"0(0#0#60"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk.icns4300911832#357"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk.icns /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources0#
+
+CLd /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/MacOS/mDisk normal i386
+r0
+
+CProcessInfoPlistFile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist Info.plist
+s298332119.395052
+e298332119.455697
+r1
+xProcessInfoPlistFile
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist298332119#298332119#0(0"0(0#0#60"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Info.plist27584749588119668#331"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    builtin-infoPlistUtility Info.plist -genpkginfo /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch mDisk_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s298332120.128596
+e298332123.765766
+r1
+xProcessPCH
+x/var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch
+xmDisk_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile mDisk_Prefix.pch298332120#298332123#0(0"0(0#0#66"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Prefix.pch4300911832#1422"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Prefix.pch -o /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch0#
+
+CTouch /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app
+r0
+

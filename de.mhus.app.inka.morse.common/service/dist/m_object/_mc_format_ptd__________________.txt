@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_ptd__________________
+DESCRIPTION=PTD - Compiled DTD
+_DESTINATION=sys
+MIME_TYPE=application/x-epic-ptd
+DOS_EXTENSION=ptd
+M_STAMP=0
+NAME=ptd

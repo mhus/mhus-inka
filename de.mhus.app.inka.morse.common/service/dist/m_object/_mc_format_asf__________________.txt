@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_asf__________________
+DESCRIPTION=Advanced Streaming File
+_DESTINATION=sys
+MIME_TYPE=video/x-ms-asf
+DOS_EXTENSION=asf
+M_STAMP=0
+NAME=asf

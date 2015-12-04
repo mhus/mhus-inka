@@ -1,0 +1,25 @@
+body { color:black; background-color:white; }
+body,h1,h2,h3,h4,p,ul,ol,li,dl,dt,dd,div,td,th,address,blockquote { font-family:Arial,sans-serif; }
+h1 { font-size:26px; margin-bottom:18px; }
+p,ul,ol,li,dl,dt,dd,div,td,th,address,blockquote { font-size:13.4px; }
+li { margin-top:3px; }
+ul#breadcrumb {
+	list-style: none;
+}
+
+ul#children {
+	list-style: none;
+}
+
+ul#breadcrumb li {
+	display: inline-block;
+	max-width: 50%;
+	vertical-align: middle;
+}
+
+ul#children li {
+	padding: 5px;
+	margin: 5px;
+	border: solid 1px; 
+}
+

@@ -1,0 +1,11 @@
+M_TYPE=m_function
+M_ACL=administrator
+ENTRY_CLASS=de.mhu.com.morse.channel.exec.MoveObject
+M_LOCK=
+M_ID=_m_function_query_move_object___
+FEATURES.SIZE=0
+_DESTINATION=sys
+M_STAMP=0
+JAR=
+ACCESS_ACL=administrator
+NAME=query.move_object

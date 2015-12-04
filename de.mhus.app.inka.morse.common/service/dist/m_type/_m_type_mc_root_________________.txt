@@ -1,0 +1,12 @@
+M_TYPE=m_type
+M_ACL=administrator
+M_LOCK=
+M_ID=_m_type_mc_root_________________
+CHANNEL.0.NAME=db
+SUPER_TYPE=mc_folder
+_DESTINATION=sys
+CHANNEL.SIZE=1
+M_STAMP=0
+ATTRIBUTE.SIZE=0
+NAME=mc_root
+ACCESS_ACL=everyone_write

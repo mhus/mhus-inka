@@ -1,0 +1,11 @@
+M_TYPE=m_function
+M_ACL=everyone_read
+ENTRY_CLASS=de.mhu.com.morse.pack.mc.McObject
+M_LOCK=
+M_ID=_m_function_ctc_mc_object_______
+FEATURES.SIZE=0
+_DESTINATION=sys
+M_STAMP=0
+JAR=
+ACCESS_ACL=everyone_read
+NAME=bto.mc_object

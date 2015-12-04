@@ -1,0 +1,11 @@
+M_TYPE=m_channel
+M_ACL=administrator
+M_LOCK=
+M_ID=_m_channel_idx__________________
+FEATURES.SIZE=0
+_DESTINATION=sys
+ACL=administrator
+M_STAMP=0
+CHANNEL=idx
+NAME=idx
+CLASS=de.mhu.com.morse.channel.idx.IdxDriver

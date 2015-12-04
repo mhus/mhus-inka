@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_jhtml________________
+DESCRIPTION=Java within Hypertext Markup Language Document
+_DESTINATION=sys
+MIME_TYPE=text/jhtml
+DOS_EXTENSION=jhtml
+M_STAMP=0
+NAME=jhtml

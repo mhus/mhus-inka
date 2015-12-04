@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: Mike Hummel 
+Main-Class: de.mhu.lib.apps.jadjar.JadJar
+Class-Path: mhu-lib.jar

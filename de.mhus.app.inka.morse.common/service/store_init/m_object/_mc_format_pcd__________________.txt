@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_pcd__________________
+DESCRIPTION=Kodak Photo CD
+_DESTINATION=sys
+MIME_TYPE=image/x-pcd
+DOS_EXTENSION=pcd
+M_STAMP=0
+NAME=pcd

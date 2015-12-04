@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_java_________________
+DESCRIPTION=Java Source File
+_DESTINATION=sys
+MIME_TYPE=text/java
+DOS_EXTENSION=java
+M_STAMP=0
+NAME=java

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>
+	WebDav</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+		<servlet>
+		<servlet-name>webdav</servlet-name>
+		<servlet-class>
+			net.sf.webdav.WebdavServlet
+		</servlet-class>
+		<init-param>
+			<param-name>ResourceHandlerImplementation</param-name>
+			<param-value>net.sf.webdav.MorseMcFileSystem</param-value>
+			<!-- description>
+				name of the class that implements
+				net.sf.webdav.IWebdavStorage
+			</description -->
+		</init-param>
+		<init-param>
+			<param-name>rootpath</param-name>
+			<param-value>c:/</param-value>
+			<!-- description>
+				place where to store the webdavcontent on the filesystem
+			</description -->
+		</init-param>
+		<init-param>
+			<param-name>storeDebug</param-name>
+			<param-value>1</param-value>
+			<!-- description>
+				triggers debug output of the
+				ResourceHandlerImplementation
+			</description -->
+		</init-param>
+		<init-param>
+			<param-name>servletDebug</param-name>
+			<param-value>1</param-value>
+			<!-- description>
+				triggers debug output of the
+				ResourceHandlerImplementation
+			</description -->
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>webdav</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

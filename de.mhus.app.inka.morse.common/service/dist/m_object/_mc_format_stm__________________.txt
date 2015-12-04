@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_stm__________________
+DESCRIPTION=Server Parsed HTML Document (stm)
+_DESTINATION=sys
+MIME_TYPE=text/stm
+DOS_EXTENSION=stm
+M_STAMP=0
+NAME=stm

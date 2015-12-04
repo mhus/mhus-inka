@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_xsd__________________
+DESCRIPTION=XML Schema
+_DESTINATION=sys
+MIME_TYPE=text/xsd
+DOS_EXTENSION=xsd
+M_STAMP=0
+NAME=xsd

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Morse_eclipse Plug-in
+Bundle-SymbolicName: de.mhu.morse.eclipse; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: de.mhu.morse.eclipse.activator.Activator
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Eclipse-LazyStart: true
+Bundle-ClassPath: .,
+ libs/mhu-lib.jar,
+ libs/morse.jar,
+ libs/org.eclipse.ui.forms_3.3.0.v20070511.jar

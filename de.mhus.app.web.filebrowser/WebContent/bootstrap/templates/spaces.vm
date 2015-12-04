@@ -1,0 +1,6 @@
+#set ($title = "Spaces")
+#parse( "header.vm" )
+#parse( "actions.vm" )
+#parse( "title.vm" )
+#parse( "list.vm" )
+#parse( "footer.vm" )

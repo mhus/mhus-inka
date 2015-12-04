@@ -1,0 +1,28 @@
+<project name="INKA-ANT-TEST" default="" basedir=".">
+
+	<path id="dependencyfinder">
+        <pathelement location="../dist/inkaant.jar"/>
+        <pathelement location="../../de.mhus.app.inka.common/libs/mhus/mhu-lib/3.0.1-SNAPSHOT/mhu-lib-3.0.1-SNAPSHOT.jar"/>
+        <pathelement location="../../de.mhus.app.inka.common/external_libs/dfc.jar"/>
+    </path>
+
+	<taskdef resource="mhuant.properties">
+        <classpath refid="dependencyfinder"/>
+    </taskdef>
+
+  <target name="passwordEncode">
+  		<passwordEncode text="aloa" attribute="axax"/>
+		<echo>Encoded: ${axax}</echo>
+  </target>
+
+  <target name="passwordDecode">
+  		<passwordDecode text=":1nybn" attribute="axax"/>
+		<echo>Encoded: ${axax}</echo>
+  </target>
+	
+  <target name="input">
+  		<stdin prompt="Write foo:" attribute="axax"/>
+		<echo>Written: ${axax}</echo>
+  </target>
+
+</project>

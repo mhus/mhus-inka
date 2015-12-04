@@ -1,0 +1,10 @@
+M_TYPE=m_group
+M_ACL=administrator
+M_LOCK=
+M_ID=_m_group_everyone_______________
+USER.1.ID=_m_user_nobody__________________
+USER.SIZE=2
+_DESTINATION=sys
+USER.0.ID=_m_user_root____________________
+M_STAMP=0
+NAME=everyone

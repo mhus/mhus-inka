@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_wma__________________
+DESCRIPTION=Windows Media Audio
+_DESTINATION=sys
+MIME_TYPE=audio/x-ms-wma
+DOS_EXTENSION=wma
+M_STAMP=0
+NAME=wma

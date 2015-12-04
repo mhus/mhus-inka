@@ -1,0 +1,6 @@
+<sync>
+	<source directory=""/>
+	<source directory=""/>
+	<destination directory=""/>
+	
+</sync>

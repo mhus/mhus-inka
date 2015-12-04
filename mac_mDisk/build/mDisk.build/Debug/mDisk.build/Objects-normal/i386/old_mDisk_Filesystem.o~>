@@ -1,0 +1,48 @@
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:14: warning: cannot find interface declaration for 'old_mDisk_Filesystem'
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem initWithAll:metafs:contentfs:storefs:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:19: error: no super class declared in @interface for 'old_mDisk_Filesystem'
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:20: error: 'config' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:20: error: (Each undeclared identifier is reported only once
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:20: error: for each function it appears in.)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:21: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:22: error: 'contentfs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:23: error: 'storefs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem dealloc]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:30: error: no super class declared in @interface for 'old_mDisk_Filesystem'
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem moveItemAtPath:toPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:43: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:47: error: 'contentfs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem removeDirectoryAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:65: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:69: error: 'contentfs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem removeItemAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:82: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:84: error: 'contentfs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem createDirectoryAtPath:attributes:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:96: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:97: warning: control reaches end of non-void function
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem createFileAtPath:attributes:userData:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:105: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:105: error: 'contentfs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem openFileAtPath:mode:userData:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:138: error: 'contentfs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:144: error: 'storefs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem contentsOfDirectoryAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:250: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:251: warning: control reaches end of non-void function
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem attributesOfItemAtPath:userData:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:260: error: 'config' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:285: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem attributesOfFileSystemForPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:305: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem setAttributes:ofItemAtPath:userData:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:325: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:327: error: 'config' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem extendedAttributesOfItemAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:382: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem valueOfExtendedAttribute:ofItemAtPath:position:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:415: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem setExtendedAttribute:ofItemAtPath:value:position:options:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:460: error: 'metafs' undeclared (first use in this function)
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m: In function '-[old_mDisk_Filesystem removeExtendedAttribute:ofItemAtPath:error:]':
+/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m:482: error: 'metafs' undeclared (first use in this function)

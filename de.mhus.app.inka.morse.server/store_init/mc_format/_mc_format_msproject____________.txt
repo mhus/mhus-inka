@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_msproject____________
+DESCRIPTION=MS Project - project
+_DESTINATION=sys
+MIME_TYPE=application/vnd.ms-project
+DOS_EXTENSION=mpp
+M_STAMP=0
+NAME=msproject

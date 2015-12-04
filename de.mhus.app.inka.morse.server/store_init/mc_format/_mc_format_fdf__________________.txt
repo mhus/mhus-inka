@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_fdf__________________
+DESCRIPTION=Acrobat FDF
+_DESTINATION=sys
+MIME_TYPE=application/fdf
+DOS_EXTENSION=fdf
+M_STAMP=0
+NAME=fdf

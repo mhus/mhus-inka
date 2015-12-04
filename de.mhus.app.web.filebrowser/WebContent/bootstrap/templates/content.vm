@@ -1,0 +1,7 @@
+#set ($title = $node.getTitle())
+#parse( "header.vm" )
+#parse( "actions.vm" )
+#parse( "breadcrumb.vm" )
+#parse( "title.vm" )
+#parse( "list.vm" )
+#parse( "footer.vm" )

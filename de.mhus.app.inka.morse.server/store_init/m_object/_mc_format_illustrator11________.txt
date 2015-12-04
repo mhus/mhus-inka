@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_illustrator11________
+DESCRIPTION=Illustrator CS/CS2 image
+_DESTINATION=sys
+MIME_TYPE=application/illustrator
+DOS_EXTENSION=ai
+M_STAMP=0
+NAME=illustrator11

@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_msw__________________
+DESCRIPTION=Word 4.x, 5.x (DOS)
+_DESTINATION=sys
+MIME_TYPE=application/msword
+DOS_EXTENSION=doc
+M_STAMP=0
+NAME=msw

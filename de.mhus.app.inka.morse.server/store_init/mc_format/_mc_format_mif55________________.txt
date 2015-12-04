@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_mif55________________
+DESCRIPTION=FrameMaker 5.5 MIF
+_DESTINATION=sys
+MIME_TYPE=application/vnd.mif
+DOS_EXTENSION=mif
+M_STAMP=0
+NAME=mif55

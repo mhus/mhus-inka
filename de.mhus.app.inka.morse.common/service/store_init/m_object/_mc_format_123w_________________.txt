@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_123w_________________
+DESCRIPTION=Lotus 1-2-3 r5
+_DESTINATION=sys
+MIME_TYPE=application/vnd.lotus-1-2-3
+DOS_EXTENSION=wk4
+M_STAMP=0
+NAME=123w

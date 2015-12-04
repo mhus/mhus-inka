@@ -1,0 +1,24 @@
+#set ($title = $node.getTitle())
+#parse( "header.vm" )
+#parse( "actions.vm" )
+#parse( "breadcrumb.vm" )
+
+<div class="jumbotron">
+  <div class="container">
+	<img id="loader" src="$root/~/free-file-icons/48px/_blank.png" alt="Loading, Loading!"></img>
+	<img style="display:hidden" id="large-img" src="" alt="London Eye"></img>
+  	<script>
+		$(function() {
+			$('#large-img').hide();
+			ext = '$node.getName()'.split('.').pop();
+			$('#large-img').attr("src","$root/~/free-file-icons/48px/" + ext + ".png");
+			$('#large-img').load( function() {
+				$('#loader').hide();
+				$('#large-img').show();
+			} );
+		});  	
+  	</script>
+	#parse( "title.vm" )
+  </div>
+</div>
+#parse( "footer.vm" )

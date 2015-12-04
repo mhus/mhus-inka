@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: de.mhu.com.morse.main.MainClient
+Class-Path: mhu-lib4.jar

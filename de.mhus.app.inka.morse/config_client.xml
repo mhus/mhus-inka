@@ -1,0 +1,12 @@
+<config>
+	<root>
+		<nio>
+			<tea/>
+		</nio>
+		<core>
+			<fileDb store="store_sys" name="sys"/>
+			<mySqlDb name="*"/>
+			<hSqlDb name="x"/>
+		</core>
+	</root>
+</config>

@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_smil_________________
+DESCRIPTION=SMIL Playlist
+_DESTINATION=sys
+MIME_TYPE=application/smil
+DOS_EXTENSION=smil
+M_STAMP=0
+NAME=smil

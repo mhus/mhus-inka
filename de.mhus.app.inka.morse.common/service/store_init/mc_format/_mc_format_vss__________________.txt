@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_vss__________________
+DESCRIPTION=Microsoft Visio Stencil
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=vss
+M_STAMP=0
+NAME=vss

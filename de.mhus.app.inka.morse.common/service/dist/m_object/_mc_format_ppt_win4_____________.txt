@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_ppt_win4_____________
+DESCRIPTION=PowerPoint 4.x (Windows)
+_DESTINATION=sys
+MIME_TYPE=application/vnd.ms-powerpoint
+DOS_EXTENSION=ppt
+M_STAMP=0
+NAME=ppt_win4

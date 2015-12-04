@@ -1,0 +1,11 @@
+M_TYPE=m_function
+M_ACL=administrator
+ENTRY_CLASS=de.mhu.com.morse.eecm.MorseRepositoryListModel
+M_LOCK=
+M_ID=_m_function_model_list_mc_folder
+FEATURES.SIZE=0
+_DESTINATION=sys
+M_STAMP=0
+JAR=
+ACCESS_ACL=everyone_read
+NAME=model.list.mc_folder

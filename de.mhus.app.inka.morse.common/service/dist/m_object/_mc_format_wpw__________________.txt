@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_wpw__________________
+DESCRIPTION=WordPerfect 5.1, 5.2 (Windows)
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=
+M_STAMP=0
+NAME=wpw

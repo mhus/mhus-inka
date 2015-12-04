@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_pagemaker5template___
+DESCRIPTION=PageMaker 5.x template
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=
+M_STAMP=0
+NAME=pagemaker5template

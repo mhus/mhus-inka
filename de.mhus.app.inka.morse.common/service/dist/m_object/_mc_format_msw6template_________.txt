@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_msw6template_________
+DESCRIPTION=Word 6.x template (MacOS, Windows)
+_DESTINATION=sys
+MIME_TYPE=application/msword
+DOS_EXTENSION=dot6
+M_STAMP=0
+NAME=msw6template

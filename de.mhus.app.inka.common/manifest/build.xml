@@ -1,0 +1,212 @@
+<project name="mhu-lib4" default="all" basedir="./">
+
+	<target name="init">
+    	<!-- General config -->
+        <tstamp />
+
+        <property environment="env" />
+		<property file="${basedir}/build.properties" />
+		<property file="${basedir}/../common.properties" />
+
+        <path id="project.class.path">
+       		<fileset dir="${lib.dir}" includes="**/*.jar"/>
+       		<fileset dir="${common.dir}/libs" includes="**/*.jar"/>        	
+        </path>
+
+        <path id="lib.project.class.path">
+       		<fileset dir="${lib.dir}" includes="**/*.jar"/>
+       		<fileset dir="${dist.dir}" includes="${name}.jar"/>
+        	<fileset dir="${common.dir}/libs" includes="**/*.jar"/>  
+        </path>
+						  	
+    </target>
+   
+   <target name="all">
+   		<antcall target="jar" />
+		<antcall target="copy_version"/>
+		<antcall target="copy_ext"/>
+   		<antcall target="build_apps"/>
+   		<antcall target="jar_sources"/>
+   </target>
+   
+<!-- ============================================== -->
+<!-- Clean                                          -->
+<!-- ============================================== -->
+
+	<target name="clean" depends="init">
+		<mkdir dir="${build.class.dir}" />
+		<delete>
+			<fileset dir="${build.class.dir}" includes="**/**" />
+			<fileset dir="${java.dir}" includes="**/*.class" />
+		</delete>
+		<mkdir dir="${dist.dir}" />
+	</target>
+
+<!-- ============================================== -->
+<!-- Compile                                        -->
+<!-- ============================================== -->
+
+	<target name="compile" depends="clean">
+      	<javac
+            destdir="${build.class.dir}"
+            classpathref="project.class.path"
+      		
+      		optimize="${compiler.optimize}"
+            debug="${compiler.debug}"
+            deprecation="${compiler.deprecation}"
+            compiler="${compiler.type}"
+      		target="${compiler.target}"
+      		source="${compiler.source}"
+        >
+            <src path="${java.mhu-core.dir}" />
+            <src path="${java.mhu-swing.dir}" />
+      		<src path="${java.mhu-jmx.dir}" />
+      		<src path="${java.mhu-swt.dir}" />
+      		<src path="${java.mhu-log.dir}" />
+      		<src path="${java.mhu-cao.dir}" />
+      			
+            <!-- src path="${java.mhu-tests.dir}" / -->
+        </javac>
+        
+	</target>
+   
+<!-- ============================================== -->
+<!-- Jar                                            -->
+<!-- ============================================== -->
+
+	<target name="jar" depends="compile">
+		<delete>
+			<fileset dir="${dist.dir}" includes="${name}.jar" />
+		</delete>
+		
+      	<jar
+            excludes="**" 
+            jarfile="${dist.dir}/${name}.jar"
+            manifest="${manifest}"
+         >
+            <fileset dir="${build.class.dir}">
+            	<include name="**/*.class" />
+            	<exclude name="*CVS*" />
+            	<exclude name="*.svn*" />
+            </fileset>
+            <fileset dir="${java.mhu-resources.dir}">
+            	<include name="**/*" />
+            	<exclude name="*CVS*" />
+            	<exclude name="*.svn*" />
+            </fileset>
+      		<fileset file="${basedir}/license.txt"/>
+
+        </jar>
+				
+    </target>
+    
+	<target name="copy_ext" depends="init" if="common.dist">
+		<copy 
+			verbose="true" 
+			file="${dist.dir}/${name}.jar" 
+			todir="${common.dist}" 
+			failonerror="false" 
+			overwrite="true"/>
+	</target>
+
+	<target name="copy_version" depends="init">
+		<copy 
+			verbose="true" 
+			file="${dist.dir}/${name}.jar" 
+			tofile="${dist.dir}/${name}-${build.version}.jar" 
+			failonerror="false" 
+			overwrite="true"/>
+	</target>
+
+	<!-- ============================================== -->
+	<!-- Jar                                            -->
+	<!-- ============================================== -->
+	
+	<target name="jar_sources" depends="init">
+
+		<delete>
+			<fileset dir="${dist.dir}" includes="${name}-${build.version}-src.jar" />
+		</delete>
+
+      	<zip
+            basedir="${basedir}" 
+            excludes="**" 
+            zipfile="${dist.dir}/${name}-${build.version}-src.zip"
+         >
+            <fileset dir="${basedir}">
+            	<include name="**" />
+            	<exclude name="build/**" />
+            	<exclude name="dist/*" />
+            	<exclude name="*CVS*" />
+            	<exclude name="*.svn*" />
+            	<exclude name="**/*.class" />
+            </fileset>
+        </zip>
+                
+	</target>
+
+	<!-- ============================================== -->
+	<!-- build apps                                      -->
+	<!-- ============================================== -->
+
+	<target name="build_apps" depends="clean">
+		
+		<antcall target="build_app">
+			<param name="package" value="de/mhu/lib/apps/log/udpserver"/>
+			<param name="package_name" value="udpserver"/>
+		</antcall>
+		
+		<antcall target="build_app">
+			<param name="package" value="de/mhu/lib/apps/jadjar"/>
+			<param name="package_name" value="jadjar"/>
+		</antcall>
+		
+		<antcall target="build_app">
+			<param name="package" value="de/mhu/lib/apps/ftpbrowser"/>
+			<param name="package_name" value="ftpbrowser"/>
+		</antcall>
+		<!-- signjar jar="${dist.dir}/ftpbrowser.jar" alias="mhu" storepass="mhumhu"/ -->
+		
+	</target>
+	
+	<!-- ============================================== -->
+	<!-- build app                                      -->
+	<!-- ============================================== -->
+
+	<target name="build_app" depends="clean">
+	
+		<javac
+		            destdir="${build.class.dir}"
+		            classpathref="lib.project.class.path"
+		      		optimize="${compiler.optimize}"
+		            debug="${compiler.debug}"
+		            deprecation="${compiler.deprecation}"
+		            compiler="${compiler.type}"
+		      		target="${compiler.target}"
+		      		source="${compiler.source}"
+        >
+            <src path="${java.mhu-apps.dir}" />
+			<include name="${package}/**"/>
+        </javac>
+		
+		<jar
+            jarfile="${dist.dir}/${package_name}.jar"
+            manifest="${java.mhu-apps.dir}/${package}/MANIFEST.MF"
+		>
+			<fileset dir="${build.class.dir}">
+            	<include name="**/**" />
+            	<exclude name="*CVS*" />
+            	<exclude name="*.svn*" />
+				<exclude name="${package}/MANIFEST.MF"/>
+            </fileset>
+			<fileset dir="${java.mhu-apps.dir}">
+            	<include name="${package}/**" />
+            	<exclude name="*CVS*" />
+            	<exclude name="*.svn*" />
+				<exclude name="${package}/MANIFEST.MF"/>
+				<exclude name="**/**.java"/>
+            </fileset>
+		</jar>
+		
+	</target>
+</project>

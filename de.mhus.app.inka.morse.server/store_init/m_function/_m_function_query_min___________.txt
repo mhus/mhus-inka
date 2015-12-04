@@ -1,0 +1,11 @@
+M_TYPE=m_function
+M_ACL=everyone_read
+ENTRY_CLASS=de.mhu.com.morse.channel.functions.Min
+M_LOCK=
+M_ID=_m_function_query_min___________
+FEATURES.SIZE=0
+_DESTINATION=sys
+M_STAMP=0
+JAR=
+ACCESS_ACL=everyone_read
+NAME=query.min

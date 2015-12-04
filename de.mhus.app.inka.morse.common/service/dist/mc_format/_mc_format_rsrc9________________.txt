@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_rsrc9________________
+DESCRIPTION=Macintosh OS 9 Resource Fork
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=rf9
+M_STAMP=0
+NAME=rsrc9

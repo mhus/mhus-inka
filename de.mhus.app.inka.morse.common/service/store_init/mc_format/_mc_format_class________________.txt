@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_class________________
+DESCRIPTION=Java Class File
+_DESTINATION=sys
+MIME_TYPE=java/*
+DOS_EXTENSION=class
+M_STAMP=0
+NAME=class

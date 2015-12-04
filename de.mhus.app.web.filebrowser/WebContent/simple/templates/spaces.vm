@@ -1,0 +1,15 @@
+<html>
+<head>
+#if ( $node )
+	<title>${node.getTitle()}</title>
+#end
+	<link rel="stylesheet" type="text/css" href="$root/~/style.css">
+</head>
+<body>
+Spaces
+<ul id="children">
+#foreach( $entry in $list )
+	<li class=""><a href='${entry.toLink()}'>${entry.getTitle()}</a></li>
+#end
+</ul>
+</html></body>

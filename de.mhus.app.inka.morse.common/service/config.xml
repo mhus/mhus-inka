@@ -1,0 +1,18 @@
+<config>
+	<root>
+		<nio>
+			<tea/>
+		</nio>
+		<core>
+			<initDb name="init" store="store_init" />
+			<sysDb  name="sys"  db.url="jdbc:mysql://localhost/m_sys?user=m_sys&amp;password=m_sys"/>
+			
+			<fileDb store="store_init" name="sys"/>
+			<mySqlDb name="*" db.url="jdbc:mysql://localhost/test?user=test&amp;password=test"/>
+			<hSqlDb name="x" db.url="jdbc:hsqldb:file:hsql.db" db.user="sa" db.pass=""/>
+			<object_manager store="C:/tmp_trans/morse/objects"></object_manager>
+		</core>
+		<types core.module.path="core"/>
+		<dbProvider core.module.path="core"/>
+	</root>
+</config>

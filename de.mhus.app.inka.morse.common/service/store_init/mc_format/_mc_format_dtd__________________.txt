@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_dtd__________________
+DESCRIPTION=Document Type Definition
+_DESTINATION=sys
+MIME_TYPE=text/dtd
+DOS_EXTENSION=dtd
+M_STAMP=0
+NAME=dtd

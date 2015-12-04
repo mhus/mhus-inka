@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_wvx__________________
+DESCRIPTION=Windows Media Video Metafile
+_DESTINATION=sys
+MIME_TYPE=video/x-ms-wmv
+DOS_EXTENSION=wvx
+M_STAMP=0
+NAME=wvx

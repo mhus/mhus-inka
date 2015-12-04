@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_phtml________________
+DESCRIPTION=PHP within Hypertext Markup Language Document (phtml)
+_DESTINATION=sys
+MIME_TYPE=text/phtml
+DOS_EXTENSION=phtml
+M_STAMP=0
+NAME=phtml

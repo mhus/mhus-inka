@@ -1,0 +1,36 @@
+<antlib>
+    <!-- typedef the tasks that work for ant less than 1.6 -->
+    <taskdef resource="mhuant.properties"/>
+
+    <taskdef
+        name="passwordDecode"
+        classname="de.mhus.app.inka.ant.lib.PasswordDecode"
+        onerror="ignore"/>
+    <typedef
+        name="passwordEncode"
+        classname="de.mhus.app.inka.ant.lib.PasswordEncode"
+        onerror="ignore" />
+    <taskdef
+        name="stdin"
+        classname="de.mhus.app.inka.ant.lib.ConsoleInput"
+        onerror="ignore"/>
+        
+    <typedef
+        name="dctmConnect"
+        classname="de.mhus.app.inka.ant.dctm.Connect"
+        onerror="ignore" />
+    <taskdef name="dctmQuery"
+        classname="de.mhus.app.inka.ant.dctm.Query"
+        onerror="ignore" />
+    <taskdef name="dctmClose"
+        classname="de.mhus.app.inka.ant.dctm.Close"
+        onerror="ignore" />
+        
+    <taskdef name="exampleAdd"
+        classname="de.mhus.app.inka.ant.example.Add"
+        onerror="ignore" />
+    <taskdef name="exampleDialogBox"
+        classname="de.mhus.app.inka.ant.example.DialogBoxTask"
+        onerror="ignore" />
+
+</antlib>

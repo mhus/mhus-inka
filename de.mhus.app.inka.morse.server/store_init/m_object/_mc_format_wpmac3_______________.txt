@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_wpmac3_______________
+DESCRIPTION=WordPerfect 3.x (MacOS)
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=
+M_STAMP=0
+NAME=wpmac3

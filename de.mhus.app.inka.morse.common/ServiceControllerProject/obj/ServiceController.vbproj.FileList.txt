@@ -1,0 +1,5 @@
+bin\ServiceController.exe
+bin\ServiceController.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ServiceController.exe
+obj\Debug\ServiceController.pdb

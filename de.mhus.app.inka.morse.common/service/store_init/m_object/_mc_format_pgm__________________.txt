@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_pgm__________________
+DESCRIPTION=NETPBM Graymap Image Format (grayscale)
+_DESTINATION=sys
+MIME_TYPE=image/x-portable-graymap
+DOS_EXTENSION=pgm
+M_STAMP=0
+NAME=pgm

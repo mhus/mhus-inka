@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_hdml_________________
+DESCRIPTION=Handheld Device Markup Language Document
+_DESTINATION=sys
+MIME_TYPE=text/hdml
+DOS_EXTENSION=hdml
+M_STAMP=0
+NAME=hdml

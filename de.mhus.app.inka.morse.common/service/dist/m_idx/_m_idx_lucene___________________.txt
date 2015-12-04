@@ -1,0 +1,11 @@
+M_TYPE=m_idx
+M_ACL=administrator
+M_LOCK=
+M_ID=_m_idx_lucene___________________
+FEATURES.SIZE=0
+_DESTINATION=sys
+ACL=everyone_read
+M_STAMP=0
+FUNCTION=lucene
+CHANNEL=@idx
+NAME=lucene

@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_pagemaker4pub________
+DESCRIPTION=PageMaker 4.x publication
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=
+M_STAMP=0
+NAME=pagemaker4pub

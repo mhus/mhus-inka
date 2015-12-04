@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_excel4book___________
+DESCRIPTION=Excel 4.x workbook (MacOS, Windows)
+_DESTINATION=sys
+MIME_TYPE=application/vnd.ms-excel
+DOS_EXTENSION=xlw
+M_STAMP=0
+NAME=excel4book

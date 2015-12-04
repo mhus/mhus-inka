@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_indesign2____________
+DESCRIPTION=InDesign 2.x
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=indd
+M_STAMP=0
+NAME=indesign2

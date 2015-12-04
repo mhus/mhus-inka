@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_jsp__________________
+DESCRIPTION=Java Server Pages
+_DESTINATION=sys
+MIME_TYPE=application/x-javascript
+DOS_EXTENSION=jsp
+M_STAMP=0
+NAME=jsp

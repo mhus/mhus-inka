@@ -1,0 +1,24 @@
+<html>
+<head>
+#if ( $node )
+	<title>${node.getTitle()}</title>
+#end
+	<link rel="stylesheet" type="text/css" href="$root/~/style.css">
+</head>
+<body>
+#if ( $node )
+file
+ <h1>${node.getTitle()}</h1>
+ <a href='$backlink'>Zur&uuml;ck</a><br>
+<ul id="breadcrumb">
+#foreach( $entry in $breadcrumb )
+	<li><a href='${entry.toLink()}'>${entry.getTitle()}</a></li>
+#end
+</ul>
+#end
+<ul id="actions">
+#foreach( $entry in $actions )
+<li><a href='${node.toLink()}?action=${entry.getName()}'>${entry.getTitle()}</a></li>
+#end
+</ul>
+</html></body>

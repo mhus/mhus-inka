@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_cfm__________________
+DESCRIPTION=Cold Fusion Template File (cfm)
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=cfm
+M_STAMP=0
+NAME=cfm

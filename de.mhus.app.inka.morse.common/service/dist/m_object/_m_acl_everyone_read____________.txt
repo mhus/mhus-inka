@@ -1,0 +1,13 @@
+M_TYPE=m_acl
+M_ACL=administrator
+M_LOCK=
+M_ID=_m_acl_everyone_read____________
+PERMIT.1.RIGHTS=1
+PERMIT.SIZE=2
+PERMIT.0.SUBJECT=_m_group_administrator__________
+PERMIT.0.RIGHTS=255
+_DESTINATION=sys
+M_STAMP=0
+SENSITIVITY=1
+PERMIT.1.SUBJECT=_m_group_everyone_______________
+NAME=everyone_read

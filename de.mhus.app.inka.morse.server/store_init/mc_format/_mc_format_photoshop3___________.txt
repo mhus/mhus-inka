@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_photoshop3___________
+DESCRIPTION=Photoshop 2.5, 3.0 image
+_DESTINATION=sys
+MIME_TYPE=application/photoshop
+DOS_EXTENSION=psd
+M_STAMP=0
+NAME=photoshop3

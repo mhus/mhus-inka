@@ -1,0 +1,8 @@
+_DESTINATION=sys
+M_ID=_m_service_service______________
+TARGET=current
+M_ACL=administrator
+NAME=service
+M_STAMP=0
+M_LOCK=
+M_TYPE=m_service

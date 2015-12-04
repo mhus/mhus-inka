@@ -1,0 +1,17 @@
+AUTH_ATTR.0.V=nein
+M_TYPE=m_user
+M_ACL=administrator
+M_LOCK=
+M_ID=_m_user_root____________________
+IS_ACTIVE=1
+ADMINISTRATOR=1
+FEATURES.SIZE=0
+_DESTINATION=sys
+AUTH_ATTR.0.K=password
+IS_HIDDEN=1
+AUTH_METHOD=_m_auth_password________________
+AUTH_ATTR.SIZE=1
+M_STAMP=0
+SENSITIVITY=200
+LOGIN_NAME=root
+NAME=Administrator

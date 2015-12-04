@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_wrl__________________
+DESCRIPTION=VRML File
+_DESTINATION=sys
+MIME_TYPE=model/vrml
+DOS_EXTENSION=wrl
+M_STAMP=0
+NAME=wrl

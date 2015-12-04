@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_pnm__________________
+DESCRIPTION=NETPBM Anymap Image Format
+_DESTINATION=sys
+MIME_TYPE=image/x-portable-anymap
+DOS_EXTENSION=pbm
+M_STAMP=0
+NAME=pnm

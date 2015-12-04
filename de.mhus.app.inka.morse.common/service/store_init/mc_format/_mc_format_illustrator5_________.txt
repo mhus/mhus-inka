@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_illustrator5_________
+DESCRIPTION=Illustrator 5.x image
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=ai
+M_STAMP=0
+NAME=illustrator5

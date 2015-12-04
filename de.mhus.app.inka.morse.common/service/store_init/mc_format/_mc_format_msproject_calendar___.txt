@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_msproject_calendar___
+DESCRIPTION=MS Project - calendar
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=mpc
+M_STAMP=0
+NAME=msproject_calendar

@@ -1,0 +1,14 @@
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\bin\Debug\CryptPad.exe
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\bin\Debug\CryptPad.pdb
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Debug\CryptPad.exe
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Debug\CryptPad.pdb
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Debug\CryptPad.Form1.resources
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Debug\CryptPad.csproj.GenerateResource.Cache
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Debug\CryptPad.Form2.resources
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\bin\Release\CryptPad.exe
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Release\ResolveAssemblyReference.cache
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Release\CryptPad.Form1.resources
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Release\CryptPad.Form2.resources
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Release\CryptPad.csproj.GenerateResource.Cache
+C:\Dokumente und Einstellungen\mike\Eigene Dateien\SharpDevelop Projects\CryptPad\obj\Release\CryptPad.exe

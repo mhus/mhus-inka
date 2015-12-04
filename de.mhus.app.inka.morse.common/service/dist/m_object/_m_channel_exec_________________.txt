@@ -1,0 +1,11 @@
+M_TYPE=m_channel
+M_ACL=administrator
+M_LOCK=
+M_ID=_m_channel_exec_________________
+FEATURES.SIZE=0
+_DESTINATION=sys
+ACL=everyone_read
+M_STAMP=0
+CHANNEL=exec
+NAME=exec
+CLASS=de.mhu.com.morse.channel.exec.ExecDriver

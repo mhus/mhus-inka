@@ -1,0 +1,61 @@
+<project name="ECLIPSE" default="main" basedir=".">
+
+  <property file="ant.properties" />
+	
+  <!-- the build path -->
+
+   <path id="build.path">
+   	  <fileset dir="${dist.dir}">
+   	        <include name="*.jar"/>
+      </fileset>
+   </path>
+
+	<target name="main" depends="copy">
+	</target>
+
+	<target name="copy" depends="init">
+		<copy todir="${plugin.lib}">
+			<fileset dir="${dist.dir}">
+				<include name="morse.jar"/>
+				<include name="mhu-lib.jar"/>
+			</fileset>
+		</copy>
+	</target>
+	
+  <target name="jar" depends="compile">
+  	<delete file="${jar}" failonerror="false"/>
+	<jar jarfile="${jar}" manifest="${manifest.file}">
+     	 <fileset dir="${build.classes.dir}" includes="**/**"/>
+		 <fileset dir="${src.dir}" excludes="**/*.java" />
+	</jar>
+  </target>
+	
+<!-- compilation options -->
+
+   <target name="compile" depends="init">
+   <javac srcdir="${src.dir}"
+      destdir="${build.classes.dir}"
+      classpathref="build.path"
+      includes="**/*.java"
+   	
+      optimize="${compiler.optimize}"
+      debug="${compiler.debug}"
+      deprecation="${compiler.deprecation}"
+      compiler="${compiler.type}"
+	  target="${compiler.target}"
+	  source="${compiler.source}"
+   />
+   </target>
+
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+		<delete file="${jar}"/>
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${build.classes.dir}"/>
+		<mkdir dir="${dist.dir}"/>
+	</target>
+
+</project>

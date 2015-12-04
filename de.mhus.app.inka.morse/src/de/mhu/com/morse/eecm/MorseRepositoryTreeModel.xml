@@ -1,0 +1,6 @@
+<form>
+  <panel title="Repository">
+    <selection name="root" title="Visible Root" description="Select the visible root" dynamic="true"/>
+  </panel>
+  
+</form>

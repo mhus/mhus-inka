@@ -1,0 +1,24 @@
+<ul class="list-group">
+#set ($cnt=0)
+#foreach( $entry in $list )
+	#set ($cnt=$cnt+1)
+	<li class="list-group-item">
+	<img class="listicon" id="loader-$cnt" src="$root/~/free-file-icons/16px/_blank.png" alt="Loading, Loading!"></img>
+	<img class="listicon" style="display:hidden" id="large-img-$cnt" src="" alt="London Eye"></img>
+  	<script>
+		$(function() {
+			$('#large-img-$cnt').hide();
+			ext = '$entry.getName()'.split('.').pop();
+			$('#large-img-$cnt').attr("src","$root/~/free-file-icons/16px/" + ext + ".png");
+			$('#large-img-$cnt').load( function() {
+				$('#loader-$cnt').hide();
+				$('#large-img-$cnt').show();
+			} );
+		});  	
+  	</script>
+	
+	<a href='${entry.toLinkUrl()}'>$esc.html($entry.getTitle())</a>
+	<span class="badge">#if ($entry.isFile() == true)file#end</span>
+	</li>
+#end
+</ul>

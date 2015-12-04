@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_eps__________________
+DESCRIPTION=Encapsulated PostScript
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=eps
+M_STAMP=0
+NAME=eps

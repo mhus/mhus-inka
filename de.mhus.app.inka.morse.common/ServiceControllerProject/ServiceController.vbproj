@@ -1,0 +1,74 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:Conversion="urn:Conversion">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1370E7BA-7DFA-4F1A-9ED0-4B03D616E4F8}</ProjectGuid>
+    <RootNamespace>ServiceController</RootNamespace>
+    <AssemblyName>ServiceController</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon />
+    <RunPostBuildEvent>OnSuccessfulBuild</RunPostBuildEvent>
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <StartupObject />
+    <NoConfig>false</NoConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <NoStdLib />
+    <WarningLevel>1</WarningLevel>
+    <NoWarn />
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <AllowUnsafeBlocks />
+    <CheckForOverflowUnderflow />
+    <DefineConstants />
+    <OutputPath>bin\</OutputPath>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <NoStdLib />
+    <WarningLevel>1</WarningLevel>
+    <NoWarn />
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks />
+    <CheckForOverflowUnderflow />
+    <DefineConstants />
+    <OutputPath>bin\</OutputPath>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ServiceProcess">
+      <HintPath>..\..\..\..\winnt\microsoft.net\framework\v1.0.3705\system.serviceprocess.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Configuration.Install">
+      <HintPath>..\..\..\..\WINNT\Microsoft.NET\Framework\v1.0.3705\System.Configuration.Install.dll</HintPath>
+      <Private />
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="modMain.vb" />
+    <Content Include="Paused.ico" />
+    <Content Include="Running.ico" />
+    <Content Include="Stopped.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+</Project>

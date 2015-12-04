@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_bmp__________________
+DESCRIPTION=BMP Image (Windows, OS/2)
+_DESTINATION=sys
+MIME_TYPE=image/bmp
+DOS_EXTENSION=bmp
+M_STAMP=0
+NAME=bmp

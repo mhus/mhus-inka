@@ -1,0 +1,10 @@
+M_TYPE=mc_format
+M_ACL=
+M_LOCK=
+M_ID=_mc_format_imagemap_____________
+DESCRIPTION=Image Map File
+_DESTINATION=sys
+MIME_TYPE=
+DOS_EXTENSION=map
+M_STAMP=0
+NAME=imagemap

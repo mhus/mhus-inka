@@ -1,0 +1,800 @@
+TmDisk
+v7
+r0
+t299609636.232145
+cCheck dependencies
+cProcessInfoPlistFile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist Info.plist
+cCopyStringsFile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib
+cCpResource build/Debug/mDisk.app/Contents/Resources/mDisk.icns mDisk.icns
+cProcessPCH /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch mDisk_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Disk.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Disk.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListener.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListener.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListView.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/ContentFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/ContentFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/MetaFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/MetaFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/StoreFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/StoreFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Configuration.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Configuration.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/const.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Direct_Filesystem.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/old_mDisk_Filesystem.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/MacOS/mDisk normal i386
+cTouch /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004A49A9E400000000000000EE
+t1246341604
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/Library/Frameworks/MacFUSE.framework/Headers/MacFUSE.h
+c00000000494BE0D20000000000000740
+t1229709522
+s1856
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004864A1C900000000000012EE
+t1214554569
+s4846
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/stat.h
+c0000000047E883D100000000000047CE
+t1206420433
+s18382
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/xattr.h
+c0000000047E883D30000000000000B43
+t1206420435
+s2883
+
+N/Library/Frameworks/MacFUSE.framework/MacFUSE
+c00000000494BE0E7000000000005DBF8
+t1229709543
+s383992
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/ContentFs.m
+c000000004C1787A50000000000000C6B
+t1276610469
+s3179
+i"ContentFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/MetaFs.m
+c000000004BA8BFFA0000000000001C54
+t1269350394
+s7252
+i"MetaFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/StoreFs.m
+c000000004C1787030000000000000926
+t1276610307
+s2342
+i"StoreFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Configuration.h
+c000000004C2994E800000000000002AB
+t1277793512
+s683
+i<Cocoa/Cocoa.h>
+i"const.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Configuration.m
+c000000004C2994DF0000000000000AAE
+t1277793503
+s2734
+i"Configuration.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/ContentFs.h
+c000000004C2995A000000000000003B8
+t1277793696
+s952
+i<Cocoa/Cocoa.h>
+i"Configuration.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/ContentFs.m
+c000000004C29958C0000000000000CC4
+t1277793676
+s3268
+i"ContentFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.h
+c000000004C2B1D4B0000000000000390
+t1277893963
+s912
+i<Foundation/Foundation.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m
+c000000004C2B2895000000000000272C
+t1277896853
+s10028
+i<sys/xattr.h>
+i<sys/stat.h>
+i"Direct_Filesystem.h"
+i<MacFUSE/MacFUSE.h>
+i"NSError+POSIX.h"
+i"Configuration.h"
+i"StoreFs.h"
+i"ContentFs.h"
+i"MetaFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Disk.h
+c000000004C2B768300000000000002B8
+t1277916803
+s696
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Disk.m
+c000000004C2B769E00000000000010D9
+t1277916830
+s4313
+i"Disk.h"
+i"mDisk_Filesystem.h"
+i"Direct_Filesystem.h"
+i"DiskListener.h"
+i<MacFUSE/MacFUSE.h>
+i"Configuration.h"
+i"StoreFs.h"
+i"ContentFs.h"
+i"MetaFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListView.h
+c000000004C194E370000000000000128
+t1276726839
+s296
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListView.m
+c000000004C194E0D0000000000000210
+t1276726797
+s528
+i"DiskListView.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListener.h
+c000000004C1808FF0000000000000159
+t1276643583
+s345
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListener.m
+c000000004C1809750000000000000148
+t1276643701
+s328
+i"DiskListener.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/InfoPlist.strings
+c000000004C17F51B000000000000005C
+t1276638491
+s92
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib
+c000000004C29930B0000000000017609
+t1277793035
+s95753
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/MetaFs.h
+c000000004C29960300000000000004E7
+t1277793795
+s1255
+i<Cocoa/Cocoa.h>
+i"Configuration.h"
+i"ContentFs.h"
+i"StoreFs.h"
+i<sys/xattr.h>
+i<sys/stat.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/MetaFs.m
+c000000004C2996170000000000001CC8
+t1277793815
+s7368
+i"MetaFs.h"
+i"NSError+POSIX.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.h
+c000000004C17F81A00000000000003B6
+t1276639258
+s950
+i<Foundation/Foundation.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m
+c000000004C17F85300000000000003B7
+t1276639315
+s951
+i"NSError+POSIX.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/StoreFs.h
+c000000004C2995DC00000000000002DE
+t1277793756
+s734
+i<Cocoa/Cocoa.h>
+i"Configuration.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/StoreFs.m
+c000000004C29A3640000000000000949
+t1277797220
+s2377
+i"StoreFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app
+t1277916832
+s102
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist
+t1276639319
+s821
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/MacOS/mDisk
+t1277916832
+s82692
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/PkgInfo
+t1276639319
+s8
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1276639320
+s92
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/MainMenu.nib
+t1277793038
+s16293
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/mDisk.icns
+t1276639319
+s226826
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Configuration.o
+t1277794282
+s17308
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/ContentFs.o
+t1277794281
+s17456
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Direct_Filesystem.o
+t1277916652
+s32604
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Disk.o
+t1277916832
+s21720
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListView.o
+t1276726840
+s17804
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListener.o
+t1276643702
+s6252
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/MetaFs.o
+t1277794281
+s25508
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o
+t1276639325
+s6272
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/StoreFs.o
+t1277797893
+s16044
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/const.o
+t1276727699
+s6064
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/disk.o
+t1276642199
+s22572
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk.LinkFileList
+c000000004C2B75E90000000000000690
+t1277916649
+s1680
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDiskApp.o
+t1276718138
+s15080
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o
+t1277916805
+s32252
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o
+t1277916651
+s34740
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o
+t1276639323
+s4876
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/old_mDisk_Filesystem.o
+t1277916652
+s34936
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.h
+c000000004C1951910000000000000188
+t1276727697
+s392
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m
+c000000004C19518800000000000001E9
+t1276727688
+s489
+i"const.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/disk.h
+c000000004C180396000000000000016F
+t1276642198
+s367
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/disk.m
+c000000004C18021F0000000000000896
+t1276641823
+s2198
+i"disk.h"
+i"mDisk_Filesystem.h"
+i<MacFUSE/MacFUSE.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk.icns
+c000000004C17F51B000000000003760A
+t1276638491
+s226826
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDiskApp.h
+c000000004C192A0A000000000000016B
+t1276717578
+s363
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDiskApp.m
+c000000004C192BD6000000000000015C
+t1276718038
+s348
+i"mDiskApp.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.h
+c000000004C29A0B10000000000000239
+t1277796529
+s569
+i<Cocoa/Cocoa.h>
+i"DiskListener.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m
+c000000004C29A1CE0000000000000A5F
+t1277796814
+s2655
+i"mDisk_Controller.h"
+i"Disk.h"
+i"DiskListener.h"
+i"DiskListView.h"
+i<MacFUSE/MacFUSE.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.h
+c000000004C29AD14000000000000036C
+t1277799700
+s876
+i<Foundation/Foundation.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m
+c000000004C2B28BD000000000000380F
+t1277896893
+s14351
+i<sys/xattr.h>
+i<sys/stat.h>
+i"mDisk_Filesystem.h"
+i<MacFUSE/MacFUSE.h>
+i"NSError+POSIX.h"
+i"Configuration.h"
+i"StoreFs.h"
+i"ContentFs.h"
+i"MetaFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Prefix.pch
+c000000004C17F51B000000000000008D
+t1276638491
+s141
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m
+c000000004C17F51B00000000000000FF
+t1276638491
+s255
+i<Cocoa/Cocoa.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.h
+c000000004C2B75C5000000000000037D
+t1277916613
+s893
+i<Foundation/Foundation.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m
+c000000004C2B75BD00000000000037EE
+t1277916605
+s14318
+i<sys/xattr.h>
+i<sys/stat.h>
+i"old_mDisk_Filesystem.h"
+i<MacFUSE/MacFUSE.h>
+i"NSError+POSIX.h"
+i"Configuration.h"
+i"StoreFs.h"
+i"ContentFs.h"
+i"MetaFs.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk_old/Configuration.h
+c000000004B9FEFCE0000000000000299
+t1268772814
+s665
+i<Cocoa/Cocoa.h>
+i"const.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk_old/ContentFs.h
+c000000004C17873000000000000003A6
+t1276610352
+s934
+i<Cocoa/Cocoa.h>
+i"Configuration.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk_old/MetaFs.h
+c000000004BA169DC00000000000004D4
+t1268869596
+s1236
+i<Cocoa/Cocoa.h>
+i"Configuration.h"
+i"ContentFs.h"
+i"StoreFs.h"
+i<sys/xattr.h>
+i<sys/stat.h>
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk_old/StoreFs.h
+c000000004C1786BC00000000000002CC
+t1276610236
+s716
+i<Cocoa/Cocoa.h>
+i"Configuration.h"
+
+N/Users/mikehummel/Documents/mhu/sources_mac/mDisk_old/const.h
+c000000004BA8BF5800000000000001D3
+t1269350232
+s467
+
+N/var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch
+t1276639323
+s54071728
+
+NInfo.plist
+c000000004C17F51B000000000000036B
+t1276638491
+s875
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies299609636#299609636#0(0"0(0#1#0"4300911832#0"0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Configuration.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Configuration.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299487081.896865
+e299487082.071020
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Configuration.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Configuration.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Configuration.m299487081#299487082#0(0"0(0#0#65"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Configuration.m4300911832#1541"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Configuration.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Configuration.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/ContentFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/ContentFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298420281.519913
+e298420281.707637
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/ContentFs.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/ContentFs.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/ContentFs.m298420281#298420281#0(0"0(0#0#74"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/ContentFs.m4300911832#1546"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/ContentFs.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/ContentFs.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/ContentFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/ContentFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299487081.498870
+e299487081.688831
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/ContentFs.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/ContentFs.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/ContentFs.m299487081#299487081#0(0"0(0#0#61"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/ContentFs.m4300911832#1533"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/ContentFs.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/ContentFs.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Direct_Filesystem.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299609451.800142
+e299609452.157146
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Direct_Filesystem.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@77"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m299609451#299609452#0(0"0(0#0#69"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m4300911832#1549"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Direct_Filesystem.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Direct_Filesystem.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Disk.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Disk.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299609632.079567
+e299609632.504747
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Disk.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Disk.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Disk.m299609632#299609632#0(0"0(0#0#56"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Disk.m4300911832#1523"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/Disk.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/Disk.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListView.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298419640.694143
+e298419640.889384
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListView.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListView.m298419640#298419640#0(0"0(0#0#64"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListView.m4300911832#1539"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListView.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListView.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListener.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListener.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298336502.734355
+e298336502.865392
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListener.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListener.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListener.m298336502#298336502#0(0"0(0#0#64"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListener.m4300911832#1539"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/DiskListener.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/DiskListener.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/MetaFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/MetaFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298420281.316772
+e298420281.690689
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/MetaFs.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/MetaFs.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/MetaFs.m298420281#298420281#0(0"0(0#0#71"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/MetaFs.m4300911832#1540"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/MetaFs.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/MetaFs.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/MetaFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/MetaFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299487081.688937
+e299487081.943422
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/MetaFs.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/MetaFs.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/MetaFs.m299487081#299487081#0(0"0(0#0#58"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/MetaFs.m4300911832#1527"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/MetaFs.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/MetaFs.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298332124.397039
+e298332125.214240
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m298332124#298332125#0(0"0(0#0#65"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m4300911832#1541"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/NSError+POSIX.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/NSError+POSIX.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/StoreFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/StoreFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298420281.318023
+e298420281.519805
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/StoreFs.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/StoreFs.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/StoreFs.m298420281#298420281#0(0"0(0#0#72"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/StoreFs.m4300911832#1542"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/../mDisk_old/StoreFs.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/StoreFs.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/StoreFs.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/StoreFs.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299490692.961461
+e299490693.433700
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/StoreFs.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/StoreFs.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/StoreFs.m299490692#299490693#0(0"0(0#0#59"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/StoreFs.m4300911832#1529"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/StoreFs.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/StoreFs.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/const.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298420498.873931
+e298420499.036405
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/const.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m:22: warning: '@end' must appear in an @implementation context
+lSLF07#2@65"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m298420498#298420499#0(120"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m:22: warning: '@end' must appear in an @implementation context1(22@48"'@end' must appear in an @implementation context298420498#0#120#0(6@57"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m298420488#22#0#22#0#0"0(0#0#57"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m4300911832#1525"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/const.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/const.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/disk.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/disk.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298334998.809132
+e298334999.077175
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/disk.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/disk.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/disk.m298334998#298334999#0(0"0(0#0#56"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/disk.m4300911832#1523"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/disk.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/disk.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDiskApp.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDiskApp.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298410938.172445
+e298410938.789423
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDiskApp.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDiskApp.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDiskApp.m298410938#298410938#0(0"0(0#0#60"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDiskApp.m4300911832#1531"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDiskApp.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDiskApp.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299609604.723890
+e299609605.016398
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m299609604#299609605#0(0"0(0#0#68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m4300911832#1547"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Controller.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Controller.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299609449.644464
+e299609451.798714
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m299609449#299609451#0(0"0(0#0#68"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m4300911832#1547"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Filesystem.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk_Filesystem.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s298332123.765916
+e298332123.929780
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m298332123#298332123#0(0"0(0#0#56"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m4300911832#1523"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/main.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/main.o0#
+
+CCompileC build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/old_mDisk_Filesystem.o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s299609452.129676
+e299609452.384733
+r1
+xCompileC
+xbuild/mDisk.build/Debug/mDisk.build/Objects-normal/i386/old_mDisk_Filesystem.o
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m299609452#299609452#0(0"0(0#0#72"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m4300911832#1555"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -include /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/old_mDisk_Filesystem.m -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/old_mDisk_Filesystem.o0#
+
+CCompileXIB /Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib
+s299485837.813755
+e299485838.129155
+r1
+xCompileXIB
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib299485837#299485838#0(0"0(0#0#76"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib4300911832#358"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/MainMenu.nib /Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/MainMenu.xib0#
+
+CCopyStringsFile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s298332119.455869
+e298332120.106038
+r1
+xCopyStringsFile
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings298332119#298332120#0(0"0(0#0#81"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/English.lproj/InfoPlist.strings4300911832#386"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Debug/mDisk.app/Contents/Resources/mDisk.icns mDisk.icns
+s298332119.782562
+e298332120.128338
+r1
+xCpResource
+xbuild/Debug/mDisk.app/Contents/Resources/mDisk.icns
+xmDisk.icns
+lSLF07#2@15"Copy mDisk.icns298332119#298332120#0(0"0(0#0#60"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk.icns4300911832#357"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk.icns /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Resources0#
+
+CLd /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/MacOS/mDisk normal i386
+s299609632.504839
+e299609632.544948
+r1
+xLd
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/MacOS/mDisk
+xnormal
+xi386
+lSLF07#2@97"Link /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/MacOS/mDisk299609632#299609632#0(0"0(0#0#0"4300911832#602"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -filelist /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/Objects-normal/i386/mDisk.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework MacFUSE -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/MacOS/mDisk0#
+
+CProcessInfoPlistFile /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist Info.plist
+s298332119.395052
+e298332119.455697
+r1
+xProcessInfoPlistFile
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist298332119#298332119#0(0"0(0#0#60"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/Info.plist27584749588119668#331"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    builtin-infoPlistUtility Info.plist -genpkginfo /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch mDisk_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s298332120.128596
+e298332123.765766
+r1
+xProcessPCH
+x/var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch
+xmDisk_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile mDisk_Prefix.pch298332120#298332123#0(0"0(0#0#66"/Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Prefix.pch4300911832#1422"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-generated-files.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-own-target-headers.hmap -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-all-target-headers.hmap -iquote /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/mDisk-project-headers.hmap -F/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/include -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources/i386 -I/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/mDisk.build/Debug/mDisk.build/DerivedSources -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/mDisk_Prefix.pch -o /var/folders/Xl/XlusNrkaHhWR5R7ulqf+jk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/mDisk_Prefix-fpzwykjqomezemeagwneroovvhdh/mDisk_Prefix.pch.gch0#
+
+CTouch /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app
+s299609632.545045
+e299609632.549947
+r1
+xTouch
+x/Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app
+lSLF07#2@77"Touch /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app299609632#299609632#0(0"0(0#0#0"4300911832#151"    cd /Users/mikehummel/Documents/mhu/sources_mac/mDisk    /usr/bin/touch -c /Users/mikehummel/Documents/mhu/sources_mac/mDisk/build/Debug/mDisk.app0#
+

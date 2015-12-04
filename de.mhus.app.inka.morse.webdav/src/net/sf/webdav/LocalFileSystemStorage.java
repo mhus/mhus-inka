@@ -1,0 +1,275 @@
+/*
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+package net.sf.webdav;
+
+import java.io.InputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+
+import java.security.Principal;
+
+import java.util.Date;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * Reference Implementation of IWebdavStorage
+ * 
+ * @author joa
+ * @author re
+ */
+public class LocalFileSystemStorage implements IWebdavStorage {
+
+	private static final String ROOTPATH_PARAMETER = "rootpath";
+
+	private static final String DEBUG_PARAMETER = "storeDebug";
+
+	private static int BUF_SIZE = 50000;
+
+	private static File root = null;
+
+	private static int debug = -1;
+
+	public void begin(HttpServletRequest req, Hashtable parameters)
+			throws Exception {
+		if (debug == -1) {
+			String debugString = (String) parameters.get(DEBUG_PARAMETER);
+			if (debugString == null) {
+				debug = 0;
+			}else{
+			debug = Integer.parseInt(debugString);
+			}
+		}
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.begin()");
+		if (root == null) {
+
+			String rootPath = (String) parameters.get(ROOTPATH_PARAMETER);
+			if (rootPath == null) {
+				throw new Exception("missing parameter: " + ROOTPATH_PARAMETER);
+			}
+			root = new File(rootPath);
+			if (!root.exists()) {
+				if (!root.mkdirs()) {
+					throw new Exception(ROOTPATH_PARAMETER + ": "
+							+ root
+							+ " does not exist and could not be created");
+				}
+			}
+		}
+	}
+
+	public void checkAuthentication(HttpServletRequest req) throws SecurityException {
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.checkAuthentication()");
+		//throw new SecurityException( "no" );
+		// do nothing
+
+	}
+
+	public void commit(HttpServletRequest req) throws IOException {
+		// do nothing
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.commit()");
+	}
+
+	public void rollback(HttpServletRequest req) throws IOException {
+		// do nothing
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.rollback()");
+
+	}
+
+	public boolean objectExists(HttpServletRequest req, String uri) throws IOException {
+		File file = new File(root, uri);
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.objectExists(" + uri
+					+ ")=" + file.exists());
+		return file.exists();
+	}
+
+	public boolean isFolder(HttpServletRequest req, String uri) throws IOException {
+		File file = new File(root, uri);
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.isFolder(" + uri + ")="
+					+ file.isDirectory());
+		return file.isDirectory();
+	}
+
+	public boolean isResource(HttpServletRequest req, String uri) throws IOException {
+		File file = new File(root, uri);
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.isResource(" + uri + ") "
+					+ file.isFile());
+		return file.isFile();
+	}
+
+	/**
+	 * @throws IOException
+	 *             if the folder cannot be created
+	 */
+	public void createFolder(HttpServletRequest req, String uri) throws IOException {
+		if (debug == 1)
+			System.out
+					.println("LocalFileSystemStore.createFolder(" + uri + ")");
+		File file = new File(root, uri);
+		if (!file.mkdir())
+			throw new IOException("cannot create folder: " + uri);
+	}
+
+	/**
+	 * @throws IOException
+	 *             if the resource cannot be created
+	 */
+	public void createResource(HttpServletRequest req, String uri) throws IOException {
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.createResource(" + uri
+					+ ")");
+		File file = new File(root, uri);
+		if (!file.createNewFile())
+			throw new IOException("cannot create file: " + uri);
+	}
+
+	/**
+	 * tries to save the given InputStream to the file at path "uri". content
+	 * type and charachter encoding are ignored
+	 */
+	public void setResourceContent(HttpServletRequest req, String uri, InputStream is,
+			String contentType, String characterEncoding) throws IOException {
+
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.setResourceContent(" + uri
+					+ ")");
+		File file = new File(root, uri);
+		OutputStream os = new BufferedOutputStream(new FileOutputStream(file));
+		try {
+			int read = -1;
+			byte[] copyBuffer = new byte[BUF_SIZE];
+
+			while ((read = is.read(copyBuffer, 0, copyBuffer.length)) != -1) {
+				os.write(copyBuffer, 0, read);
+			}
+		} finally {
+			try {
+				is.close();
+			} finally {
+				os.close();
+			}
+		}
+	}
+
+	/**
+	 * @return the lastModified Date
+	 */
+	public Date getLastModified(HttpServletRequest req, String uri) throws IOException {
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.getLastModified(" + uri
+					+ ")");
+		File file = new File(root, uri);
+		return new Date(file.lastModified());
+	}
+
+	/**
+	 * @return the lastModified date of the file, java.io.file does not support
+	 *         a creation date
+	 */
+	public Date getCreationDate(HttpServletRequest req, String uri) throws IOException {
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.getCreationDate(" + uri
+					+ ")");
+		// TODO return creation date instead of last modified
+		File file = new File(root, uri);
+		return new Date(file.lastModified());
+	}
+
+	/**
+	 * @return a (possibly empty) list of children, or <code>null</code> if
+	 *         the uri points to a file
+	 */
+	public String[] getChildrenNames(HttpServletRequest req, String uri) throws IOException {
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.getChildrenNames(" + uri
+					+ ")");
+		File file = new File(root, uri);
+		if (file.isDirectory()) {
+
+			File[] children = file.listFiles();
+			List childList = new ArrayList();
+			if ( children == null ) return null;
+			for (int i = 0; i < children.length; i++) {
+				String name = children[i].getName();
+				childList.add(name);
+
+			}
+			String[] childrenNames = new String[childList.size()];
+			childrenNames = (String[]) childList.toArray(childrenNames);
+			return childrenNames;
+		} else {
+			return null;
+		}
+
+	}
+
+	/**
+	 * @return an input stream to the specified resource
+	 */
+	public InputStream getResourceContent(HttpServletRequest req, String uri) throws IOException {
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.getResourceContent(" + uri
+					+ ")");
+		File file = new File(root, uri);
+
+		InputStream in = new BufferedInputStream(new FileInputStream(file));
+		return in;
+	}
+
+	/**
+	 * @return the size of the file
+	 */
+	public long getResourceLength(HttpServletRequest req, String uri) throws IOException {
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.getResourceLength(" + uri
+					+ ")");
+		File file = new File(root, uri);
+		return file.length();
+	}
+
+	/**
+	 * @throws IOException
+	 *             if the deletion failed
+	 * 
+	 */
+	public void removeObject(HttpServletRequest req, String uri) throws IOException {
+		File file = new File(root, uri);
+		boolean success = file.delete();
+		if (debug == 1)
+			System.out.println("LocalFileSystemStore.removeObject(" + uri
+					+ ")=" + success);
+		if (!success) {
+			throw new IOException("cannot delete object: " + uri);
+		}
+
+	}
+
+}
