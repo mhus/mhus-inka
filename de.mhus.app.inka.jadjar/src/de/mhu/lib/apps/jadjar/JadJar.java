@@ -46,7 +46,6 @@ import org.apache.commons.vfs.VFS;
 import de.mhu.lib.AFile;
 import de.mhu.lib.AThread;
 import de.mhu.lib.log.AL;
-import de.mhu.lib.sf.AScriptPanel;
 import de.mhus.lib.sf.IMScript;
 import de.mhus.lib.sf.ScriptLogger;
 
