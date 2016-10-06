@@ -18,6 +18,8 @@
 
 package de.mhu.lib.apps.jadjar;
 
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,6 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -37,6 +40,9 @@ import java.util.zip.ZipOutputStream;
 
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 import org.apache.commons.vfs.FileObject;
 import org.apache.commons.vfs.FileSystemException;
@@ -46,6 +52,7 @@ import org.apache.commons.vfs.VFS;
 import de.mhu.lib.AFile;
 import de.mhu.lib.AThread;
 import de.mhu.lib.log.AL;
+import de.mhu.lib.swing.ASwing;
 import de.mhus.lib.sf.IMScript;
 import de.mhus.lib.sf.ScriptLogger;
 
@@ -66,49 +73,84 @@ public class JadJar implements IMScript {
 	private boolean cleanup = true;
 	private boolean order = true;
 	private boolean isBeginning;
+	static File tmp = null;
+	static File jad = null;
+	static File jar = null;
 
-	public static void main( String[] args ) throws IOException {
+	public static void main( String[] args ) throws IOException, InterruptedException, InvocationTargetException {
 		// // AScriptControl.showFrame( JadJar.class.getName() );
 
 		//		AScriptPanel.showFrame( JadJar.class.getName() ).setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
+		JFrame frame = new JFrame();
+		ASwing.halfFrame(frame);
+		ASwing.centerFrame(frame);
+		frame.setVisible(true);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(new BorderLayout());
+		
+		JTextArea output = new JTextArea();
+		JScrollPane scroller = new JScrollPane(output);
+		panel.add(scroller, BorderLayout.CENTER);
+		frame.setContentPane(panel);
+		
+		System.setProperty("apple.awt.fileDialogForDirectories", "true");
+		
 		Properties p = new Properties();
 		try {
 			FileInputStream fis = new FileInputStream("jadjar.properties");
 			p.load(fis);
 			fis.close();
 		} catch (Exception e) {}
+
 		
-		JFileChooser chooser = new JFileChooser();
-		chooser.setDialogTitle("Temp Directory");
-		chooser.setMultiSelectionEnabled(false);
-		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-		chooser.setSelectedFile(new File(p.getProperty("tmp", ".")));
-		if ( chooser.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) {
-			return;
-		}
-		File tmp = chooser.getSelectedFile();
-		if (tmp==null) return;
+		EventQueue.invokeAndWait(new Runnable() {
+            @Override
+            public void run() {
+				JFileChooser chooser = new JFileChooser();
+				chooser.setDialogTitle("Temp Directory");
+				chooser.setMultiSelectionEnabled(false);
+				chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+				chooser.setSelectedFile(new File(p.getProperty("tmp", ".")));
+				if ( chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+					tmp = chooser.getSelectedFile();
+				}
+            }
+		});
+		if (tmp==null) System.exit(1);
 		p.setProperty("tmp", tmp.getAbsolutePath());
 		
-		chooser.setSelectedFile(new File(p.getProperty("jad", ".")));
-		chooser.setDialogTitle("jad Binary");
-		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		if ( chooser.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) {
-			return;
-		}
-		File jad = chooser.getSelectedFile();
-		if (jad==null) return;
+		Thread.sleep(1000);
+		EventQueue.invokeAndWait(new Runnable() {
+            @Override
+            public void run() {
+				JFileChooser chooser = new JFileChooser();
+				chooser.setSelectedFile(new File(p.getProperty("jad", ".")));
+				chooser.setDialogTitle("jad Binary");
+				chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				if ( chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+					jad = chooser.getSelectedFile();
+				}
+            }
+		});
+		if (jad==null) System.exit(1);
 		p.setProperty("jad", jad.getAbsolutePath());
 		
-		chooser.setSelectedFile(new File(p.getProperty("jar", ".")));
-		chooser.setDialogTitle("JAR Package");
-		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		if ( chooser.showOpenDialog(null) != JFileChooser.APPROVE_OPTION) {
-			return;
-		}
-		File jar = chooser.getSelectedFile();
-		if (jar==null) return;
+		Thread.sleep(1000);
+		EventQueue.invokeAndWait(new Runnable() {
+            @Override
+            public void run() {
+				JFileChooser chooser = new JFileChooser();
+				chooser.setSelectedFile(new File(p.getProperty("jar", ".")));
+				chooser.setDialogTitle("JAR Package");
+				chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+				if ( chooser.showOpenDialog(frame) == JFileChooser.APPROVE_OPTION) {
+					jar = chooser.getSelectedFile();
+				}
+            }
+		});
+		if (jar==null) System.exit(1);
 		p.setProperty("jar", jar.getAbsolutePath());
 		
 		try {
@@ -229,6 +271,7 @@ public class JadJar implements IMScript {
 		zip.close();
 		
 		if ( cleanup ) {
+			System.out.println("Cleanup...");
 			AFile.deleteDir( tmp );
 		}
 		
