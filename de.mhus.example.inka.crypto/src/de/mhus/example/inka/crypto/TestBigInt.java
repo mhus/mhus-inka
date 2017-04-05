@@ -1,4 +1,4 @@
-package calc;
+package de.mhus.example.inka.crypto;
 
 import java.math.BigInteger;
 import java.util.Random;

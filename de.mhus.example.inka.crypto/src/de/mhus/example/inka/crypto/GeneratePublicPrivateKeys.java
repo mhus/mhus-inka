@@ -1,4 +1,4 @@
-package calc;
+package de.mhus.example.inka.crypto;
 import java.security.KeyPairGenerator;
 import java.security.KeyPair;
 import java.security.PrivateKey;

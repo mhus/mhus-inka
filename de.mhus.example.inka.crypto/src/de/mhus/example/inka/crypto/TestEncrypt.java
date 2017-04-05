@@ -1,4 +1,4 @@
-package calc;
+package de.mhus.example.inka.crypto;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
