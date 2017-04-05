@@ -373,7 +373,12 @@ public class ExtractPemAndEncode {
 		BigDecimal D = new BigDecimal(start);
 		BigDecimal T = null;
 		BigDecimal logE = log10(E, 10);
+		long cnt = 0;
 		do {
+			cnt++;
+			if (cnt % 1000 == 0) System.err.print(".");
+			if (cnt % 100000 == 0) System.err.println(" " + cnt);
+			
 			D = D.add(Z);
 			T = D.divide(E, 100, BigDecimal.ROUND_UP).stripTrailingZeros();
 			if (T.scale() > 0) {
