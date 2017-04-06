@@ -75,6 +75,11 @@ public class ExtractPemAndEncode {
 
 			byte[] encodedPrivateKey = Base64.getDecoder().decode(privKeyPEM);
 
+			for (int i = 0; i < encodedPrivateKey.length; i++) {
+				System.out.print(toHex(encodedPrivateKey[i]) + " ");
+				if ((i+1) % 10 == 0) System.out.println();
+			}
+			System.out.println();
 			try {
 			    ASN1Sequence primitive = (ASN1Sequence) ASN1Sequence
 			        .fromByteArray(encodedPrivateKey);
@@ -165,9 +170,9 @@ public class ExtractPemAndEncode {
 			    System.out.println(" Decoded: " + decoded2);
 			    
 			    System.out.println();
-			    System.out.println("Fries out of the bottle:");
-			    BigInteger x = findFries(encoded, decoded2, modulus);
-			    System.out.println(" Fries: " + x);
+			  //  System.out.println("Fries out of the bottle:");
+			  //  BigInteger x = findFries(encoded, decoded2, modulus);
+			  //  System.out.println(" Fries: " + x);
 			    
 			} catch (IOException e2) {
 			    throw new IllegalStateException();
@@ -392,5 +397,8 @@ public class ExtractPemAndEncode {
 		} while (true);
 	}
 	
+	public static String toHex(byte in) {
+		return String.format("%02X ", in);
+	}
 	
 }
