@@ -107,8 +107,8 @@ public class ScriptConsole implements Plugin {
 				logger.printMsg("User: " + con.getUserName());
 			for (Iterator i = parameters.keySet().iterator(); i.hasNext();) {
 				String key = (String) i.next();
-				if (key.toLowerCase().indexOf("pass") >= 0) {
-					logger.printMsg(key + "=[xxx]");
+				if (MSystem.isPasswordName(key)) {
+					logger.printMsg(key + "=[***]");
 				} else {
 					logger.printMsg(key + "=" + parameters.get(key));
 				}
