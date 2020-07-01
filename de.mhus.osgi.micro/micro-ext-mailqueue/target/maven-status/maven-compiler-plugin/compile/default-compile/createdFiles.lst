@@ -1,0 +1,5 @@
+de/mhus/micro/ext/mailqueue/MailQueueDbImpl.class
+de/mhus/micro/ext/mailqueue/SopMailTask.class
+de/mhus/micro/ext/mailqueue/_SopMailTask.class
+de/mhus/micro/ext/mailqueue/MailQueueOperationImpl.class
+de/mhus/micro/ext/mailqueue/MailQueueTimer.class

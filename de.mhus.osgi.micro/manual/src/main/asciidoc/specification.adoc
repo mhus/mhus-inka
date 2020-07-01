@@ -1,0 +1,196 @@
+== Specification
+
+=== Vision
+
+The basic idea is to generalize the usage of different micro service and RCP
+concepts and frameworks. The focus is more on how to discover services from
+providers and distribute it to the consumers.
+
+We separate in provide, consume and discovery services. 
+
+The main goal for the provider is to use the preferred framework and SDK and 
+for the consumer not to matter how to reach or use the service if it's 
+implemented in another kind of framework.
+
+The consumer only need to know the name of the service to consume and the type
+of request and response data (json, plain text, binary, ...). Mapping of 
+data types are done by the clients.
+
+Core architecture and focus should be rest web services. It's the common
+way to implement micro services. But there are also arguments for JMS or
+other frameworks to use.
+
+Load balancing and heals checks are done in the background. Only providers are
+affected in this concepts by providing information of the current state of
+the service.
+
+Consumers should be able to select by using label selectors which providers
+are used for a request.
+
+=== Concepts
+
+The basic concept is the 'broker'. The broker can be embedded or a server
+implementation. The embedded should be used for small solutions. More
+enterprise applications should use the server.
+
+The server must provide a cluster functionality to scale the traffic. The focus
+is to run in a kubernetes environment. This means the presence of 'services' for
+TCP transports.
+
+All is done by the 'broker'. The broker is responsible for routing executions from 
+consumers to service providers. Each request is routed over the broker. The broker
+provide also browser access to the provider registry. But in most cases the
+consumer need to know which service it need to call.
+
+==== Server request
+
+In case of REST the server request should be similar to the original request to 
+the real service.
+
+The request is described in URI notation (specification later):
+
+----
+ms://de.mhus.micro.test.ping:1.0.0;broadcast;technology=java/say/hello
+----
+
+The example requests the service 'de.mhus.micro.test.ping' in version 1.0.0 and 
+with path '/say/hello'. Only java implementations will be affected and
+it will return a list of results because of the broadcast feature.
+
+The request to the original service is:
+
+----
+http://service.server/de.mhus.micro.test.ping/say/hello?a=b
+----
+
+The server request must include the URI informations for the broker:
+
+----
+http://broker.server/execute/de.mhus.micro.test.ping:1.0.0;broadcast;technology=java/say/hello?a=b
+----
+
+It's also possible to add user credentials but credentials will be added
+separately to the request and never in the URI.
+
+==== Direct request
+
+A more complex scenario is the direct request. In this case the client
+ask the server for a valid service url and afterwards execute it directly.
+
+The request to the broker in the first step will return a list of URLs:
+
+----
+GET Request:
+
+http://broker.server/query.rest/de.mhus.micro.test.ping:1.0.0;broadcast;technology=java
+
+Result:
+{
+    status: 'SUCCESSFUL',
+    results: [
+            'http://service.server/de.mhus.micro.test.ping',
+            ...
+            ]
+}
+----
+
+In the next step the consumer requests directly the rest service.
+
+This option has some limitations:
+
+* The consumer client need to be more smarter then for the server request.
+* The service could not be accessible from the consumer.
+* The authorization has to be done by the consumer client.
+* The client should not cache the service URL, this would bypass load balancing and readiness checks.
+* There could be services in NON REST environments. This services are only accessible using the server request.
+
+This request concept is not really faster and will be ignored for the first 
+version of the specification.
+
+=== Data specification
+
+==== URI properties
+
+Service names are organized in URI notation. The schema is always 'ms' for micro 
+service. The domain is the name of the service to request. Optional followed by the
+version number and the path. The path is forwarded to the micro service. The 
+query is used as selector to specify the requested service in detail. It's also
+possible to set features which will control the execution of the call.
+
+The notation of the service name should consist of a path and the name itself to
+differ a wide range of services.
+
+* Schema: always 'ms'
+* Domain: The name of the service to call, e.g. bookstore
+* Domain Version: The version or range to use, e.g. (1.0.0,2.0.0]
+* Features: Request features described later and the selector for the service
+* Path: The path for the service, e.g. /book/1234
+* Query: Not part of the micro service uri, it is 
+
+==== Request features
+
+* broadcast: Will execute all services found and return a list of results
+* oneway: Will not wait for the result
+* timeout=sec: Number of seconds to wait for the result, if not an TimeoutException will be thrown
+
+==== Service request properties
+
+* URI
+* Method: GET, POST, PUT, DELETE, PATCH
+* Credentials: User name, Password
+
+==== Service description
+
+* Provider (REST, JMS,...)
+* Server URI (for readiness check results)
+* URI
+* Request content type
+* Result content type
+* Configuration link (or default)
+* Token (optional)
+* List of services as JSON content
+* Ready : boolean
+
+==== Server description
+
+* URI
+* last updated
+* Ready : boolean
+
+
+
+==== Configuration
+
+* Authentication
+* Certificate
+
+==== Content types
+
+* Unknown
+* Json
+* XML
+* Binary
+* HTML
+* Other
+
+
+
+=== Functional specification
+
+==== Overview
+
+The functionality is not bound to the transportation layer. There are
+functions the must and other could be implemented for each transportation 
+technology.
+
+* Execute request
+* Query services
+* Service inspection
+
+==== Execute request
+
+The execute request is the central service for the consumer. It must be 
+implemented in each technology.
+
+
+

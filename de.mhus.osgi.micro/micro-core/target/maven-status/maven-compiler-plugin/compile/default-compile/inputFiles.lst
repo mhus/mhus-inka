@@ -1,0 +1,15 @@
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/SelectorRoundRobin.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/OperationAnswer.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/OperationApi.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/SelectorRandom.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/JmsApi.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/SelectorLocalRoundRobin.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/OperationAddress.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/OperationsProvider.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/OperationsSelector.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/OperationDescriptor.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/SelectorProvider.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/OperationUtil.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/OperationException.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/api/Selector.java
+/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/micro-core/src/main/java/de/mhus/micro/core/MicroServiceRegistry.java

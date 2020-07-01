@@ -1,0 +1,9 @@
+de/mhus/micro/ext/dfs/FileQueueApiImpl.class
+de/mhus/micro/ext/dfs/DfsSql2Provider.class
+de/mhus/micro/ext/dfs/FileInfoImpl.class
+de/mhus/micro/ext/dfs/DfsSqlProvider.class
+de/mhus/micro/ext/dfs/FileQueueOperationImpl.class
+de/mhus/micro/ext/dfs/DfsSqlProvider$EntryData.class
+de/mhus/micro/ext/dfs/FileQueueTimer.class
+de/mhus/micro/ext/dfs/DfsApiImpl.class
+de/mhus/micro/ext/dfs/DfsSql2Provider$EntryData.class

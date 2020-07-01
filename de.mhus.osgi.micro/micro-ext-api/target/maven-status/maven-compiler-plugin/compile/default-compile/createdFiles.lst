@@ -1,0 +1,10 @@
+de/mhus/micro/ext/api/dfs/DfsUtil.class
+de/mhus/micro/ext/api/dfs/FileQueueApi.class
+de/mhus/micro/ext/api/dfs/FileInfo.class
+de/mhus/micro/ext/api/dfs/DfsApi.class
+de/mhus/micro/ext/api/mailqueue/MutableMailMessage.class
+de/mhus/micro/ext/api/mailqueue/MailQueueOperation.class
+de/mhus/micro/ext/api/dfs/FileQueueOperation.class
+de/mhus/micro/ext/api/dfs/DfsProviderOperation.class
+de/mhus/micro/ext/api/mailqueue/MailMessage.class
+de/mhus/micro/ext/api/mailqueue/MailQueueOperation$STATUS.class

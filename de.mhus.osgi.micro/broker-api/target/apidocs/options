@@ -1,0 +1,24 @@
+-classpath
+'/Users/mikehummel/.m2/repository/de/mhus/lib/lib-annotations/7.0.0-SNAPSHOT/lib-annotations-7.0.0-SNAPSHOT.jar:/Users/mikehummel/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/Users/mikehummel/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/Users/mikehummel/.m2/repository/org/apache/logging/log4j/log4j-core/2.8.2/log4j-core-2.8.2.jar:/Users/mikehummel/.m2/repository/org/apache/logging/log4j/log4j-api/2.8.2/log4j-api-2.8.2.jar:/Users/mikehummel/.m2/repository/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar:/Users/mikehummel/.m2/repository/de/mhus/lib/lib-core/7.0.0-SNAPSHOT/lib-core-7.0.0-SNAPSHOT.jar:/Users/mikehummel/.m2/repository/org/bouncycastle/bcprov-jdk16/1.46/bcprov-jdk16-1.46.jar:/Users/mikehummel/.m2/repository/org/bouncycastle/bcmail-jdk16/1.46/bcmail-jdk16-1.46.jar:/Users/mikehummel/.m2/repository/org/apache/httpcomponents/httpclient/4.5.7/httpclient-4.5.7.jar:/Users/mikehummel/.m2/repository/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar:/Users/mikehummel/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/mikehummel/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/mikehummel/.m2/repository/net/bytebuddy/byte-buddy/1.9.4/byte-buddy-1.9.4.jar:/Users/mikehummel/.m2/repository/net/bytebuddy/byte-buddy-agent/1.9.4/byte-buddy-agent-1.9.4.jar:/Users/mikehummel/.m2/repository/javax/mail/mail/1.4.1/mail-1.4.1.jar:/Users/mikehummel/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/Users/mikehummel/.m2/repository/org/jline/jline/3.9.0/jline-3.9.0.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-core/1.5.1/shiro-core-1.5.1.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-lang/1.5.1/shiro-lang-1.5.1.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-cache/1.5.1/shiro-cache-1.5.1.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-crypto-hash/1.5.1/shiro-crypto-hash-1.5.1.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-crypto-core/1.5.1/shiro-crypto-core-1.5.1.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-crypto-cipher/1.5.1/shiro-crypto-cipher-1.5.1.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-event/1.5.1/shiro-event-1.5.1.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-config-core/1.5.1/shiro-config-core-1.5.1.jar:/Users/mikehummel/.m2/repository/org/apache/shiro/shiro-config-ogdl/1.5.1/shiro-config-ogdl-1.5.1.jar:/Users/mikehummel/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/mikehummel/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/mikehummel/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/broker-api/src/main/java:/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/broker-api/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2020. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/broker-api/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'broker-api 7.0.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/Users/mikehummel/MHU/workspaces/mhus/mhus-micro/broker-api/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'broker-api 7.0.0-SNAPSHOT API'

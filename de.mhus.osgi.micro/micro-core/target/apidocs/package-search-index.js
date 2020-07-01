@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"de.mhus.micro.core"},{"l":"de.mhus.micro.core.api"}]

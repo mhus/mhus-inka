@@ -1,0 +1,16 @@
+de/mhus/micro/core/api/OperationApi.class
+de/mhus/micro/core/api/OperationUtil.class
+de/mhus/micro/core/api/OperationAddress.class
+de/mhus/micro/core/api/OperationsSelector.class
+de/mhus/micro/core/api/SelectorRandom.class
+de/mhus/micro/core/api/SelectorLocalRoundRobin.class
+de/mhus/micro/core/api/Selector.class
+de/mhus/micro/core/api/OperationsProvider.class
+de/mhus/micro/core/api/OperationAnswer.class
+de/mhus/micro/core/api/OperationDescriptor.class
+de/mhus/micro/core/api/OperationUtil$OperationInvocationHandler.class
+de/mhus/micro/core/api/JmsApi.class
+de/mhus/micro/core/MicroServiceRegistry.class
+de/mhus/micro/core/api/SelectorRoundRobin.class
+de/mhus/micro/core/api/OperationException.class
+de/mhus/micro/core/api/SelectorProvider.class
