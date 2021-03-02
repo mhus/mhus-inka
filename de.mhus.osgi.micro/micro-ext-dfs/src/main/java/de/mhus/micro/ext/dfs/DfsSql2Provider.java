@@ -36,7 +36,7 @@ import de.mhus.lib.core.config.IConfig;
 import de.mhus.lib.core.config.IConfigFactory;
 import de.mhus.lib.core.operation.OperationDescription;
 import de.mhus.lib.core.operation.OperationToIfcProxy;
-import de.mhus.lib.core.shiro.AccessUtil;
+import de.mhus.lib.core.aaa.Aaa;
 import de.mhus.lib.core.util.MUri;
 import de.mhus.lib.core.util.MutableUri;
 import de.mhus.lib.core.util.SoftHashMap;
@@ -303,7 +303,7 @@ public class DfsSql2Provider extends OperationToIfcProxy implements DfsProviderO
 
         DbConnection con = null;
         try {
-            if (!AccessUtil.isAdmin())
+            if (!Aaa.isAdmin())
                 throw new IOException("Not supported"); // TODO use ACL!!!!
 
             FileQueueApi api = M.l(FileQueueApi.class);
@@ -389,7 +389,7 @@ public class DfsSql2Provider extends OperationToIfcProxy implements DfsProviderO
         String path = normalizePath(uri.getPath());
         DbConnection con = null;
         try {
-            if (!AccessUtil.isAdmin())
+            if (!Aaa.isAdmin())
                 throw new IOException("Not supported"); // TODO use ACL!!!!
 
             con = pool.getConnection();
@@ -429,7 +429,7 @@ public class DfsSql2Provider extends OperationToIfcProxy implements DfsProviderO
     public void createDirectories(MUri uri) throws IOException {
         DbConnection con = null;
         try {
-            if (!AccessUtil.isAdmin())
+            if (!Aaa.isAdmin())
                 throw new IOException("Not supported"); // TODO use ACL!!!!
 
             String parentPath = normalizePath(MUri.getFileDirectory(uri.getPath()));

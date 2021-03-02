@@ -23,7 +23,7 @@ import de.mhus.lib.core.operation.Operation;
 import de.mhus.lib.core.operation.OperationResult;
 import de.mhus.lib.core.operation.Successful;
 import de.mhus.lib.core.operation.TaskContext;
-import de.mhus.lib.core.shiro.AccessUtil;
+import de.mhus.lib.core.aaa.Aaa;
 
 @Component(service = Operation.class, property = "tags=acl=*")
 @OperationService(title = "Ping")
@@ -32,7 +32,7 @@ public class PingOperation extends AbstractOperation {
     @Override
     protected OperationResult doExecute2(TaskContext context) throws Exception {
         log().d("PING PONG", context.getParameters());
-        String user = AccessUtil.getPrincipal();
+        String user = Aaa.getPrincipal();
         String ident = IdentUtil.getServerIdent();
         String pid = MSystem.getPid();
         String host = MSystem.getHostname();

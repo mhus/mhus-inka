@@ -46,7 +46,7 @@ import de.mhus.lib.core.MThread;
 import de.mhus.lib.core.base.service.ServerIdent;
 import de.mhus.lib.core.operation.NotSuccessful;
 import de.mhus.lib.core.operation.OperationResult;
-import de.mhus.lib.core.shiro.AccessUtil;
+import de.mhus.lib.core.aaa.Aaa;
 import de.mhus.lib.core.util.TempFile;
 import de.mhus.lib.core.util.VersionRange;
 import de.mhus.lib.errors.MException;
@@ -134,8 +134,8 @@ public class JmsOperationProvider extends MLog implements OperationsProvider {
 
         JmsConnection con = JmsUtil.getConnection(conName);
 
-        String ticket = AccessUtil.createTrustTicket(JmsApi.TRUST_NAME.value(), AccessUtil.getSubject());
-        Locale locale = AccessUtil.getLocale();
+        String ticket = Aaa.createTrustTicket(JmsApi.TRUST_NAME.value(), Aaa.getSubject());
+        Locale locale = Aaa.getLocale();
         long timeout =
                 OperationUtil.getOption(
                         executeOptions,

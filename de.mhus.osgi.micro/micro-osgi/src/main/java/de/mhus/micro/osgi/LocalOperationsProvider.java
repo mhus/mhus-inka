@@ -37,7 +37,7 @@ import de.mhus.lib.core.operation.NotSuccessful;
 import de.mhus.lib.core.operation.Operation;
 import de.mhus.lib.core.operation.OperationDescription;
 import de.mhus.lib.core.operation.OperationResult;
-import de.mhus.lib.core.shiro.AccessUtil;
+import de.mhus.lib.core.aaa.Aaa;
 import de.mhus.lib.core.util.VersionRange;
 import de.mhus.lib.errors.AccessDeniedException;
 import de.mhus.lib.errors.NotFoundException;
@@ -213,7 +213,7 @@ public class LocalOperationsProvider extends MLog implements OperationsProvider 
         }
         if (operation == null) throw new NotFoundException("operation not found", desc);
 
-        if (!AccessUtil.isPermitted("local.operation:execute:" + desc.getPath()))
+        if (!Aaa.isPermitted("local.operation:execute:" + desc.getPath()))
             throw new AccessDeniedException("access denied", desc.getPath());
 
         DefaultTaskContext taskContext = new DefaultTaskContext(getClass());

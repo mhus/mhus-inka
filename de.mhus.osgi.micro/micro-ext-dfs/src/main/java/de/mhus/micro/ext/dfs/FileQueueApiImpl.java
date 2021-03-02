@@ -41,7 +41,7 @@ import de.mhus.lib.core.base.service.IdentUtil;
 import de.mhus.lib.core.cfg.CfgInt;
 import de.mhus.lib.core.cfg.CfgLong;
 import de.mhus.lib.core.io.QuotaFileOutputStream;
-import de.mhus.lib.core.shiro.AccessUtil;
+import de.mhus.lib.core.aaa.Aaa;
 import de.mhus.lib.core.util.MUri;
 import de.mhus.lib.core.util.MutableUri;
 import de.mhus.lib.errors.AccessDeniedException;
@@ -499,7 +499,7 @@ public class FileQueueApiImpl extends MLog implements FileQueueApi {
 
         HashSet<UUID> out = new HashSet<>();
         // only admin is allowed to watch id list, id is like a token and need to be protected
-        if (!AccessUtil.isAdmin())
+        if (!Aaa.isAdmin())
             throw new AccessDeniedException("only root is allowed to access ids");
 
         File dir = getUploadDir();

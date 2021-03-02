@@ -35,7 +35,7 @@ import de.mhus.lib.core.config.IConfig;
 import de.mhus.lib.core.config.IConfigFactory;
 import de.mhus.lib.core.operation.OperationDescription;
 import de.mhus.lib.core.operation.OperationToIfcProxy;
-import de.mhus.lib.core.shiro.AccessUtil;
+import de.mhus.lib.core.aaa.Aaa;
 import de.mhus.lib.core.util.MUri;
 import de.mhus.lib.core.util.MutableUri;
 import de.mhus.lib.core.util.SoftHashMap;
@@ -269,7 +269,7 @@ public class DfsSqlProvider extends OperationToIfcProxy implements DfsProviderOp
 
         DbConnection con = null;
         try {
-            if (!AccessUtil.isAdmin())
+            if (!Aaa.isAdmin())
                 throw new IOException("Not supported"); // TODO use ACL!!!!
 
             FileQueueApi api = M.l(FileQueueApi.class);
@@ -352,7 +352,7 @@ public class DfsSqlProvider extends OperationToIfcProxy implements DfsProviderOp
         String path = normalizePath(uri.getPath());
         DbConnection con = null;
         try {
-            if (!AccessUtil.isAdmin())
+            if (!Aaa.isAdmin())
                 throw new IOException("Not supported"); // TODO use ACL!!!!
 
             con = pool.getConnection();
@@ -402,7 +402,7 @@ public class DfsSqlProvider extends OperationToIfcProxy implements DfsProviderOp
         String path = normalizePath(uri.getPath());
         DbConnection con = null;
         try {
-            if (!AccessUtil.isAdmin())
+            if (!Aaa.isAdmin())
                 throw new IOException("Not supported"); // TODO use ACL!!!!
 
             con = pool.getConnection();
