@@ -29,7 +29,7 @@ import java.util.UUID;
 import javax.sql.DataSource;
 
 import de.mhus.lib.core.M;
-import de.mhus.lib.core.MConstants;
+import de.mhus.lib.core.M;
 import de.mhus.lib.core.MProperties;
 import de.mhus.lib.core.MSystem;
 import de.mhus.lib.core.config.IConfig;
@@ -57,7 +57,7 @@ import de.mhus.osgi.api.util.DataSourceUtil;
 
 public class DfsSql2Provider extends OperationToIfcProxy implements DfsProviderOperation {
 
-    private static final UUID ROOT_ID = MConstants.EMPTY_UUID;
+    private static final UUID ROOT_ID = M.EMPTY_UUID;
     private static final EntryData rootEntry = new EntryData();
     private String scheme = "sql";
     private String prefix = "sop_dfs";
