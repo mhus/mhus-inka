@@ -1,0 +1,32 @@
+<CONST>
+
+<!-- old, unused (?) or easy generic const's -->
+
+<!-- wather -->
+<NO     int="0"/>
+<YES    int="1"/>
+
+<!-- break -->
+<BORDER  int="1"/>
+<ISLAND  int="2"/>
+
+<!-- type -->
+<WATHER    int="1"/>
+<MOUNTAINS int="2"/>
+<PLATO     int="3"/>
+<DESERT    int="4"/>
+<WOOD      int="5"/>
+<USE       int="6"/>
+<MARSH     int="7"/>
+<LAKES     int="8"/>
+<ISLANDS   int="9"/>
+
+<!-- colors in DISPLAY mode 
+<WHITE   int="18"/>
+<YELLOW  int="13"/>
+<BROWN   int="8"/>
+<GREY    int="20"/>
+<GREEN   int="1"/>
+<GREEN2  int="3"/>
+-->
+</CONST>

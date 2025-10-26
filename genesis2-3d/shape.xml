@@ -1,0 +1,142 @@
+<SHAPE>
+
+<!-- define some const for using Shape and ShapeFactory -->
+
+<!-- ShapeFactory Types:
+1 = Simple Background (with doBackgroundBox)
+    use: _diff, _base
+
+2 = Shaked Box, only writen on back="0"
+    use: _diff, _base
+         _int = border size (-1 = full border)
+
+3 = Switching, switch some pixels with naibours
+    use: _anz = number of loops
+         _int = relat. frequency of switches (1 = every, 2 = every second...)
+
+10 = Soften Raster (in 4 steps)
+     use: _diff,
+          _anz = number of loops
+
+11 = Soften (use doSoften())
+     use: _diff
+
+12 = Plateau (use Spider)
+     use: _base, _diff, _min, _max,
+          _anz = deep (number of childs e.g. 6)
+          _int = subraktion (e.g. 2)
+
+13 = Simple Mountains (use doMountain())
+     from xa,ya, to xb,yb -> great to use with borders
+     use: _base, _diff, _min, _max,
+          _anz = number of mountain lines
+          _int = unsharp of line (neg. is like pos. but enables
+                                  an "undo" line)
+
+14 = Simple Mountains
+     from west to east
+     use: see 13,
+          _anz = number of lines per 100 pixel
+
+15 = Simple Mountains
+     from north to south
+     use: see 14
+
+16 = SimpleMountains
+     from center to borders
+     use: see 14
+
+17 = Sofen Wather
+     use: see 10
+
+41 = Mountain to the center
+     use: _base = to height
+          _int  = plateau at center (is radius)
+          _anz  = number of circles to build
+
+42 = Valley (e.g for a lake)
+     use: _base = max. height
+          _min  = min. dept
+          _int = plateau at center (is radius)
+          _anz = number of circles to build
+
+44 = Krater (a set of circles)
+     use: _base = height of big krater
+          _min, _max
+          _anz = number of little kraters
+          _int = max. radius of little crater
+
+45 = Islands (a set of mountains)
+     use: _int = size (radius) of main island
+          _anz = number of small islands (size max 1/3 of _int)
+          _base = max height of island
+
+46 = lakes
+     use: _int = size of main lake
+          _anz = number of small lakes
+          _base = max height
+          _min  = min deept
+
+-->
+
+<TYPE>
+  <BG      int="1"/>
+  <SHAKEBG int="2"/>
+
+  <SWITCHF int="3"/>
+  <RASTERF int="10"/>
+  <SOFTENF int="11"/>
+  <WATHERF int="17"/>
+
+  <PLATEAU int="12"/>
+  <MOUNTAIN>
+    <STD        int="13"/>
+    <WESTEAST   int="15"/>
+    <EASTWEST   int="15"/>
+    <NORTHSOUTH int="14"/>
+    <SOUTHNORTH int="14"/>
+    <CENTER     int="16"/>
+  </MOUNTAIN>
+
+  <EXTRA>
+    <MOUNTAIN  int="41"/>
+    <VALLEY    int="42"/>
+    <KRATER    int="44"/>
+    <ISLAND    int="45"/>
+    <LAKE      int="46"/>
+  </EXTRA>
+</TYPE>
+
+
+<!-- const for use of mountains -->
+<MOUNTAIN>
+  <!-- use of unsharp = _int 
+       if value is neg. t uses an unmountain (base=0) too
+    -->
+  <STRICT   int="5"/>
+  <EASY     int="10"/>
+  <GAMPLING int="20"/>
+  <DUMP     int="30"/>
+  <STRICTUN   int="-5"/>
+  <EASYUN     int="-10"/>
+  <GAMPLINGUN int="-20"/>
+  <DUMPUN     int="-30"/>
+</MOUNTAIN>
+
+
+<!-- ORDERS -->
+
+<!-- To define the order (reihenfolge) of an array to build set the
+     the "order" def is GMBF this means:
+       G = do BackGROUND
+       M = do MAIN
+       B = do Borders
+       F = do FILTER
+    -->
+
+  <ORDER>
+    <STD     str="GMBF"/>
+    <CREASY  str="GFBFMF"/>
+  </ORDER>
+
+</SHAPE>

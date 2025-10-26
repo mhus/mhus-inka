@@ -1,0 +1,2 @@
+#!/bin/sh
+cc cube.cpp -o cube -L/usr/X11/lib/ -lvga -lxml -lz -lglut -lGLU -lGL -lX11 -lm ShapeFactory.o Lib.o Shape.o DisplayHelper.o Arrange.o Area.o RWHelper.o ConfigHelper.o Genesis.o

@@ -1,0 +1,12 @@
+<GENESIS>
+
+  <LIB FILE="config.xml"/>
+  <CONFIG LIB="CONFIG"/>
+
+  <LIB FILE="references.xml"/>
+  <REFERENCES LIB="REFERENCES"/>
+
+  <LIB FILE="const.xml"/>
+  <CONST LIB="CONST"/>
+
+</GENESIS>

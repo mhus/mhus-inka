@@ -1,0 +1,284 @@
+<AREA>
+
+  <LIB FILE="colors.xml"/>
+  <LIB FILE="shape.xml"/>
+  <LIB FILE="arrange.xml"/>
+
+  <TEST  ID="test" type="8">
+    <SHAPE order="xGMFsc">
+      <BACKGROUND type="SHAPE:TYPE.MOUNTAIN.CENTER"
+                  anz="50"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="60" min="1" max="80" diff="2"
+      />
+      <MAIN       type="47"
+                  anz="10"
+                  intensity="-10"
+                  base="200" min="190" max="255" diff="2"
+      />
+      <FILTER     type="17"
+                  anz="5"
+                  intensity = "10"
+      />
+      <BORDER     type="0" />
+      <BORDERSAME type="0" />
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+
+    </SHAPE>
+  </TEST>
+
+  <MOUNTAINS  ID="SKURIL" type="8">
+    <SHAPE order="xGMFsB">
+      <BACKGROUND type="SHAPE:TYPE.MOUNTAIN.CENTER"
+                  anz="50"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="60" min="1" max="80" diff="2"
+      />
+      <MAIN       type="47"
+                  anz="10"
+                  intensity="-10"
+                  base="200" min="190" max="255" diff="2"
+      />
+      <FILTER     type="SHAPE:TYPE.RASTERF"
+                  anz="1"
+      />
+    </SHAPE>
+      <BORDER     type="0" />
+      <BORDERSAME type="0" />
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+  </MOUNTAINS>
+
+  <ISLAND  ID="SKURIL" type="8">
+    <SHAPE order="xMFsB">
+      <MAIN       type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="10"
+                  intensity="25"
+                  base="200" min="190" max="255" diff="2"
+      />
+      <FILTER     type="SHAPE:TYPE.RASTERF"
+                  anz="1"
+      />
+      <BORDER     type="0" />
+      <BORDERSAME type="0" />
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+
+    </SHAPE>
+  </ISLAND>
+
+  <HIGHLANDS ID="STD" type="7">
+    <ARRANGE size="1"/>
+    <SHAPE order="xGBFs">
+      <BACKGROUND type="SHAPE:TYPE.MOUNTAIN.CENTER"
+                  anz="50"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="180" min="150" max="200" diff="5"
+      />
+      <BORDER     type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="20"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="35" min="20" max="50" diff="2"
+      />
+      <BORDERSAME type="0"/>
+      <FILTER     type="SHAPE:TYPE.SWITCHF"
+                  anz="10"
+                  intensity="3"
+      />
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+
+    </SHAPE>
+
+  </HIGHLANDS>
+
+  <HIGHLANDS ID="SCHLUCHT" type="COLORS:WHITE">
+    <ARRANGE size="1"/>
+    <SHAPE order="xGMBFs">
+      <BACKGROUND type="SHAPE:TYPE.MOUNTAIN.CENTER"
+                  anz="50"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="180" min="150" max="200" diff="5"
+      />
+      <MAIN       type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="50"
+                  intensity="SHAPE:MOUNTAIN.EASYUN"
+                  base="180" min="150" max="220" diff="5"
+      />
+      <BORDER     type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="20"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="35" min="20" max="50" diff="2"
+      />
+      <BORDERSAME type="0"/>
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+
+      <FILTER     type="SHAPE:TYPE.SWITCHF"
+                  anz="10"
+                  intensity="3"
+      />
+    </SHAPE>
+
+  </HIGHLANDS>
+
+  <FLAT type="1">
+    <ARRANGE size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="SHAPE:TYPE.RASTERF" anz="1"/>
+      <MAIN type="SHAPE:TYPE.PLATEAU"
+            anz="4"
+            intensity="2"
+            base="30" diff="5" min="1" max="50"/>
+      <BORDER type="SHAPE:TYPE.SWITCHF" 
+              anz="10"
+              intensity="2"
+              offset="20"
+              />
+      <BORDERSAME />
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+      <FILTER type="SHAPE:TYPE.SWITCHF" anz="6" offset="40" intensity="3"/>
+    </SHAPE>
+  </FLAT>
+
+
+  <MOUNTAIN ID="CENTER" type="4">
+    <ARRANGE size="1"/>
+    <SHAPE order="xGMBFs">
+      <BACKGROUND type="SHAPE:TYPE.SHAKEBG" base="1" diff="10"/>
+      <MAIN type="SHAPE:TYPE.MOUNTAIN.CENTER"
+            anz="20"
+            intensity="SHAPE:MOUNTAIN.EASYUN"
+            base="100" diff="10" min="80" max="120"/>
+      <BORDER type="SHAPE:TYPE.SWITCHF" 
+              anz="10"
+              intensity="2"
+              offset="20"
+              />
+      <BORDERSAME />
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+      <FILTER type="SHAPE:TYPE.RASTERF" anz="1" offset="20" />
+    </SHAPE>
+  </MOUNTAIN>
+
+  <MOUNTAIN ID="NORTHSOUTH" type="4">
+    <ARRANGE size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="SHAPE:TYPE.SHAKEBG" base="1" diff="10"/>
+      <MAIN type="SHAPE:TYPE.MOUNTAIN.NORTHSOUTH"
+            anz="50"
+            intensity="SHAPE:MOUNTAIN.EASYUN"
+            base="100" diff="10" min="80" max="120"/>
+      <BORDER type="SHAPE:TYPE.SWITCHF" 
+              anz="10"
+              intensity="2"
+              offset="20"
+              />
+      <BORDERSAME />
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+      <FILTER type="SHAPE:TYPE.RASTERF" anz="1" offset="20" />
+    </SHAPE>
+  </MOUNTAIN>
+
+  <MOUNTAIN ID="EASTWEST" type="4">
+    <ARRANGE size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="SHAPE:TYPE.SHAKEBG" base="1" diff="10"/>
+      <MAIN type="SHAPE:TYPE.MOUNTAIN.EASTWEST"
+            anz="50"
+            intensity="SHAPE:MOUNTAIN.EASYUN"
+            base="100" diff="10" min="80" max="120"/>
+      <BORDER type="SHAPE:TYPE.SWITCHF" 
+              anz="10"
+              intensity="2"
+              offset="20"
+              />
+      <BORDERSAME />
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+      <FILTER type="SHAPE:TYPE.RASTERF" anz="1" offset="20" />
+    </SHAPE>
+  </MOUNTAIN>
+
+
+  <ISLAND type="5">
+    <ARRANGE size="1" break="ARRANGE:BREAK.YES"/>
+    <SHAPE order="xMGFsB">
+      <BACKGROUND type="10" base="180" min="50" max="100" diff="10" 
+                  intensity="3" anz="1"/>
+      <MAIN type="45"
+            anz="50"
+            intensity="50"
+            base="30" diff="10" min="0" max="50"/>
+      <BORDER type="0" anz="20" base="50" diff="10" min="1" max="70"
+              intensity="10" />
+      <BORDERSAME type="0"/>
+      <BORDERWATHER type="SHAPE:TYPE.MOUNTAIN.STD"
+                  anz="4"
+                  intensity="SHAPE:MOUNTAIN.EASY"
+                  base="0" min="0" max="0" diff="1"
+      />
+      <FILTER type="3" anz="3" intensity="2"/>
+    </SHAPE>
+  </ISLAND>
+
+
+
+<!-- ****************************************************************** -->
+
+  <TOWER type="COLORS:WHITE">
+    <ARRANGE size="1"/>
+    <SHAPE order="xGF">
+      <BACKGROUND type="41" base="250" min="50" max="100" diff="10" 
+                  intensity="40" anz="10"/>
+      <FILTER type="10" anz="1" intensity="1"/>
+
+    </SHAPE>
+  </TOWER>
+
+  <LAKE>
+    <SHAPE order="xMFs">
+      <MAIN type="SHAPE:TYPE.EXTRA.LAKE"
+            intensity="80"
+            anz="20"
+            base="40"
+            min="1"
+      />
+      <FILTER type="SHAPE:TYPE.RASTERF"
+              anz="1"
+      />
+    </SHAPE>
+  </LAKE>
+
+</AREA>

@@ -1,0 +1,23 @@
+<REFERENCES>
+
+  <GENESIS ID="STD"
+           xpr       = "200"
+           ypr       = "200"
+           automatic = "0"
+           diffmaxx  = "21"
+           diffmaxy  = "21"
+           diffminx  = "20"
+           diffminy  = "20"
+           path      = "/drv/big0/genesis/"
+           xmlsavefile = "save.xml"
+           finalshaperenderer = "18"
+           finalshaperendereranz = "5"
+           finalshaperendererint = "4"
+  />
+
+  <ARRANGE ID="STD" 
+           warnings="1" 
+           x="20" 
+           y="20"/>
+
+</REFERENCES>

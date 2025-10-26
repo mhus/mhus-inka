@@ -1,0 +1,11 @@
+<COLORS>
+
+<!-- colors in DISPLAY mode -->
+<WHITE   int="18"/>
+<YELLOW  int="13"/>
+<BROWN   int="8"/>
+<GREY    int="20"/>
+<GREEN   int="1"/>
+<GREEN2  int="3"/>
+
+</COLORS>

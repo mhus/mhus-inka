@@ -1,0 +1,831 @@
+#include "ConfigHelper.h"
+
+/*******************************************************************
+ * Constructor and destructor
+ ******************************************************************/
+ConfigHelper::ConfigHelper() {
+  doc = NULL;
+  refDoc = NULL;
+  constsDoc = NULL;
+  newDocument();
+};
+ConfigHelper::~ConfigHelper() {
+  if (doc != NULL)       xmlFreeDoc(doc);
+  if (refDoc != NULL)    xmlFreeDoc(refDoc);
+  if (constsDoc != NULL) xmlFreeDoc(constsDoc);
+  doc       = NULL;
+  refDoc    = NULL;
+  constsDoc = NULL;
+};
+
+
+/**********************************************************************
+ * Parse file with gnome-XML parser and create DOM
+ *********************************************************************/
+xmlDocPtr ConfigHelper::getDoc(char *_fname) {
+
+  if (_fname == NULL) {
+    printf("ConfigHelper: no Filename\n");
+    newDocument();
+    return NULL;
+  }
+
+  xmlDocPtr doc_ = xmlParseFile(_fname);
+  if (doc_ == NULL || doc_->root == NULL) {
+    printf("ConfigHelper: parse error\n");
+    newDocument();
+    return NULL;
+  }
+
+  return doc_;
+};
+
+/**********************************************************************
+ * Parse file and Init system for the document
+ *********************************************************************/
+int ConfigHelper::parseXML(char *_file) {
+
+  for(docIter = docs.getIterator(); docIter->hasNext() == true;) {
+    xmlFreeDoc(docIter->getNext());
+  }
+  docs.clear();
+
+  work   = NULL;
+  ref    = NULL;
+  consts = NULL;
+
+  doc = getDoc(_file);
+  if (doc == NULL) return 2;
+
+  // add doc to docs
+  docs.put(_file,doc);
+
+  return parseXML();
+};
+
+/*********************************************************************
+ * Main initializing routine after parsing
+ ********************************************************************/
+int ConfigHelper::parseXML() {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("ConfigHelper: parse document\n");
+#endif
+
+  // is doc ready ?
+  if (doc == NULL || doc->root == NULL) {
+    printf("ConfigHelper: no DOM document parsed\n");
+    newDocument();
+    return 2;
+  }
+
+  if (strcmp((char *)doc->root->name,"GENESIS") != 0) {
+    printf("ConfigHelper: no GENESIS document\n");
+    newDocument();
+    return 5;
+  }
+
+  // get CONFIG and REFERENCES
+  work   = getNodeRaw(doc->root,"CONFIG");
+  ref    = getNodeRaw(doc->root,"REFERENCES");
+  consts = getNodeRaw(doc->root,"CONST");
+
+  // no REFERENCES specified, create dummy
+  if (ref == NULL) {
+//    printf("ConfigHelper: no REFERENCES found\n");
+    ref = xmlNewChild(doc->root, NULL,(CHAR *)"REFERENCE", NULL);
+  }
+
+  // no CONST specified, create dummy
+  if (consts == NULL) {
+//    printf("ConfigHelper: no CONST found\n");
+    consts = xmlNewChild(doc->root, NULL,(CHAR *)"CONST", NULL);
+  }
+
+  // no CONFIG found
+  if (work == NULL) {
+//    printf("ConfigHelper: no CONFIG found\n");
+    work = xmlNewChild(doc->root, NULL,(CHAR *)"CONFIG", NULL);
+//    return 1;
+  }
+
+/*
+  // if libs are defined
+  if (existsPropertyRaw(doc->root,"LIBS")) {
+  
+  }
+*/
+  // if a reference to a file ?
+  if (existsPropertyRaw(ref,"FILE") && refDoc == NULL) {
+    char *name = getPropertyRaw(ref,"FILE");
+    printf("Load %s for ref\n",name);
+    xmlDocPtr doc_;
+    if (refDoc != NULL) xmlFreeDoc(refDoc);
+    if ((doc_ = getDoc(name)) != NULL) {
+      ref = doc_->root;
+      refDoc = doc_;
+    } else {
+      refDoc = NULL;
+    }
+  }
+
+  // if a const to a file ?
+  if (existsPropertyRaw(consts,"FILE") && constsDoc == NULL) {
+    char *name = getPropertyRaw(consts,"FILE");
+    printf("Load %s for const\n",name);
+    xmlDocPtr doc_;
+    if (constsDoc != NULL) xmlFreeDoc(constsDoc);
+    if ((doc_ = getDoc(name)) != NULL) {
+      consts = doc_->root;
+      constsDoc = doc_;
+    } else {
+      constsDoc = NULL;
+    }
+  }
+
+  return 0;
+
+};
+
+/*******************************************************************
+ * Initialize a new document
+ *******************************************************************/
+void ConfigHelper::newDocument() {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("ConfigHelper: create new document\n");
+#endif
+
+  if (doc != NULL)       xmlFreeDoc(doc);
+  if (refDoc != NULL)    xmlFreeDoc(refDoc);
+  if (constsDoc != NULL) xmlFreeDoc(constsDoc);
+  doc       = NULL;
+  refDoc    = NULL;
+  constsDoc = NULL;
+  work   = NULL;
+  ref    = NULL;
+  consts = NULL;
+
+  doc = xmlNewDoc((CHAR *)"1.0");
+  doc->root = xmlNewDocNode(doc, NULL, (CHAR *)"GENESIS", NULL);
+
+  work = xmlNewChild(doc->root,NULL, (CHAR *)"CONFIG",NULL);
+  ref  = xmlNewChild(doc->root,NULL, (CHAR *)"REFERENCES",NULL);
+  consts = xmlNewChild(doc->root,NULL, (CHAR *)"CONST",NULL);
+};
+
+
+
+
+/*********************************************************************
+ * gets a Node named _element, ignore references
+ ********************************************************************/
+xmlNodePtr ConfigHelper::getNodeRaw(xmlNodePtr _tree, char *_element) {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("  GetNodeRaw: %s\n",_element);
+#endif
+
+  if (_tree == NULL) return NULL;
+
+  xmlNodePtr cur = _tree->childs;
+  if (cur == NULL) return NULL;
+
+  while (strcmp((char *)cur->name,_element) != 0) {
+    cur = cur->next;
+    if (cur == NULL) return NULL;
+  }
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("  GetNodeRaw (found) %s\n",_element);
+#endif
+
+  return cur;
+};
+
+/***********************************************************************
+ * gets a property value, ignore references
+ **********************************************************************/
+char *ConfigHelper::getPropertyRaw(xmlNodePtr _tree, char *_property) {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("  GetPropertyRaw %s\n",_property);
+#endif
+
+  if (_tree == NULL) return "";
+
+  // get first property
+  xmlAttrPtr cur = _tree->properties;
+  if (cur == NULL) return "";
+
+  while(strcmp((char *)cur->name,_property) != 0) {
+    cur = cur->next;
+    if (cur == NULL) return "";
+  }
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("  GetPropertyRaw (found) %s = %s\n",_property,cur->val->content);
+#endif
+
+  return (char *)cur->val->content;
+}
+
+/*************************************************************************
+ * test if exist a property (getPropertyRaw returns "" in this case)
+ * ignboring references
+ ************************************************************************/
+bool ConfigHelper::existsPropertyRaw(xmlNodePtr _tree, char *_property) {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("  ExistsPropertyRaw %s\n",_property);
+#endif
+
+  if (_tree == NULL) return 0;
+
+  xmlAttrPtr cur = _tree->properties;
+  if (cur == NULL) return 0;
+
+  while(strcmp((char *)cur->name,_property) != 0) {
+    cur = cur->next;
+    if (cur == NULL) return 0;
+  }
+
+  if (cur->val->content == NULL) return 0;
+  if (strcmp((char *)cur->val->content,"") == 0) return 0;
+
+  return 1;
+}
+
+/******************************************************************
+ * gets a node with a specified property (e.g. ID="MAIN"),
+ * ignores references
+ *****************************************************************/
+xmlNodePtr ConfigHelper::getNamedNodeRaw(xmlNodePtr _tree, 
+                                            char *_element,
+                                            char *_property,
+                                            char *_value) {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("  GetNamedNodeRaw %s %s = %s\n",_element,_property,_value);
+#endif
+
+  if (_tree == NULL) return NULL;
+  xmlNodePtr cur = _tree->childs;
+  if (cur == NULL) return NULL;
+
+  while (strcmp( (char *)cur->name, _element ) != 0 ||
+         strcmp( getPropertyRaw( cur, _property ), _value ) != 0 ) {
+    cur = cur->next;
+    if (cur == NULL) return NULL;
+  }
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("  GetNamedNodeRaw (found) %s %s = %s\n",_element,_property,_value);
+#endif
+
+  return cur;
+
+};
+
+
+
+
+
+/*********************************************************************
+ * gets a Node named _element
+ ********************************************************************/
+xmlNodePtr ConfigHelper::getNode(xmlNodePtr _tree, char *_element) {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("GetNode: %s\n",_element);
+#endif
+
+  if (_tree == NULL) return NULL;
+
+  // get original node
+  xmlNodePtr cur = getNodeRaw(_tree, _element);
+
+  // no original node, check reference node
+  if (cur == NULL &&
+      ref != NULL &&
+      existsPropertyRaw(_tree, "REF")) {
+
+    // get Reference 
+    xmlNodePtr ref_ = getNodeFrom(ref, getPropertyRaw(_tree, "REF"));
+/*
+    xmlNodePtr ref_ = getNamedNodeRaw(ref, 
+                                      (char *)_tree->name,
+                                      "ID",
+                                      getPropertyRaw(_tree, "REF"));
+*/
+    // try question in reference node
+    if (ref_ != NULL) cur = getNode(ref_, _element);
+  }
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("GetNode (found) %s\n",_element);
+#endif
+
+  return cur;
+};
+
+/***********************************************************************
+ * gets a property value
+ **********************************************************************/
+
+char *ConfigHelper::getProperty(xmlNodePtr _tree,
+                                char *_property,
+                                char *_def) {
+  if (existsProperty(_tree, _property)) {
+    return getProperty(_tree, _property);
+  } else {
+    return _def;
+  }
+};
+
+char *ConfigHelper::getProperty(xmlNodePtr _tree, char *_property) {
+  char *cur = "";
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("GetProperty %s\n",_property);
+#endif
+
+  if (_tree == NULL) return "";
+
+  //try original property
+  if (existsPropertyRaw(_tree, _property)) {
+    cur = getPropertyRaw(_tree, _property);
+  } else {
+
+    // lets get reference
+    if (ref != NULL &&
+      existsPropertyRaw(_tree, "REF")) {
+
+      // get Reference
+      xmlNodePtr ref_ = getNodeFrom(ref, getPropertyRaw(_tree,"REF"));
+/*
+      xmlNodePtr ref_ = getNamedNodeRaw(ref, 
+                                        (char *)_tree->name,
+                                        "ID",
+                                        getPropertyRaw(_tree,"REF"));
+*/
+      // try question in reference node
+      if (ref_ != NULL) cur = getProperty(ref_, _property);
+    }
+
+  } //END if existsPropertyRaw
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("GetProperty (found) %s = %s\n",_property, cur );
+#endif
+
+  return cur;
+};
+
+/*************************************************************************
+ * test if exist a property (getPropertyRaw returns "" in this case)
+ ************************************************************************/
+bool ConfigHelper::existsProperty(xmlNodePtr _tree, char *_property) {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("ExistsProperty %s\n",_property);
+#endif
+
+  if (_tree == NULL) return "";
+
+  //try original property
+  if (existsPropertyRaw(_tree, _property)) {
+    return 1;
+  } else {
+
+    // lets get reference
+    if (ref != NULL &&
+      existsPropertyRaw(_tree, "REF")) {
+
+      // get Reference
+      xmlNodePtr ref_ = getNodeFrom(ref, getPropertyRaw(_tree,"REF"));
+/*
+      xmlNodePtr ref_ = getNamedNodeRaw(ref,
+                                        (char *)_tree->name,
+                                        "ID",
+                                        getPropertyRaw(_tree,"REF"));
+*/
+      // try question in reference node
+      if (ref_ != NULL && 
+          existsProperty(ref_, _property)) return 1;
+    }
+
+  } //END if existsPropertyRaw
+
+  return 0;
+
+};
+
+/******************************************************************
+ * gets a node with a specified property (e.g. ID="MAIN")
+ *****************************************************************/
+xmlNodePtr ConfigHelper::getNamedNode(xmlNodePtr _tree, 
+                                            char *_element,
+                                            char *_property,
+                                            char *_value) {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("GetNamedNode %s %s = %s\n",_element,_property,_value);
+#endif
+
+  if (_tree == NULL) return NULL;
+
+  // get original node
+  xmlNodePtr cur = getNamedNodeRaw(_tree, _element, _property, _value);
+
+  // no original node, check reference node
+  if (cur == NULL &&
+      ref != NULL &&
+      existsPropertyRaw(_tree, "REF")) {
+
+    // get Reference
+      xmlNodePtr ref_ = getNodeFrom(ref, getPropertyRaw(_tree,"REF"));
+/*
+    xmlNodePtr ref_ = getNamedNodeRaw(ref, 
+                                      (char *)_tree->name,
+                                      "ID",
+                                      getPropertyRaw(_tree,"REF"));
+*/
+    // try question in reference node
+    if (ref_ != NULL) cur = getNamedNode(ref_, _element, _property, _value);
+  }
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("GetNamedNode (found) %s %s = %s\n",_element,_property,_value);
+#endif
+
+  return cur;
+};
+
+/******************************************************************
+ * gets a Node with a specifed position, if not available its NULL
+ *****************************************************************/
+xmlNodePtr ConfigHelper::getNodeAt(xmlNodePtr _tree, 
+                                        char *_element,
+                                        int _nr) {
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("GetNodeAt %s:%i\n",_element,_nr);
+#endif
+
+  if (_tree == NULL || _nr<0) return NULL;
+
+  int count = 0;
+  xmlNodePtr cur;
+  xmlNodePtr ref_;
+
+  //first search in REF *************************************************
+  if (ref != NULL && existsPropertyRaw(_tree,"REF")) {
+    // get Reference
+   ref_ = getNodeFrom(ref, getPropertyRaw(_tree,"REF"));
+/*
+   ref_ = getNamedNodeRaw(ref,
+                           (char *)_tree->name,
+                           "ID",
+                           getPropertyRaw(_tree,"REF"));
+*/
+    if (ref_ != NULL) {
+      //lets go
+      cur = ref_->childs;                                //get first
+      while (cur != NULL) {                             //is not NULL
+        if (strcmp((char *)cur->name,_element) == 0 &&  //and TOP
+            strcmp(getPropertyRaw(cur,"LOCATION"),"TOP") == 0 ) 
+        {                                               //is it one
+          //found the one ?
+         if (count == _nr) return cur;                    //right nr
+         count++;                                       //add found-counter
+        } // if name == _element
+        cur = cur->next;                                //next one
+      } // while cur != NULL
+    } // if ref_ != NULL
+  } // if REF available
+
+  //search in original *************************************************
+  cur = _tree->childs;                               //get first
+  while (cur != NULL) {                             //is not NULL
+    if (strcmp((char *)cur->name,_element) == 0) {  //is it one
+      //found the one ?
+     if (count == _nr) return cur;                    //right nr
+     count++;                                       //add found-counter
+    } // if name == _element
+    cur = cur->next;                                //next one
+  } // while cur != NULL
+
+  //finaly search in REF *************************************************
+  if (ref_ != NULL) {
+    //lets go
+    cur = ref_->childs;                                //get first
+    while (cur != NULL) {                             //is not NULL
+      if (strcmp((char *)cur->name,_element) == 0 &&  //and not TOP
+          strcmp(getPropertyRaw(cur,"LOCATION"),"TOP") != 0 ) 
+      {                                               //is it one
+        //found the one ?
+       if (count == _nr) return cur;                    //right nr
+       count++;                                       //add found-counter
+      } // if name == _element
+      cur = cur->next;                                //next one
+    } // while cur != NULL
+  } // if ref_ != NULL
+
+  //not available
+  return NULL;
+};
+
+
+/******************************************************************
+ * gets a Node, use a path to find it, seperated with . for the
+ * elements, use = to specifie an ID and a : to define a root
+ * document name (if root is "" use current) (not implemented yet)
+ * e.g
+ *    ARRANGE.AREA=happyland.SHAPE to get shape-tree from happyland
+ *****************************************************************/
+xmlNodePtr ConfigHelper::getNodeFrom(xmlNodePtr _tree, char *_path) {
+
+  int count = 0;
+  int count_el = 0;
+  int count_na = 0;
+  int mode = 0;
+  unsigned char ch;
+  char element[200] = "";
+  char name[200] = "";
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("GetNodeFrom %s\n",_path);
+#endif
+
+  if (_tree == NULL || _path == NULL || _path[0] == 0 ) return NULL;
+
+  do {
+    ch = _path[count++];
+
+    if (ch == ':') {
+      // use "element" as root
+
+      if (name[0] == 0) {
+        // use "this" root as root
+        _tree = _tree->doc->root;
+      } else {
+        //get a root from array of config doc's, not implemented yet
+        _tree = work; // dummy !!!!
+      }
+      mode=0;  
+    }
+    if (ch == '=') {
+      mode=1;
+    }
+    else 
+    if (ch == '.' || ch == 0) {
+
+      //get new element
+      if (name[0] == 0) {
+        _tree = getNode(_tree, element);
+      } else {
+        _tree = getNamedNode(_tree, element, "ID", name);
+      }
+
+      //not found
+      if (_tree == NULL) {
+#ifdef DEBUG_CONFIGHELPER
+        printf("GetNodeFrom (not found)\n  -> in %s\n  -> at %s  ID = %s\n",
+          _path, element, name);
+#endif
+        return NULL;
+      }
+
+      //init
+      element[0]=0;
+      name[0]=0;
+      mode=0;
+
+    } else
+    if (ch != 0) {
+      if (mode == 0) {
+        element[count_el++] = ch;
+        element[count_el] = 0;
+        if (count_el > 199) count_el = 199;
+      } else
+      if (mode == 1) {
+        name[count_na++] = ch;
+        name[count_na] = 0;
+        if (count_na > 199) count_na = 199;
+      }
+    }
+  } while (ch != 0);
+
+#ifdef DEBUG_CONFIGHELPER
+        printf("GetNodeFrom (found) %s in %s\n",
+          _path,_tree->name);
+#endif
+  return _tree;
+
+};
+
+
+
+
+/**********************************************************************
+ * gets constante definitions
+ *********************************************************************/
+int ConfigHelper::getConstInt(char *_name) {
+  xmlNodePtr cur;
+
+#ifdef DEBUG_CONFIGHELPER
+  printf("  -> getConstInt %s\n",_name);
+#endif
+
+  if (_name == NULL) return 0;
+  if (_name[0] == 0) return 0;
+  if ((cur = getNodeFrom(consts,_name)) != NULL) {
+
+#ifdef DEBUG_CONFIGHELPER
+    printf("  -> getConstInt (found) %s\n",_name);
+#endif
+
+    return atoi(getPropertyRaw(cur,"int"));
+  } else {
+
+#ifdef DEBUG_CONFIGHELPER
+    printf("  -> getConstInt (not found) %s\n",_name);
+#endif
+
+    return atoi(_name);
+  }
+};
+
+
+/**********************************************************************
+ * gets constante definitions
+ *********************************************************************/
+char *ConfigHelper::getConstStr(char *_name) {
+  xmlNodePtr cur;
+
+#ifdef DEBUG_CONFIGHELPER
+    printf("  -> getConstStr %s\n",_name);
+#endif
+
+  if (_name == NULL) return 0;
+  if (_name[0] == 0) return 0;
+  if ((cur = getNodeFrom(consts,_name)) != NULL) {
+
+#ifdef DEBUG_CONFIGHELPER
+    printf("  -> getConstStr (found) %s\n",_name);
+#endif
+
+    return getPropertyRaw(cur,"str");
+  } else {
+
+#ifdef DEBUG_CONFIGHELPER
+    printf("  -> getConstStr (not found) %s\n",_name);
+#endif
+
+    return _name;
+  }
+};
+
+/**************************************************************************
+ **************************************************************************
+ *               Section for configuration Adapters                       *
+ **************************************************************************
+ *************************************************************************/
+
+
+
+/******************************************************
+* Creates and configure a new Arange object with Areas
+*******************************************************/  
+Arrange *ConfigHelper::configureArrange(char *_id) {
+  if (work == NULL) parseXML();
+  return configureArrange(work, _id);
+};
+
+Arrange *ConfigHelper::configureArrange(xmlNodePtr _tree, char *_id) {
+
+  xmlNodePtr element = getNamedNode(_tree, "ARRANGE", "ID", "MAIN");
+
+  if (element == NULL) {
+    printf("ConfigHelper: ARRANGE \"%s\" not found\n",_id);
+    return NULL;
+  }
+
+  // create
+  int xr = atoi(getProperty(element,"x"));
+  int yr = atoi(getProperty(element,"y"));
+  if (xr < 1 || yr < 1) {
+    printf("ConfigHelper: ARRANGE %s wrong XYRaster x = %i y = %i\n",
+      _id,xr,yr);
+    return NULL;
+  }
+  Arrange *arrange = new Arrange(xr,yr);
+
+
+  // configure properties
+  if (existsProperty(element, "warnings"))
+    arrange->setWarnings(atoi(getProperty(element,"warnings")));
+
+  // configure Areas
+ xmlNodePtr cur;
+ for (int i=0;(cur = getNodeAt(element,"AREA",i)) != NULL;i++) {
+   arrange->addArea(configureArea(cur));
+ }
+
+  return arrange;
+};
+
+
+
+/******************************************************
+* Creates and configure a new Area object with Areas
+*******************************************************/  
+Area *ConfigHelper::configureArea(char *_id) {
+  if (work == NULL) parseXML();
+  return configureArea(work, _id);
+};
+
+Area *ConfigHelper::configureArea(xmlNodePtr _tree, char *_id) {
+  xmlNodePtr element = getNamedNode(_tree, "AREA", "ID", "MAIN");
+
+  if (element == NULL) {
+    printf("ConfigHelper: AREA \"%s\" not found\n",_id);
+    return NULL;
+  }
+  return configureArea(element);
+};
+
+Area *ConfigHelper::configureArea(xmlNodePtr _element) {
+
+  xmlNodePtr cur;
+  char *type, *anz, *inte, *diff, *base;
+
+  if (_element == NULL) {
+    printf("ConfigHelper: AREA is NULL");
+    return NULL;
+  }
+
+  // create Area
+  Area *area = new Area();
+
+  // configure def attributes
+  area->name    = getProperty(_element,"name");
+  area->rasterx = atoi(getProperty(_element,"rasterx"));
+  area->rastery = atoi(getProperty(_element,"rastery"));
+  area->rasterb = atoi(getProperty(_element,"rasterb"));
+  area->rasterh = atoi(getProperty(_element,"rasterh"));
+
+  // configure arrange
+  cur = getNode(_element,"ARRANGE");
+  area->build.fWather = getConstInt(getProperty(cur,"wather"));
+  area->build.fBreak  = getConstInt(getProperty(cur,"break"));
+
+  // set type, can be set be AREA, too
+  area->build.type = getConstInt(getProperty(_element,"type",
+                                 getProperty(cur,"type")));
+  // set size, can be set by AREA, too
+  area->build.size = atoi(getProperty(_element,"size",
+                          getProperty(cur,"size")));
+
+  // configure shape
+  xmlNodePtr shape = getNode(_element,"SHAPE");
+  // background
+  cur = getNode(_element,"BACKGROUND");
+  area->build.bgType      = getConstInt(getProperty(cur,"type"));
+  area->build.bgAnz       = atoi(getProperty(cur,"anz","1"));
+  area->build.bgIntensity = getConstInt(getProperty(cur,"intensity","1"));
+  area->build.bgDiff      = getConstInt(getProperty(cur,"diff","1"));
+  area->build.bgBase      = getConstInt(getProperty(cur,"base","120"));
+  // main
+  cur = getNode(_element,"MAIN");
+  area->build.mainType      = getConstInt(getProperty(cur,"type","1"));
+  area->build.mainAnz       = atoi(getProperty(cur,"anz","1"));
+  area->build.mainIntensity = getConstInt(getProperty(cur,"intensity","1"));
+  area->build.mainDiff      = getConstInt(getProperty(cur,"diff","1"));
+  area->build.mainBase      = getConstInt(getProperty(cur,"base","120"));
+  // border others (def.)
+  cur = getNode(_element,"BORDER");
+  area->build.bsType      = getConstInt(type = getProperty(cur,"type","1"));
+  area->build.bsAnz       = atoi(anz  = getProperty(cur,"anz","1"));
+  area->build.bsIntensity = getConstInt(inte = getProperty(cur,"intensity","1"));
+  area->build.bsDiff      = getConstInt(diff = getProperty(cur,"diff","1"));
+  area->build.bsBase      = getConstInt(base = getProperty(cur,"base","120"));
+  // border same
+  cur = getNode(_element,"BORDERSAME");
+  area->build.bsType      = getConstInt(getProperty(cur,"type",type));
+  area->build.bsAnz       = atoi(getProperty(cur,"anz",anz));
+  area->build.bsIntensity = getConstInt(getProperty(cur,"intensity",inte));
+  area->build.bsDiff      = getConstInt(getProperty(cur,"diff",diff));
+  area->build.bsBase      = getConstInt(getProperty(cur,"base",base));
+  // filter
+  cur = getNode(_element,"FILTER");
+  area->build.fType      = getConstInt(getProperty(cur,"type"));
+  area->build.fAnz       = atoi(getProperty(cur,"anz","1"));
+  area->build.fIntensity = getConstInt(getProperty(cur,"intensity","1"));
+  area->build.fDiff      = getConstInt(getProperty(cur,"diff","1"));
+  area->build.fBase      = getConstInt(getProperty(cur,"base","120"));
+
+  return area;
+};
+

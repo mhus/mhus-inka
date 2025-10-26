@@ -1,0 +1,15 @@
+<GENESIS>
+  <CONFIG>
+   <ARRANGE ID="MAIN" REF="STD" x="20" y="20">
+     <AREA name="a" type="1" size="2"/>
+     <AREA name="b" type="1" size="2"/>
+     <AREA name="c" type="1" size="2"/>
+     <AREA name="d" type="1" size="2"/>
+   </ARRANGE>
+  </CONFIG>
+
+  <REFERENCES>
+    <ARRANGE ID="STD" warnings="1">
+    </ARRANGE>
+  </REFERENCES>
+</GENESIS>

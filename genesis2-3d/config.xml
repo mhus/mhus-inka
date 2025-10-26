@@ -1,0 +1,83 @@
+<CONFIG>
+
+  <LIB FILE="area.xml"/>
+
+  <GENESIS ID="MAIN" REF="GENESIS=STD">
+
+    <ARRANGE ID="MAIN" REF="ARRANGE=STD" x="12" y="12">
+
+      <AREA REF="AREA:TEST" size="2" name="Test"/>
+
+      <AREA REF="AREA:HIGHLANDS=STD" size="1" name="HighLands"/>
+
+      <AREA REF="AREA:FLAT" name="NewYork" size="1"/>
+      <AREA REF="AREA:FLAT" name="NewYork_1" size="2"/>
+      <AREA REF="AREA:FLAT" name="NewYork_2" size="1"/>
+       <AREA REF="AREA:LAKE" master="NewYork_2" size="1"/>
+      <AREA REF="AREA:FLAT" name="NewYork_3" size="1"/>
+      <AREA REF="AREA:FLAT" name="NewYork_4" size="2"/>
+      <AREA REF="AREA:FLAT" name="NewYork_5" size="1"/>
+
+      <AREA REF="AREA:HIGHLANDS=SCHLUCHT" size="1" name="HighLands"/>
+
+      <AREA REF="AREA:FLAT" name="York" size="1"/>
+      <AREA REF="AREA:FLAT" name="York_1" size="2"/>
+      <AREA REF="AREA:FLAT" name="York_2" size="2"/>
+       <AREA REF="AREA:LAKE" master="York_2" size="1"/>
+      <AREA REF="AREA:FLAT" name="York_3" size="1"/>
+      <AREA REF="AREA:FLAT" name="York_4" size="2"/>
+      <AREA REF="AREA:FLAT" name="York_5" size="1"/>
+
+
+      <AREA REF="AREA:MOUNTAIN=NORTHSOUTH" name="Alpen_1" size="1"/>
+      <AREA REF="AREA:MOUNTAIN=NORTHSOUTH" name="Alpen_2" size="1"/>
+      <AREA REF="AREA:MOUNTAIN=NORTHSOUTH" name="Alpen_3" size="1"/>
+       <AREA REF="AREA:TOWER"  master="Alpen_3" size="1" rasterpart="5" />
+      <AREA REF="AREA:MOUNTAIN=NORTHSOUTH" name="Alpen_4" size="1"/>
+       <AREA REF="AREA:TOWER"  master="Alpen_4" size="1" rasterpart="5" />
+      <AREA REF="AREA:MOUNTAIN=NORTHSOUTH" name="Alpen_5" size="1"/>
+      <AREA REF="AREA:MOUNTAIN=NORTHSOUTH" name="Alpen_6" size="1"/>
+
+      <AREA REF="AREA:FLAT" name="Y" size="1"/>
+      <AREA REF="AREA:FLAT" name="Y_1" size="2"/>
+      <AREA REF="AREA:FLAT" name="Y_2" size="2"/>
+      <AREA REF="AREA:FLAT" name="Y_3" size="1"/>
+      <AREA REF="AREA:FLAT" name="Y_4" size="2"/>
+      <AREA REF="AREA:FLAT" name="Y_5" size="1"/>
+
+      <AREA REF="AREA:MOUNTAIN=EASTWEST" name="Pyri_2" size="1"/>
+       <AREA REF="AREA:TOWER"  master="Pyri_2" size="1" rasterpart="5" />
+
+      <AREA REF="AREA:FLAT" name="Ya" size="1"/>
+      <AREA REF="AREA:FLAT" name="Ya_1" size="2"/>
+      <AREA REF="AREA:FLAT" name="Ya_2" size="2"/>
+      <AREA REF="AREA:FLAT" name="Ya_3" size="1"/>
+      <AREA REF="AREA:FLAT" name="Ya_4" size="2"/>
+      <AREA REF="AREA:FLAT" name="Ya_5" size="1"/>
+      <AREA REF="AREA:FLAT" name="Yb" size="1"/>
+      <AREA REF="AREA:FLAT" name="Yb_1" size="2"/>
+      <AREA REF="AREA:FLAT" name="Yb_2" size="2"/>
+      <AREA REF="AREA:FLAT" name="Yb_3" size="1"/>
+      <AREA REF="AREA:FLAT" name="Yb_4" size="2"/>
+      <AREA REF="AREA:FLAT" name="Yb_5" size="1"/>
+
+      <AREA REF="AREA:MOUNTAIN=CENTER" name="Ural_3" size="1"/>
+
+      
+      <AREA REF="AREA:ISLAND" name  ="Sylt" size="1"/>
+      <AREA REF="AREA:TOWER"  master="Sylt" size="1" rasterpart="5" />
+
+      <AREA REF="AREA:ISLAND" name  ="Hawaii" size="1"/>
+      <AREA REF="AREA:ISLAND" name  ="Berlin" size="1"/>
+      <AREA REF="AREA:ISLAND" name  ="Irland" size="1"/>
+
+    </ARRANGE>
+
+  </GENESIS>
+
+
+  <RUN>
+    <START x="100" y="100" area="Test" shapepath="/home/archive/pub/genesis/" />
+  </RUN>
+
+</CONFIG>

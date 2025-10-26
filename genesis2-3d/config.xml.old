@@ -1,0 +1,52 @@
+<GENESIS>
+  <CONFIG>
+   <ARRANGE ID="MAIN" REF="STD" x="25" y="25">
+
+     <AREA REF="AREA=MOUNTAINS" name="a" size="3"/>
+     <AREA REF="AREA=DESERT"    name="b" size="2"/>
+     <AREA REF="AREA=DESERT"    name="c" size="2"/>
+     <AREA REF="AREA=DESERT"    name="d" size="2"/>
+     <AREA REF="AREA=MOUNTAINS" name="e" size="2">
+       <ARRANGE wather="YES"/>
+     </AREA>
+     <AREA REF="AREA=MOUNTAINS" name="f" size="2">
+       <ARRANGE wather="YES"/>
+     </AREA>
+     <AREA REF="AREA=PLATO"     name="g" size="1"/>
+     <AREA REF="AREA=MOUNTAINS" name="h" size="2">
+       <ARRANGE wather="YES"/>
+     </AREA>
+     <AREA REF="AREA=MOUNTAINS" name="i" size="2">
+       <ARRANGE wather="YES"/>
+     </AREA>
+
+     <AREA REF="AREA=MOUNTAINS" name="j" size="2">
+       <ARRANGE break="BORDER"/>
+     </AREA>
+     <AREA REF="AREA=MOUNTAINS" name="k" size="3"/>
+     <AREA REF="AREA=MOUNTAINS" name="l" size="2"/>
+     <AREA REF="AREA=WOOD" name="l" size="2"/>
+     <AREA REF="AREA=WOOD" name="l" size="2"/>
+     <AREA REF="AREA=WOOD" name="l" size="2"/>
+     <AREA REF="AREA=MARSH" name="l" size="2"/>
+     <AREA REF="AREA=MARSH" name="l" size="2"/>
+     <AREA REF="AREA=MARSH" name="l" size="2"/>
+     <AREA REF="AREA=MARSH" name="l" size="2"/>
+     <AREA REF="AREA=LAKES" name="l" size="2"/>
+     <AREA REF="AREA=LAKES" name="l" size="2"/>
+     <AREA REF="AREA=LAKES" name="l" size="2"/>
+     <AREA REF="AREA=WOOD" name="l" size="2"/>
+     <AREA REF="AREA=MOUNTAINS" name="k" size="3"/>
+     <AREA REF="AREA=MOUNTAINS" name="l" size="2"/>
+
+     <AREA REF="AREA=ISLANDS" name="k" size="1"/>
+     <AREA REF="AREA=ISLANDS" name="k" size="2"/>
+     <AREA REF="AREA=ISLANDS" name="k" size="1"/>
+     <AREA REF="AREA=ISLANDS" name="k" size="2"/>
+
+   </ARRANGE>
+  </CONFIG>
+
+  <REFERENCES FILE="references.xml"/>
+  <CONST FILE="const.xml"/>
+</GENESIS>

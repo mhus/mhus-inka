@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<SAVE>
+  <GENESIS xpr="200" ypr="200"/>
+  <AREA name="Test" rasterx="6" rastery="5" rasterb="1" rasterh="2" rasterpart="0" xa="1200" ya="1000" xb="1400" yb="1400" master="" slave="">
+    <ARRANGE water="0" break="0" type="8" size="2"/>
+    <SHAPE order="xGMFsc">
+      <BACKGROUND type="16" anz="50" intensity="10" diff="2" base="60" min="1" max="80"/>
+      <MAIN type="47" anz="10" intensity="-10" diff="2" base="200" min="190" max="255"/>
+      <BORDER type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <FILTER type="17" anz="5" intensity="10" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="HighLands" rasterx="6" rastery="4" rasterb="1" rasterh="1" rasterpart="0" xa="1200" ya="800" xb="1000" yb="1000" master="" slave="">
+    <ARRANGE water="0" break="0" type="7" size="1"/>
+    <SHAPE order="xGBFs">
+      <BACKGROUND type="16" anz="50" intensity="10" diff="5" base="180" min="150" max="200"/>
+      <MAIN type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <BORDER type="13" anz="20" intensity="10" diff="2" base="35" min="20" max="50" offset="0"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="20" intensity="10" diff="2" base="35" min="20" max="50" offset="0"/>
+      <FILTER type="3" anz="10" intensity="3" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="NewYork" rasterx="6" rastery="3" rasterb="1" rasterh="1" rasterpart="0" xa="1200" ya="600" xb="800" yb="800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="NewYork_1" rasterx="4" rastery="3" rasterb="2" rasterh="1" rasterpart="0" xa="800" ya="600" xb="800" yb="800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="NewYork_2" rasterx="4" rastery="2" rasterb="1" rasterh="1" rasterpart="0" xa="800" ya="400" xb="600" yb="600" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="" rasterx="4" rastery="2" rasterb="1" rasterh="1" rasterpart="0" xa="800" ya="400" xb="600" yb="600" master="NewYork_2" slave="">
+    <ARRANGE water="0" break="0" type="0" size="1"/>
+    <SHAPE order="xMFs">
+      <BACKGROUND type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <MAIN type="46" anz="20" intensity="80" diff="1" base="40" min="1" max="180"/>
+      <BORDER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERWATHER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="NewYork_3" rasterx="4" rastery="1" rasterb="1" rasterh="1" rasterpart="0" xa="800" ya="200" xb="400" yb="400" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="NewYork_4" rasterx="5" rastery="1" rasterb="1" rasterh="2" rasterpart="0" xa="1000" ya="200" xb="600" yb="600" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="NewYork_5" rasterx="6" rastery="2" rasterb="1" rasterh="1" rasterpart="0" xa="1200" ya="400" xb="600" yb="600" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="HighLands" rasterx="6" rastery="1" rasterb="1" rasterh="1" rasterpart="0" xa="1200" ya="200" xb="400" yb="400" master="" slave="">
+    <ARRANGE water="0" break="0" type="18" size="1"/>
+    <SHAPE order="xGMBFs">
+      <BACKGROUND type="16" anz="50" intensity="10" diff="5" base="180" min="150" max="200"/>
+      <MAIN type="13" anz="50" intensity="-10" diff="5" base="180" min="150" max="220"/>
+      <BORDER type="13" anz="20" intensity="10" diff="2" base="35" min="20" max="50" offset="0"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="20" intensity="10" diff="2" base="35" min="20" max="50" offset="0"/>
+      <FILTER type="3" anz="10" intensity="3" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="York" rasterx="7" rastery="1" rasterb="1" rasterh="1" rasterpart="0" xa="1400" ya="200" xb="400" yb="400" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="York_1" rasterx="7" rastery="2" rasterb="1" rasterh="2" rasterpart="0" xa="1400" ya="400" xb="800" yb="800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="York_2" rasterx="7" rastery="4" rasterb="1" rasterh="2" rasterpart="0" xa="1400" ya="800" xb="1200" yb="1200" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="" rasterx="7" rastery="4" rasterb="1" rasterh="2" rasterpart="0" xa="1400" ya="800" xb="1200" yb="1200" master="York_2" slave="">
+    <ARRANGE water="0" break="0" type="0" size="1"/>
+    <SHAPE order="xMFs">
+      <BACKGROUND type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <MAIN type="46" anz="20" intensity="80" diff="1" base="40" min="1" max="180"/>
+      <BORDER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERWATHER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="York_3" rasterx="7" rastery="6" rasterb="1" rasterh="1" rasterpart="0" xa="1400" ya="1200" xb="1400" yb="1400" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="York_4" rasterx="8" rastery="6" rasterb="1" rasterh="2" rasterpart="0" xa="1600" ya="1200" xb="1600" yb="1600" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="York_5" rasterx="7" rastery="7" rasterb="1" rasterh="1" rasterpart="0" xa="1400" ya="1400" xb="1600" yb="1600" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Alpen_1" rasterx="7" rastery="8" rasterb="1" rasterh="1" rasterpart="0" xa="1400" ya="1600" xb="1800" yb="1800" master="" slave="">
+    <ARRANGE water="0" break="0" type="4" size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="2" anz="1" intensity="1" diff="10" base="1" min="1" max="180"/>
+      <MAIN type="14" anz="50" intensity="-10" diff="10" base="100" min="80" max="120"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="20"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Alpen_2" rasterx="8" rastery="8" rasterb="1" rasterh="1" rasterpart="0" xa="1600" ya="1600" xb="1800" yb="1800" master="" slave="">
+    <ARRANGE water="0" break="0" type="4" size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="2" anz="1" intensity="1" diff="10" base="1" min="1" max="180"/>
+      <MAIN type="14" anz="50" intensity="-10" diff="10" base="100" min="80" max="120"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="20"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Alpen_3" rasterx="8" rastery="9" rasterb="1" rasterh="1" rasterpart="0" xa="1600" ya="1800" xb="2000" yb="2000" master="" slave="">
+    <ARRANGE water="0" break="0" type="4" size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="2" anz="1" intensity="1" diff="10" base="1" min="1" max="180"/>
+      <MAIN type="14" anz="50" intensity="-10" diff="10" base="100" min="80" max="120"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="20"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="" rasterx="8" rastery="9" rasterb="1" rasterh="1" rasterpart="5" xa="1666" ya="1866" xb="1933" yb="1933" master="Alpen_3" slave="">
+    <ARRANGE water="0" break="0" type="18" size="1"/>
+    <SHAPE order="xGF">
+      <BACKGROUND type="41" anz="10" intensity="40" diff="10" base="250" min="50" max="100"/>
+      <MAIN type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <BORDER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERWATHER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Alpen_4" rasterx="8" rastery="10" rasterb="1" rasterh="1" rasterpart="0" xa="1600" ya="2000" xb="2200" yb="2200" master="" slave="">
+    <ARRANGE water="0" break="0" type="4" size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="2" anz="1" intensity="1" diff="10" base="1" min="1" max="180"/>
+      <MAIN type="14" anz="50" intensity="-10" diff="10" base="100" min="80" max="120"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="20"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="" rasterx="8" rastery="10" rasterb="1" rasterh="1" rasterpart="5" xa="1666" ya="2066" xb="2133" yb="2133" master="Alpen_4" slave="">
+    <ARRANGE water="0" break="0" type="18" size="1"/>
+    <SHAPE order="xGF">
+      <BACKGROUND type="41" anz="10" intensity="40" diff="10" base="250" min="50" max="100"/>
+      <MAIN type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <BORDER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERWATHER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Alpen_5" rasterx="7" rastery="10" rasterb="1" rasterh="1" rasterpart="0" xa="1400" ya="2000" xb="2200" yb="2200" master="" slave="">
+    <ARRANGE water="0" break="0" type="4" size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="2" anz="1" intensity="1" diff="10" base="1" min="1" max="180"/>
+      <MAIN type="14" anz="50" intensity="-10" diff="10" base="100" min="80" max="120"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="20"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Alpen_6" rasterx="7" rastery="9" rasterb="1" rasterh="1" rasterpart="0" xa="1400" ya="1800" xb="2000" yb="2000" master="" slave="">
+    <ARRANGE water="0" break="0" type="4" size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="2" anz="1" intensity="1" diff="10" base="1" min="1" max="180"/>
+      <MAIN type="14" anz="50" intensity="-10" diff="10" base="100" min="80" max="120"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="20"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Y" rasterx="6" rastery="9" rasterb="1" rasterh="1" rasterpart="0" xa="1200" ya="1800" xb="2000" yb="2000" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Y_1" rasterx="6" rastery="7" rasterb="1" rasterh="2" rasterpart="0" xa="1200" ya="1400" xb="1800" yb="1800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Y_2" rasterx="5" rastery="7" rasterb="1" rasterh="2" rasterpart="0" xa="1000" ya="1400" xb="1800" yb="1800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Y_3" rasterx="5" rastery="9" rasterb="1" rasterh="1" rasterpart="0" xa="1000" ya="1800" xb="2000" yb="2000" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Y_4" rasterx="4" rastery="10" rasterb="2" rasterh="1" rasterpart="0" xa="800" ya="2000" xb="2200" yb="2200" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Y_5" rasterx="3" rastery="10" rasterb="1" rasterh="1" rasterpart="0" xa="600" ya="2000" xb="2200" yb="2200" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Pyri_2" rasterx="2" rastery="10" rasterb="1" rasterh="1" rasterpart="0" xa="400" ya="2000" xb="2200" yb="2200" master="" slave="">
+    <ARRANGE water="0" break="0" type="4" size="1"/>
+    <SHAPE order="xGMBs">
+      <BACKGROUND type="2" anz="1" intensity="1" diff="10" base="1" min="1" max="180"/>
+      <MAIN type="15" anz="50" intensity="-10" diff="10" base="100" min="80" max="120"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="20"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="" rasterx="2" rastery="10" rasterb="1" rasterh="1" rasterpart="5" xa="466" ya="2066" xb="2133" yb="2133" master="Pyri_2" slave="">
+    <ARRANGE water="0" break="0" type="18" size="1"/>
+    <SHAPE order="xGF">
+      <BACKGROUND type="41" anz="10" intensity="40" diff="10" base="250" min="50" max="100"/>
+      <MAIN type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <BORDER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERWATHER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Ya" rasterx="2" rastery="9" rasterb="1" rasterh="1" rasterpart="0" xa="400" ya="1800" xb="2000" yb="2000" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Ya_1" rasterx="3" rastery="9" rasterb="2" rasterh="1" rasterpart="0" xa="600" ya="1800" xb="2000" yb="2000" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Ya_2" rasterx="4" rastery="7" rasterb="1" rasterh="2" rasterpart="0" xa="800" ya="1400" xb="1800" yb="1800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Ya_3" rasterx="3" rastery="7" rasterb="1" rasterh="1" rasterpart="0" xa="600" ya="1400" xb="1600" yb="1600" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Ya_4" rasterx="2" rastery="8" rasterb="2" rasterh="1" rasterpart="0" xa="400" ya="1600" xb="1800" yb="1800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Ya_5" rasterx="1" rastery="8" rasterb="1" rasterh="1" rasterpart="0" xa="200" ya="1600" xb="1800" yb="1800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Yb" rasterx="1" rastery="7" rasterb="1" rasterh="1" rasterpart="0" xa="200" ya="1400" xb="1600" yb="1600" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Yb_1" rasterx="1" rastery="5" rasterb="1" rasterh="2" rasterpart="0" xa="200" ya="1000" xb="1400" yb="1400" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Yb_2" rasterx="1" rastery="4" rasterb="2" rasterh="1" rasterpart="0" xa="200" ya="800" xb="1000" yb="1000" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Yb_3" rasterx="2" rastery="3" rasterb="1" rasterh="1" rasterpart="0" xa="400" ya="600" xb="800" yb="800" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Yb_4" rasterx="2" rastery="1" rasterb="1" rasterh="2" rasterpart="0" xa="400" ya="200" xb="600" yb="600" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="2"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Yb_5" rasterx="3" rastery="1" rasterb="1" rasterh="1" rasterpart="0" xa="600" ya="200" xb="400" yb="400" master="" slave="">
+    <ARRANGE water="0" break="0" type="1" size="1"/>
+    <SHAPE order="xMGBFs">
+      <BACKGROUND type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180"/>
+      <MAIN type="12" anz="4" intensity="2" diff="5" base="30" min="1" max="50"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="3" anz="6" intensity="3" diff="1" base="120" min="1" max="180" offset="40"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Ural_3" rasterx="3" rastery="2" rasterb="1" rasterh="1" rasterpart="0" xa="600" ya="400" xb="600" yb="600" master="" slave="">
+    <ARRANGE water="0" break="0" type="4" size="1"/>
+    <SHAPE order="xGMBFs">
+      <BACKGROUND type="2" anz="1" intensity="1" diff="10" base="1" min="1" max="180"/>
+      <MAIN type="16" anz="20" intensity="-10" diff="10" base="100" min="80" max="120"/>
+      <BORDER type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="20"/>
+      <BORDERSAME type="3" anz="10" intensity="2" diff="1" base="120" min="1" max="180" offset="20"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="20"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Sylt" rasterx="3" rastery="3" rasterb="1" rasterh="1" rasterpart="0" xa="600" ya="600" xb="800" yb="800" master="" slave="">
+    <ARRANGE water="0" break="0" type="8" size="1"/>
+    <SHAPE order="xMFsB">
+      <BACKGROUND type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <MAIN type="13" anz="10" intensity="25" diff="2" base="200" min="190" max="255"/>
+      <BORDER type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="" rasterx="3" rastery="3" rasterb="1" rasterh="1" rasterpart="5" xa="666" ya="666" xb="733" yb="733" master="Sylt" slave="">
+    <ARRANGE water="0" break="0" type="18" size="1"/>
+    <SHAPE order="xGF">
+      <BACKGROUND type="41" anz="10" intensity="40" diff="10" base="250" min="50" max="100"/>
+      <MAIN type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <BORDER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERWATHER type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Hawaii" rasterx="3" rastery="4" rasterb="1" rasterh="1" rasterpart="0" xa="600" ya="800" xb="1000" yb="1000" master="" slave="">
+    <ARRANGE water="0" break="0" type="8" size="1"/>
+    <SHAPE order="xMFsB">
+      <BACKGROUND type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <MAIN type="13" anz="10" intensity="25" diff="2" base="200" min="190" max="255"/>
+      <BORDER type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Berlin" rasterx="4" rastery="4" rasterb="1" rasterh="1" rasterpart="0" xa="800" ya="800" xb="1000" yb="1000" master="" slave="">
+    <ARRANGE water="0" break="0" type="8" size="1"/>
+    <SHAPE order="xMFsB">
+      <BACKGROUND type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <MAIN type="13" anz="10" intensity="25" diff="2" base="200" min="190" max="255"/>
+      <BORDER type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+  <AREA name="Irland" rasterx="4" rastery="5" rasterb="1" rasterh="1" rasterpart="0" xa="800" ya="1000" xb="1200" yb="1200" master="" slave="">
+    <ARRANGE water="0" break="0" type="8" size="1"/>
+    <SHAPE order="xMFsB">
+      <BACKGROUND type="0" anz="0" intensity="0" diff="0" base="0" min="0" max="0"/>
+      <MAIN type="13" anz="10" intensity="25" diff="2" base="200" min="190" max="255"/>
+      <BORDER type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <BORDERWATHER type="13" anz="4" intensity="10" diff="1" base="0" min="0" max="0" offset="0"/>
+      <BORDERSAME type="0" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+      <FILTER type="10" anz="1" intensity="1" diff="1" base="120" min="1" max="180" offset="0"/>
+    </SHAPE>
+  </AREA>
+</SAVE>

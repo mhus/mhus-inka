@@ -1,0 +1,26 @@
+<ARRANGE>
+
+<!-- BREAK -->
+<!-- to get a new start point (e.g for new continent or islands
+     property in ARRANGE is break
+     0 = no break
+     1 = break to new startpoint
+     2 = break to random startpoint
+   -->
+  <BREAK>
+    <BORDER int="1"/>
+    <YES    int="2"/>
+    <ISLAND int="2"/>
+  </BREAK>
+
+<!-- WATER -->
+<!-- do u need water on a area use the water prop. at ARRANGE
+     0 = no
+     1 = yes
+  -->
+  <WATER>
+    <NO  int="0"/>
+    <YES int="1"/>
+  </WATER>
+
+</ARRANGE>
